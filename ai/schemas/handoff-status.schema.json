@@ -1,0 +1,157 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "HandoffStatus",
+  "description": "Machine-readable execution-package state for a Claude<->Codex handoff package.",
+  "type": "object",
+  "required": [
+    "task_id",
+    "handoff_status",
+    "attempt",
+    "revision",
+    "planning_owner",
+    "execution_owner",
+    "review_owner",
+    "artifacts",
+    "created_at",
+    "updated_at"
+  ],
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "description": "Matches task_id in the corresponding ai/tasks/ record."
+    },
+    "handoff_status": {
+      "type": "string",
+      "enum": ["pending", "in_progress", "review_ready", "approved", "changes_requested", "closed"],
+      "description": "Current execution-package state of the handoff. This is not the broader task lifecycle."
+    },
+    "attempt": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Execution attempt counter for this package. Increment when a changes_requested loop reopens the same package."
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Auditable package revision counter. Increment together with attempt when reopening the same package."
+    },
+    "worktree_branch": {
+      "type": "string",
+      "description": "Git branch created for this handoff. Set by orchestrator."
+    },
+    "worktree_path": {
+      "type": "string",
+      "description": "Repo-relative path to the git worktree. Set by orchestrator."
+    },
+    "planning_owner": {
+      "type": "string",
+      "description": "Agent that produced the execution brief."
+    },
+    "execution_owner": {
+      "type": "string",
+      "description": "Agent responsible for implementation."
+    },
+    "review_owner": {
+      "type": "string",
+      "description": "Agent responsible for review and approval."
+    },
+    "artifacts": {
+      "type": "object",
+      "required": ["task", "execution_brief"],
+      "properties": {
+        "task": {
+          "type": "string",
+          "description": "Path to ai/tasks/<task-id>.yaml"
+        },
+        "execution_brief": {
+          "type": "string",
+          "description": "Path to ai/handoffs/<task-id>/execution-brief.md"
+        },
+        "change": {
+          "type": "string",
+          "description": "Path to ai/changes/<task-id>.md. Set after Codex completes."
+        },
+        "validation": {
+          "type": "string",
+          "description": "Path to ai/validation/<task-id>.md. Set after Codex completes."
+        },
+        "review_brief": {
+          "type": "string",
+          "description": "Path to ai/handoffs/<task-id>/review-brief.md. Set after Codex completes."
+        }
+      }
+    },
+    "review": {
+      "type": "object",
+      "description": "Reviewer writeback metadata for approved or changes_requested decisions.",
+      "properties": {
+        "decision": {
+          "type": "string",
+          "enum": ["approved", "changes_requested"]
+        },
+        "reviewed_by": {
+          "type": "string"
+        },
+        "reviewed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "approved_by": {
+          "type": "string"
+        },
+        "approved_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "requested_by": {
+          "type": "string"
+        },
+        "requested_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "scope_decision": {
+          "type": "string",
+          "enum": ["same_package", "new_package_required"]
+        },
+        "required_changes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "reopen": {
+      "type": "object",
+      "description": "Explicit reopen audit metadata for the changes_requested loop.",
+      "required": ["reopened_by", "reopened_at", "reopen_reason"],
+      "properties": {
+        "reopened_by": {
+          "type": "string"
+        },
+        "reopened_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "reopen_reason": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}

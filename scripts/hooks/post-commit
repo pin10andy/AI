@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+# post-commit hook: surface pending handoff packages and next actions
+#
+# Canonical source: scripts/hooks/post-commit
+# Install: bash scripts/install-hooks.sh
+#
+# This hook is notification-only. It does not auto-run orchestrator.
+
+set -euo pipefail
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+HANDOFF_ROOT="${REPO_ROOT}/ai/handoffs"
+
+if [ ! -d "${HANDOFF_ROOT}" ]; then
+    exit 0
+fi
+
+pending_count=0
+
+extract_scalar() {
+    local file="$1"
+    local key="$2"
+    grep -E "^${key}:" "$file" | head -n 1 | sed -E 's/^[^:]+:[[:space:]]*"?([^"]*)"?$/\1/'
+}
+
+while IFS= read -r -d '' status_file; do
+    handoff_status="$(extract_scalar "$status_file" "handoff_status")"
+    [ "${handoff_status}" = "pending" ] || continue
+
+    task_id="$(extract_scalar "$status_file" "task_id")"
+    execution_owner="$(extract_scalar "$status_file" "execution_owner")"
+
+    pending_count=$((pending_count + 1))
+
+    echo ""
+    echo "╔══════════════════════════════════════════════════════════╗"
+    echo "║  PENDING HANDOFF PACKAGE DETECTED                       ║"
+    echo "╚══════════════════════════════════════════════════════════╝"
+    echo ""
+    echo "Task: ${task_id}"
+    echo "Execution owner: ${execution_owner}"
+    echo "Next action:"
+    echo "  python3 scripts/handoff_preflight.py --task ${task_id} --require-status pending"
+    if [ "${execution_owner}" = "codex" ]; then
+        echo "  python3 scripts/orchestrator.py --task ${task_id}"
+    else
+        echo "  Orchestrator hint skipped because execution_owner is ${execution_owner}"
+    fi
+done < <(find "${HANDOFF_ROOT}" -type f -name status.yaml -print0)
+
+if [ "${pending_count}" -eq 0 ]; then
+    exit 0
+fi
