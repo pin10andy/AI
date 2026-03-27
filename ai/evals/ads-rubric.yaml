@@ -1,0 +1,84 @@
+# ads-rubric.yaml
+# Google Ads 素材評估標準 — 所有 agent 共用
+# 用於自我評估與人工審查
+
+rubric:
+  name: Google Ads Copy Quality Rubric
+  version: "1.1"
+  applies_to:
+    - ai/schemas/google-ads-search-output.schema.json
+    - ai/schemas/google-ads-pmax-output.schema.json
+
+  dimensions:
+
+    - name: brand_consistency
+      weight: 0.20
+      description: 素材是否符合品牌 voice 與 tone 規範
+      scoring:
+        5: 完全符合品牌語氣，用詞精準
+        4: 大致符合，有微小偏差
+        3: 部分符合，有明顯不一致
+        2: 多處違反品牌規範
+        1: 完全偏離品牌語氣
+
+    - name: char_limit_compliance
+      weight: 0.20
+      description: 所有欄位是否符合字元限制
+      scoring:
+        pass: 所有欄位均在限制內
+        fail: 任何欄位超出限制
+
+    - name: cta_clarity
+      weight: 0.15
+      description: 行動呼籲是否明確且有吸引力
+      scoring:
+        5: CTA 明確、有吸引力、與受眾相關
+        4: CTA 明確但可以更有吸引力
+        3: CTA 存在但不夠明確
+        2: CTA 模糊或與內容不符
+        1: 缺少 CTA
+
+    - name: headline_diversity
+      weight: 0.15
+      description: 標題或資產之間是否有足夠差異性
+      scoring:
+        5: 每組標題角度不同，覆蓋多個賣點
+        4: 大部分標題有差異，少數重複
+        3: 約一半標題有明顯相似
+        2: 多數標題表達相似概念
+        1: 標題幾乎相同
+
+    - name: angle_coverage
+      weight: 0.10
+      description: 是否真的產出 3 個 distinct angles，且素材有實際覆蓋
+      scoring:
+        5: 3 個 angle 清楚不同，headline / description 都能對應
+        4: 3 個 angle 大致成立，少數素材對應較弱
+        3: angle 有寫出來，但 copy 分布不明顯
+        2: 角度區隔模糊，幾乎都在講同一件事
+        1: 沒有可辨識的 angle 結構
+
+    - name: policy_safety
+      weight: 0.10
+      description: 是否避免誇大、醫療承諾、低價促銷等高風險表述
+      scoring:
+        5: 無高風險表述，合規意識清楚
+        4: 基本安全，僅少數字句需人工確認
+        3: 有模糊表述，人工 review 必須介入
+        2: 多處接近違規邊界
+        1: 明顯出現違規宣稱或品牌禁用語
+
+    - name: language_quality
+      weight: 0.10
+      description: 語言正確性與流暢度
+      scoring:
+        5: 語言自然流暢，無錯誤
+        4: 語言正確，偶有生硬處
+        3: 有語法或用詞問題
+        2: 多處語言錯誤
+        1: 語言品質差，難以理解
+
+  passing_threshold:
+    overall_score: 3.5
+    required_pass:
+      - char_limit_compliance

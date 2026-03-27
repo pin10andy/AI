@@ -1,0 +1,166 @@
+{
+  "task_id": "gads-copy-005",
+  "brief_id": "lovefu-pmax-hillbed",
+  "campaign_type": "pmax",
+  "brand_name": "LOVEFU大島樂眠",
+  "product_name": "山丘樂眠床",
+  "generated_by": "claude",
+  "generated_at": "2026-03-14T19:00:00+08:00",
+  "angles": [
+    {
+      "key": "body-first-comfort",
+      "label": "身體先被接住",
+      "rationale": "從躺下那一刻的身體感受切入，用高密度慢回彈泡棉與高碳鋼獨立筒的支撐力和安全認證，讓支撐品質成為可驗證的事實而非空泛承諾。"
+    },
+    {
+      "key": "worry-free-choice",
+      "label": "選床不怕錯",
+      "rationale": "用 100 天安心睡全額退款與 10 年保固，直接回應買床怕踩雷的壓力，降低決策門檻讓人敢踏出第一步。"
+    },
+    {
+      "key": "smart-start",
+      "label": "聰明入門",
+      "rationale": "以 14,900 起的系列入門定位，對接第 2 張床或首次升級的需求，在不喊低價的前提下傳達好支撐也能輕鬆開始。"
+    }
+  ],
+  "short_headlines": [
+    {
+      "text": "床墊推薦 先接住身體再放鬆",
+      "angle_key": "body-first-comfort",
+      "keyword_used": true
+    },
+    {
+      "text": "獨立筒床墊 穩穩托住腰背",
+      "angle_key": "body-first-comfort",
+      "keyword_used": true
+    },
+    {
+      "text": "支撐床墊 睡出放鬆感",
+      "angle_key": "body-first-comfort",
+      "keyword_used": true
+    },
+    {
+      "text": "山丘樂眠床 溫柔接住你",
+      "angle_key": "body-first-comfort",
+      "keyword_used": false
+    },
+    {
+      "text": "高碳鋼獨立筒 支撐更穩定",
+      "angle_key": "body-first-comfort",
+      "keyword_used": false
+    },
+    {
+      "text": "慢回彈泡棉 包覆更安心",
+      "angle_key": "body-first-comfort",
+      "keyword_used": false
+    },
+    {
+      "text": "100天安心睡 不怕選錯",
+      "angle_key": "worry-free-choice",
+      "keyword_used": false
+    },
+    {
+      "text": "10年保固 長久安心睡",
+      "angle_key": "worry-free-choice",
+      "keyword_used": false
+    },
+    {
+      "text": "買床不踩雷 先安心睡再說",
+      "angle_key": "worry-free-choice",
+      "keyword_used": false
+    },
+    {
+      "text": "先睡100天 再決定留不留",
+      "angle_key": "worry-free-choice",
+      "keyword_used": false
+    },
+    {
+      "text": "獨立筒床墊 安心試睡",
+      "angle_key": "worry-free-choice",
+      "keyword_used": true
+    },
+    {
+      "text": "14,900起 好支撐入門",
+      "angle_key": "smart-start",
+      "keyword_used": false
+    },
+    {
+      "text": "入門床墊 也有好支撐",
+      "angle_key": "smart-start",
+      "keyword_used": false
+    },
+    {
+      "text": "第2張床 從山丘開始",
+      "angle_key": "smart-start",
+      "keyword_used": false
+    },
+    {
+      "text": "山丘樂眠床 立即選購",
+      "angle_key": "smart-start",
+      "keyword_used": false
+    }
+  ],
+  "long_headlines": [
+    {
+      "text": "山丘樂眠床用高密度慢回彈泡棉搭配高碳鋼獨立筒，讓每晚都被穩穩接住",
+      "angle_key": "body-first-comfort"
+    },
+    {
+      "text": "找床墊推薦？先看支撐品質，山丘樂眠床通過歐盟安全檢測讓你睡得更安心",
+      "angle_key": "body-first-comfort"
+    },
+    {
+      "text": "100天安心睡全額退款搭配10年保固，選山丘樂眠床不用急著下決定",
+      "angle_key": "worry-free-choice"
+    },
+    {
+      "text": "第2張床也值得好好選，14,900起的山丘樂眠床讓入門不必將就支撐感",
+      "angle_key": "smart-start"
+    },
+    {
+      "text": "正在比較獨立筒床墊推薦？山丘樂眠床從支撐到安心一次到位",
+      "angle_key": "smart-start"
+    }
+  ],
+  "descriptions": [
+    {
+      "text": "100天安心睡 選床少一點壓力",
+      "angle_key": "worry-free-choice"
+    },
+    {
+      "text": "山丘樂眠床以MDI高密度慢回彈泡棉搭配2.4mm高碳鋼獨立筒，支撐與包覆一次到位。",
+      "angle_key": "body-first-comfort"
+    },
+    {
+      "text": "通過歐盟CertiPUR與OEKO-TEX安全檢測，讓支撐床墊的品質不只靠感覺，而是有認證背書。",
+      "angle_key": "body-first-comfort"
+    },
+    {
+      "text": "100天安心睡全額退款搭配10年保固，選床不用急，慢慢感受再決定適不適合自己。",
+      "angle_key": "worry-free-choice"
+    },
+    {
+      "text": "14,900起的入門系列，不走低價路線，把好支撐與好放鬆一起帶回家。",
+      "angle_key": "smart-start"
+    }
+  ],
+  "compliance_notes": {
+    "manual_review_required": true,
+    "checks_passed": [
+      "exact_counts",
+      "char_limits",
+      "one_short_description",
+      "three_distinct_angles",
+      "angle_coverage_check",
+      "keyword_message_fit_check",
+      "must_include_terms_present",
+      "no_forbidden_claims"
+    ],
+    "policy_risks": [
+      "「托住腰背」「接住身體」等支撐描述需確保不被延伸為醫療改善承諾"
+    ],
+    "brand_risks": [
+      "14,900起與100天安心睡等數據需與官網商品頁當前資訊一致，上稿前再次確認"
+    ]
+  }
+}

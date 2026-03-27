@@ -1,0 +1,15 @@
+interface:
+  display_name: "Facebook Chrome Scraper"
+  short_description: "Collect Facebook posts and comments through Chrome MCP"
+  default_prompt: "Use $facebook-chrome-scraper to collect Facebook posts or comments through Chrome MCP and return a structured collection plus limitations."
+
+policy:
+  allow_implicit_invocation: true
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "chrome_devtools"
+      description: "Chrome DevTools MCP server for browser navigation and DOM inspection"
+      transport: "streamable_http"
+      url: "http://localhost:3000/mcp"

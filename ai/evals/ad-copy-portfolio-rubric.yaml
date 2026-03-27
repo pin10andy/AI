@@ -1,0 +1,52 @@
+rubric:
+  name: "Ad Copy Portfolio Builder Quality Rubric"
+  version: "1.2"
+  applies_to:
+    - ai/schemas/ad-copy-portfolio-output.schema.json
+
+  dimensions:
+    - name: field_level_handoff
+      weight: 0.20
+      scoring:
+        pass: "完整驗證上游 required fields，並保留 angle_key / decision_confidence / rewrite metadata"
+        fail: "只做 object-level 驗證或遺失關鍵欄位"
+
+    - name: observe_handling
+      weight: 0.20
+      scoring:
+        5: "observe_new / borderline / stale 被正確分流，不再整桶塞主力"
+        3: "有分流，但仍有過量 observe 佔主力"
+        1: "observe 仍是單一保留桶"
+
+    - name: replacement_and_candidate_fit
+      weight: 0.20
+      scoring:
+        5: "replacement_map 完整，retire gap 有對應 candidate，且 safer-rewrite 有落地"
+        3: "退場處理存在，但 gap fit 或 safer-rewrite 不完整"
+        1: "退場素材處理缺漏"
+
+    - name: taxonomy_coverage_quality
+      weight: 0.15
+      scoring:
+        5: "coverage_check 明確回答哪個 angle 是 core / test / gap / overbuilt"
+        3: "coverage_check 有 taxonomy，但判讀仍偏形式"
+        1: "coverage_check 只剩形式"
+
+    - name: portfolio_convergence
+      weight: 0.15
+      scoring:
+        5: "final pack 收斂到接近真實上稿規模"
+        3: "有收斂，但仍偏肥大"
+        1: "幾乎只是把舊池整包搬運"
+
+    - name: format_compliance
+      weight: 0.10
+      scoring:
+        pass: "schema pass，required 欄位完整"
+        fail: "schema fail 或 required 欄位缺漏"
+
+  passing_threshold:
+    overall_score: 3.5
+    required_pass:
+      - field_level_handoff
+      - format_compliance

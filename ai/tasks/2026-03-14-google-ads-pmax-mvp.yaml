@@ -1,0 +1,80 @@
+task:
+  task_id: "gads-copy-002"
+  title: "PMax 文案生成 MVP"
+  status: validated
+  owner: codex
+  created_at: "2026-03-14"
+  updated_at: "2026-03-14"
+
+  goal: >
+    在已成立的 Search RSA brief-driven 架構上，擴充出可重複執行的 PMax 文案生成流程，
+    讓 agent 能從同一份 Google Ads brief 產出 15 個短標題、5 個長標題、5 個說明、
+    3 個訴求角度與合規註記。
+
+  background: >
+    Search RSA MVP（gads-copy-001）已完成 contract、testcase、輸出樣本與驗證，
+    也已證明至少 2 組案例可微調後上稿。
+    下一步是把同樣的 brief-driven 流程擴到 PMax，但不重做一套平行架構。
+
+  references:
+    brand: "ai/brand/master-brand.yaml"
+    playbook: "ai/playbooks/google-ads-pmax.md"
+    schema: "ai/schemas/google-ads-pmax-output.schema.json"
+    rubric: "ai/evals/ads-rubric.yaml + ai/evals/google-ads-pmax-human-review.md"
+    related_adr: ""
+    related_tasks:
+      - "gads-copy-001"
+      - "gads-001"
+
+  deliverables:
+    - description: "共用 Google Ads brief schema 支援 PMax"
+      format: "json-schema"
+      destination: "ai/inputs/google-ads-brief.schema.json"
+
+    - description: "PMax output schema"
+      format: "json-schema"
+      destination: "ai/schemas/google-ads-pmax-output.schema.json"
+
+    - description: "PMax playbook"
+      format: "markdown"
+      destination: "ai/playbooks/google-ads-pmax.md"
+
+    - description: "PMax human review checklist"
+      format: "markdown"
+      destination: "ai/evals/google-ads-pmax-human-review.md"
+
+    - description: "google-ads-writer 升級為 Search / PMax 雙路徑"
+      format: "skill-doc"
+      destination: "ai/skill-src/google-ads-writer/SKILL.md"
+
+    - description: "三份真實 PMax testcase"
+      format: "yaml"
+      destination: "ai/testcases/google-ads/"
+
+    - description: "三份 PMax 輸出樣本"
+      format: "json + markdown"
+      destination: "ai/testcases/google-ads/outputs/"
+
+  validation:
+    method: "manual + automated"
+    rubric: "ai/evals/ads-rubric.yaml + ai/evals/google-ads-pmax-human-review.md"
+    passing_criteria: >
+      brief schema 可接受 search_rsa 與 pmax；
+      PMax output schema 可讀取；
+      google-ads-writer 已能依 campaign_type 路由；
+      validator 可強制檢查 PMax exact counts；
+      三份 PMax testcase 與輸出樣本存在且皆通過 validator；
+      skill 已同步到 .agents/skills/、.claude/skills/、runtime/openclaw/。
+    validation_file: "ai/validation/2026-03-14-google-ads-pmax-mvp.md"
+
+  notes: >
+    本任務不處理圖片、影片與 feed 素材，只處理文案欄位。
+    既有素材優化與素材替換仍由 ad-copy-builder 處理。
+
+  metadata:
+    created_by: codex
+    compatible_agents:
+      - claude
+      - codex
+      - gemini
+      - openclaw

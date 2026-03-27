@@ -1,0 +1,57 @@
+task:
+  task_id: "rnd-002"
+  title: "建立狀態追蹤與設計核對機制"
+  status: validated
+  owner: "claude + human"
+  created_at: "2026-03-14"
+  updated_at: "2026-03-14"
+
+  goal: >
+    讓使用者能隨時問「做到哪了」和「跟設計一致嗎」，
+    並得到有證據支持的答案。
+
+  background: >
+    R&D 記錄機制（rnd-001）建好後，repo 能記錄變更，
+    但缺少兩個能力：(1) 狀態帳本查詢 (2) 設計基準核對。
+    需要新增 ai/specs/ 和 ai/reports/ 來補齊。
+
+  references:
+    brand: "ai/brand/master-brand.yaml"
+    playbook: ""
+    schema: ""
+    rubric: ""
+    related_adr: ""
+    related_tasks: ["rnd-001"]
+
+  deliverables:
+    - description: "ai/specs/ 目錄 + product-spec-template.md"
+      format: "markdown"
+      destination: "ai/specs/"
+    - description: "ai/reports/ 目錄 + spec-vs-implementation-template.md"
+      format: "markdown"
+      destination: "ai/reports/"
+    - description: "current-milestone-spec.md（Phase 1 實際 spec）"
+      format: "markdown"
+      destination: "ai/specs/"
+    - description: "第一份 alignment report"
+      format: "markdown"
+      destination: "ai/reports/"
+    - description: "CLAUDE.md 更新（status tracking + alignment rules）"
+      format: "markdown"
+      destination: "CLAUDE.md"
+
+  validation:
+    method: "manual"
+    rubric: ""
+    passing_criteria: "spec 存在、report 可產出、CLAUDE.md 含 status 和 alignment 規則"
+    validation_file: "ai/validation/2026-03-14-status-and-alignment-system.md"
+
+  notes: ""
+
+  metadata:
+    created_by: "claude"
+    compatible_agents:
+      - claude
+      - codex
+      - gemini
+      - openclaw

@@ -1,0 +1,608 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Creative Performance Interpretation Input",
+  "description": "歷史廣告素材成效數據包，用於驅動 creative-performance-interpreter skill 的分析流程。v1.2 新增 click / conversion / placement / duration 四層資料可用性描述、標準化 angle taxonomy、以及 richer candidate seed context。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "interpretation_id",
+    "brand_name",
+    "product_name",
+    "campaign_type",
+    "goal",
+    "reporting_period",
+    "performance_data",
+    "legacy_message_policy"
+  ],
+  "properties": {
+    "interpretation_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-_]*$",
+      "description": "唯一的解讀任務 ID"
+    },
+    "brand_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "product_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "campaign_type": {
+      "type": "string",
+      "enum": ["search_rsa", "pmax"]
+    },
+    "goal": {
+      "type": "string",
+      "enum": ["lead", "purchase", "store_visit", "product_discovery"]
+    },
+    "reporting_period": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["start_date", "end_date"],
+      "properties": {
+        "start_date": {
+          "type": "string",
+          "format": "date",
+          "description": "YYYY-MM-DD"
+        },
+        "end_date": {
+          "type": "string",
+          "format": "date",
+          "description": "YYYY-MM-DD"
+        }
+      }
+    },
+    "performance_data": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "reporting_context",
+        "assets",
+        "campaign_level_metrics"
+      ],
+      "properties": {
+        "reporting_context": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "asset_granularity",
+            "includes_asset_level_conversion",
+            "includes_asset_level_conversion_value",
+            "includes_placement_breakout",
+            "interpretation_layers"
+          ],
+          "properties": {
+            "asset_granularity": {
+              "type": "string",
+              "enum": ["asset_level", "asset_association_estimate", "mixed"]
+            },
+            "includes_asset_level_conversion": {
+              "type": "boolean"
+            },
+            "includes_asset_level_conversion_value": {
+              "type": "boolean"
+            },
+            "includes_placement_breakout": {
+              "type": "boolean"
+            },
+            "interpretation_layers": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "click_layer",
+                "conversion_layer",
+                "placement_layer",
+                "duration_layer"
+              ],
+              "properties": {
+                "click_layer": {
+                  "$ref": "#/definitions/layer_requirement_click"
+                },
+                "conversion_layer": {
+                  "$ref": "#/definitions/layer_requirement_conversion"
+                },
+                "placement_layer": {
+                  "$ref": "#/definitions/layer_requirement_placement"
+                },
+                "duration_layer": {
+                  "$ref": "#/definitions/layer_requirement_duration"
+                }
+              }
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        },
+        "assets": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "asset_id",
+              "asset_type",
+              "text",
+              "angle_key",
+              "metrics",
+              "active_duration_days",
+              "status"
+            ],
+            "properties": {
+              "asset_id": {
+                "type": "string",
+                "description": "素材的唯一識別碼"
+              },
+              "asset_type": {
+                "type": "string",
+                "enum": ["short_headline", "long_headline", "headline", "description"],
+                "description": "素材類型。search_rsa 使用 headline/description；pmax 使用 short_headline/long_headline/description"
+              },
+              "text": {
+                "type": "string",
+                "minLength": 1,
+                "description": "素材的實際文案內容"
+              },
+              "angle_key": {
+                "$ref": "#/definitions/angle_key"
+              },
+              "metrics": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["impressions", "clicks", "ctr"],
+                "properties": {
+                  "impressions": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "description": "Required for click-layer interpretation."
+                  },
+                  "clicks": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "description": "Required for click-layer interpretation."
+                  },
+                  "ctr": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Required for click-layer interpretation; decimal format (0.05 = 5%)."
+                  },
+                  "asset_level_conversions": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "description": "Required for conversion-layer interpretation to exceed medium confidence."
+                  },
+                  "conversion_value": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Recommended for conversion-layer interpretation when available."
+                  },
+                  "conversion_rate": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "cost": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "花費金額（幣別依帳戶設定）"
+                  },
+                  "cpa": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Cost per acquisition"
+                  },
+                  "roas": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Return on ad spend"
+                  },
+                  "placement_breakout": {
+                    "type": "array",
+                    "description": "Optional placement split for Search / Display level interpretation.",
+                    "items": {
+                      "$ref": "#/definitions/placement_metric"
+                    }
+                  },
+                  "association_proxy_conversions": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "僅在 asset granularity 不是 asset_level 時使用的 proxy signal。"
+                  }
+                }
+              },
+              "active_duration_days": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "素材已上線天數。observe downgrade 與 staleness 判斷的必要欄位。"
+              },
+              "status": {
+                "type": "string",
+                "enum": ["enabled", "paused", "removed"]
+              },
+              "google_performance_label": {
+                "type": "string",
+                "enum": ["best", "good", "low", "pending", "--"],
+                "description": "Google Ads 素材成效標籤（PMax 適用）"
+              }
+            }
+          }
+        },
+        "campaign_level_metrics": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["total_impressions", "total_clicks"],
+          "properties": {
+            "total_impressions": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "total_clicks": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "total_ctr": {
+              "type": "number",
+              "minimum": 0
+            },
+            "total_asset_level_conversions": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "total_conversion_value": {
+              "type": "number",
+              "minimum": 0
+            },
+            "total_cost": {
+              "type": "number",
+              "minimum": 0
+            },
+            "average_cpa": {
+              "type": "number",
+              "minimum": 0
+            },
+            "average_roas": {
+              "type": "number",
+              "minimum": 0
+            }
+          }
+        }
+      }
+    },
+    "legacy_message_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Legacy 訊號分三類：protected_phrase / must_include_token / reusable_motif。",
+      "required": [
+        "protected_phrases",
+        "must_include_tokens",
+        "reusable_motifs"
+      ],
+      "properties": {
+        "protected_phrases": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["phrase", "reason", "source", "min_active_assets"],
+            "properties": {
+              "phrase": {
+                "type": "string",
+                "minLength": 1
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source": {
+                "type": "string",
+                "enum": ["pm_decision", "historical_performance", "brand_guideline"]
+              },
+              "min_active_assets": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "preferred_asset_types": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": ["short_headline", "long_headline", "headline", "description"]
+                }
+              }
+            }
+          }
+        },
+        "must_include_tokens": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["token", "reason", "source", "min_active_assets"],
+            "properties": {
+              "token": {
+                "type": "string",
+                "minLength": 1
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source": {
+                "type": "string",
+                "enum": ["pm_decision", "historical_performance", "brand_guideline"]
+              },
+              "min_active_assets": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "preferred_asset_types": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": ["short_headline", "long_headline", "headline", "description"]
+                }
+              }
+            }
+          }
+        },
+        "reusable_motifs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["motif_key", "description", "reason", "source"],
+            "properties": {
+              "motif_key": {
+                "type": "string",
+                "pattern": "^[a-z0-9][a-z0-9_-]*$"
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source": {
+                "type": "string",
+                "enum": ["pm_decision", "historical_performance", "brand_guideline"]
+              }
+            }
+          }
+        }
+      }
+    },
+    "new_drafts": {
+      "type": "array",
+      "description": "待審查的新文案草稿。若提供，skill 會檢查是否繼承高價值語言與 reusable motif。",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["text", "asset_type", "angle_key"],
+        "properties": {
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "asset_type": {
+            "type": "string",
+            "enum": ["short_headline", "long_headline", "headline", "description"]
+          },
+          "angle_key": {
+            "$ref": "#/definitions/angle_key"
+          }
+        }
+      }
+    },
+    "interpretation_config": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "分析參數設定。所有欄位皆有預設值，可不填。",
+      "properties": {
+        "minimum_impressions_threshold": {
+          "type": "integer",
+          "minimum": 0,
+          "default": 1000,
+          "description": "單一素材曝光量低於此值時，預設走 observe 流程。"
+        },
+        "minimum_clicks_threshold": {
+          "type": "integer",
+          "minimum": 0,
+          "default": 60,
+          "description": "點擊量不足時不得給高信心。"
+        },
+        "minimum_conversion_threshold": {
+          "type": "integer",
+          "minimum": 0,
+          "default": 3,
+          "description": "asset-level conversion 低於此值時不得給 high confidence。"
+        },
+        "high_performer_percentile": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "default": 0.75,
+          "description": "高表現素材的百分位數門檻，預設 0.75。"
+        },
+        "data_sufficiency_threshold": {
+          "type": "integer",
+          "minimum": 0,
+          "default": 5000,
+          "description": "Campaign 總曝光量低於此值時，標記整體數據為 insufficient。"
+        },
+        "observe_stale_days": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 21,
+          "description": "active_duration_days 超過此值且仍缺足夠數據時，優先判為 observe_stale。"
+        },
+        "retire_candidate_days": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 35,
+          "description": "active_duration_days 超過此值且仍無法形成有效訊號時，可由 observe_insufficient_data downgrade 為 retire_candidate。"
+        },
+        "decision_metric_priority": {
+          "type": "string",
+          "enum": ["conversion_first", "ctr_first", "hybrid"],
+          "default": "hybrid",
+          "description": "有素材層級 conversion 時的優先決策基準。"
+        }
+      }
+    },
+    "notes": {
+      "type": "string",
+      "description": "補充說明。如活動期間特殊因素、季節性備註等。"
+    }
+  },
+  "definitions": {
+    "angle_key": {
+      "type": "string",
+      "enum": [
+        "product_feel",
+        "risk_reversal",
+        "brand_trust",
+        "entry_value",
+        "life_scene",
+        "concrete_number",
+        "pain_point",
+        "social_proof",
+        "legacy_phrase",
+        "cta_lower_friction"
+      ]
+    },
+    "layer_requirement_click": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "required_fields"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["ready", "partial", "missing"]
+        },
+        "required_fields": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["impressions", "clicks", "ctr", "active_duration_days"]
+          },
+          "minItems": 4
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "layer_requirement_conversion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "required_fields"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["ready", "partial", "missing"]
+        },
+        "required_fields": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "impressions",
+              "clicks",
+              "ctr",
+              "asset_level_conversions",
+              "active_duration_days"
+            ]
+          },
+          "minItems": 5
+        },
+        "recommended_fields": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["conversion_value", "placement_breakout"]
+          }
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "layer_requirement_placement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "required_fields"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["ready", "partial", "missing"]
+        },
+        "required_fields": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["placement_breakout", "impressions", "clicks", "ctr"]
+          },
+          "minItems": 4
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "layer_requirement_duration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "required_fields"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["ready", "partial", "missing"]
+        },
+        "required_fields": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["active_duration_days"]
+          },
+          "minItems": 1
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "placement_metric": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["placement", "impressions", "clicks", "ctr"],
+      "properties": {
+        "placement": {
+          "type": "string",
+          "enum": ["search", "display", "discover", "youtube", "gmail", "other"]
+        },
+        "impressions": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "clicks": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "ctr": {
+          "type": "number",
+          "minimum": 0
+        },
+        "asset_level_conversions": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "conversion_value": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}

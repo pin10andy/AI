@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "generated_by": "claude",
+    "generated_at": "2026-03-13T23:25:00+08:00",
+    "sources": [
+      {
+        "type": "document",
+        "filename": "ai/brand/master-brand.yaml",
+        "description": "Checked baseline state before extraction; name, tagline, industry, visual, and target_audience fields were all empty."
+      },
+      {
+        "type": "website",
+        "url": "https://www.lovefu.tw/pages/about-lovefu",
+        "description": "品牌精神頁：品牌願景、使命宣言、品牌語氣與價值主張。"
+      },
+      {
+        "type": "website",
+        "url": "https://www.lovefu.tw/pages/lovefuhome",
+        "description": "睡眠體驗店頁：服務流程（量脖子、調整枕頭、沈浸體驗）、品牌語氣線索、慵懶守則。"
+      },
+      {
+        "type": "website",
+        "url": "https://www.lovefu.tw/pages/lovefu-certificate",
+        "description": "SGS 安心認證頁：產品安全認證清單、信任語言風格。"
+      },
+      {
+        "type": "website",
+        "url": "https://www.lovefu.tw/products/hillbed",
+        "description": "山丘樂眠床產品頁：目標受眾與痛點訊號、產品文案語氣。"
+      }
+    ]
+  },
+  "extracted": {
+    "name": {
+      "value": "LOVEFU大島樂眠",
+      "source": "https://www.lovefu.tw/pages/about-lovefu",
+      "confidence": "high"
+    },
+    "tagline": {
+      "value": "晚安！歡迎回家",
+      "source": "https://www.lovefu.tw/pages/about-lovefu",
+      "confidence": "high"
+    },
+    "industry": {
+      "value": "睡眠寢具與睡眠體驗零售",
+      "source": "https://www.lovefu.tw/pages/about-lovefu ; https://www.lovefu.tw/pages/lovefuhome",
+      "confidence": "high"
+    },
+    "voice": {
+      "tone": [
+        { "value": "warm", "source": "https://www.lovefu.tw/pages/about-lovefu" },
+        { "value": "approachable", "source": "https://www.lovefu.tw/pages/lovefuhome" },
+        { "value": "comfort-focused", "source": "https://www.lovefu.tw/pages/about-lovefu" },
+        { "value": "trustworthy", "source": "https://www.lovefu.tw/pages/lovefu-certificate" }
+      ],
+      "personality": [
+        { "value": "溫柔陪伴", "source": "https://www.lovefu.tw/pages/about-lovefu" },
+        { "value": "慵懶放鬆", "source": "https://www.lovefu.tw/pages/lovefuhome" },
+        { "value": "安心可靠", "source": "https://www.lovefu.tw/pages/lovefu-certificate" }
+      ],
+      "do": [
+        { "value": "使用回家、放下疲憊、安心入睡、先躺下再努力等陪伴式語言", "source": "https://www.lovefu.tw/pages/about-lovefu" },
+        { "value": "強調量脖子、試躺體驗、SGS認證、安心睡計畫等具體信任證據", "source": "https://www.lovefu.tw/pages/lovefuhome ; https://www.lovefu.tw/pages/lovefu-certificate" },
+        { "value": "聚焦睡眠改善的舒適感受與結果，而非單純產品規格", "source": "https://www.lovefu.tw/products/hillbed" }
+      ],
+      "do_not": [
+        { "value": "避免廉價搶購、貪小便宜式的促銷語氣（慵懶守則明確禁止）", "source": "https://www.lovefu.tw/pages/lovefuhome" },
+        { "value": "避免將品牌定位為單純賣寢具，而忽略完整睡眠體驗的敘事", "source": "https://www.lovefu.tw/pages/about-lovefu" },
+        { "value": "避免使用無法驗證的誇大健康宣稱", "source": "https://www.lovefu.tw/pages/lovefu-certificate" }
+      ]
+    },
+    "visual": {
+      "primary_color": {
+        "value": "",
+        "source": "無法從網站內容直接提取可靠的 HEX 色碼"
+      },
+      "secondary_color": {
+        "value": "",
+        "source": "無法從網站內容直接提取可靠的 HEX 色碼"
+      },
+      "font_family": {
+        "value": "",
+        "source": "無法從網站內容確認品牌指定字型"
+      }
+    },
+    "target_audience": {
+      "segments": [
+        { "value": "有睡眠困擾、渴望提升睡眠品質的成人", "source": "https://www.lovefu.tw/pages/about-lovefu" },
+        { "value": "久坐腰背緊繃、需要被穩定支撐的人", "source": "https://www.lovefu.tw/products/hillbed" },
+        { "value": "有肩頸與頸椎適配需求、想找合適枕頭的人", "source": "https://www.lovefu.tw/pages/lovefuhome" }
+      ],
+      "pain_points": [
+        { "value": "難以真正放鬆入睡，睡不深、無法一覺到天亮", "source": "https://www.lovefu.tw/pages/about-lovefu" },
+        { "value": "久坐造成腰背疲憊緊繃，需要被安撫和托住", "source": "https://www.lovefu.tw/products/hillbed" },
+        { "value": "不知道如何挑選適合自己身型與頸椎的枕頭或寢具", "source": "https://www.lovefu.tw/pages/lovefuhome" },
+        { "value": "擔心寢具材質安全性（甲醛、重金屬、螢光劑）", "source": "https://www.lovefu.tw/pages/lovefu-certificate" }
+      ],
+      "desired_outcomes": [
+        { "value": "每天都能安心入睡，一覺到天亮", "source": "https://www.lovefu.tw/pages/about-lovefu" },
+        { "value": "讓身體先被接住，再慢慢進入放鬆睡眠", "source": "https://www.lovefu.tw/products/hillbed" },
+        { "value": "睡得安心自由，回到舒服的生活節奏", "source": "https://www.lovefu.tw/pages/about-lovefu" }
+      ]
+    }
+  },
+  "gaps": [
+    {
+      "field": "Primary color",
+      "yaml_path": "brand.visual.primary_color",
+      "required": false,
+      "reason": "網站內容未顯示可靠的 HEX 色碼，需使用者提供。"
+    },
+    {
+      "field": "Secondary color",
+      "yaml_path": "brand.visual.secondary_color",
+      "required": false,
+      "reason": "網站內容未顯示可靠的 HEX 色碼，需使用者提供。"
+    },
+    {
+      "field": "Font family",
+      "yaml_path": "brand.visual.font_family",
+      "required": false,
+      "reason": "網站未明確指定品牌字型名稱。"
+    }
+  ],
+  "completion_rate": 77
+}

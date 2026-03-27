@@ -1,0 +1,63 @@
+# Claude Ads creative pipeline analysis
+
+task:
+  task_id: "gads-arch-002"
+  title: "Claude Ads Creative Pipeline Analysis and Integration Design"
+  status: validated
+  owner: codex
+  created_at: "2026-03-21"
+  updated_at: "2026-03-21"
+
+  goal: >
+    分析外部 Claude Ads creative pipeline 的實際 stages、輸入輸出與品質門檻，
+    並判斷它最適合如何整合進目前 workspace 的 Google Ads copy pipeline。
+
+  background: >
+    先前已完成 Claude Ads Skill 的 framework-fit mapping，
+    但尚未單獨拆解其 creative pipeline 細節。
+    需要進一步判斷它究竟是 production pipeline、audit pipeline，
+    還是更適合做 upstream / downstream sidecar。
+
+  references:
+    brand: "ai/brand/master-brand.yaml"
+    playbook: "ai/playbooks/google-ads-creative-interpretation.md"
+    schema: "ai/schemas/creative-performance-output.schema.json"
+    rubric: "ai/evals/creative-performance-rubric.yaml"
+    related_tasks:
+      - "gads-arch-001"
+      - "gads-pipeline-012"
+      - "gads-pipeline-013"
+      - "gads-pipeline-014"
+
+  deliverables:
+    - description: "Creative pipeline analysis report"
+      format: markdown
+      destination: "ai/reports/2026-03-21-claude-ads-creative-pipeline-analysis.md"
+    - description: "Validation record"
+      format: markdown
+      destination: "ai/validation/2026-03-21-claude-ads-creative-pipeline-analysis.md"
+    - description: "Change record"
+      format: markdown
+      destination: "ai/changes/2026-03-21-claude-ads-creative-pipeline-analysis.md"
+
+  validation:
+    method: manual
+    rubric: "ai/evals/creative-performance-rubric.yaml"
+    passing_criteria: >
+      報告需明確回答 external creative pipeline 的本質、
+      與現有 interpreter/builder/packager 的差異、
+      最佳整合位置、不可直接合併的部分，
+      並提出 MVP integration shape。
+    validation_file: "ai/validation/2026-03-21-claude-ads-creative-pipeline-analysis.md"
+    governance_check: "pass"
+
+  notes: >
+    本任務只做分析與設計，不新增 skill、不改 schema、不接 MCP。
+
+  metadata:
+    created_by: codex
+    compatible_agents:
+      - claude
+      - codex
+      - gemini
+      - openclaw

@@ -1,0 +1,140 @@
+# storage-map.yaml
+# Canonical storage map for all Google Ads artifacts
+# This file defines WHERE each artifact type must be stored.
+# For naming rules, see: ai/policies/artifact-naming-policy.md
+# For write rules, see: ai/policies/artifact-write-policy.md
+
+version: "1.0"
+created_at: "2026-03-16"
+scope: google-ads
+
+# ─────────────────────────────────────────────
+# Path template
+# ─────────────────────────────────────────────
+# Official outputs follow this hierarchy:
+#   ai/outputs/google-ads/{brand}/{product}/{lane}/{artifact_type}/
+#
+# Lane format: {message_scope}-{goal}-{campaign_type}
+#   Example: evergreen-purchase-pmax
+#
+# All path segments use kebab-case, lowercase, ASCII only.
+
+path_template: "ai/outputs/google-ads/{brand}/{product}/{lane}/{artifact_type}/"
+
+# ─────────────────────────────────────────────
+# Artifact type → storage path mapping
+# ─────────────────────────────────────────────
+
+artifact_types:
+
+  golden:
+    description: "已核可的 golden output（唯一正式版本）"
+    path_suffix: "golden/"
+    immutable: true
+    examples:
+      - "ai/outputs/google-ads/lovefu/hillbed/evergreen-purchase-pmax/golden/lovefu-pmax-hillbed.output.json"
+      - "ai/outputs/google-ads/lovefu/hillbed/evergreen-purchase-pmax/golden/lovefu-pmax-hillbed.output.md"
+
+  approved-reference:
+    description: "已核可的參考版本（可有多份，帶序號）"
+    path_suffix: "approved-references/"
+    immutable: true
+    examples:
+      - "ai/outputs/google-ads/lovefu/hillbed/evergreen-purchase-pmax/approved-references/lovefu-pmax-hillbed.ref-03.output.json"
+
+  pipeline:
+    description: "Pipeline 階段正式產出（按 task_id 分目錄）"
+    path_suffix: "pipeline/{task_id}/"
+    immutable: false
+    stage_names:
+      - input          # 輸入快照
+      - builder        # ad-copy-builder / google-ads-writer 輸出
+      - interpreter    # creative-performance-interpreter 原始輸出
+      - interpretation # creative-performance-interpreter 結構化分析
+      - portfolio      # ad-copy-portfolio-builder 輸出
+      - packager       # upload-packager 輸出
+    examples:
+      - "ai/outputs/google-ads/lovefu/hillbed/evergreen-purchase-pmax/pipeline/2026-03-15-pipeline-v1-2-uat/builder.json"
+      - "ai/outputs/google-ads/lovefu/hillbed/evergreen-purchase-pmax/pipeline/2026-03-15-pipeline-v1-2-uat/interpreter.json"
+      - "ai/outputs/google-ads/lovefu/hillbed/evergreen-purchase-pmax/pipeline/2026-03-15-pipeline-v1-2-uat/packager.json"
+      - "ai/outputs/google-ads/lovefu/hillbed/evergreen-purchase-pmax/pipeline/2026-03-15-performance-interpretation/interpretation.json"
+
+  deliverable:
+    description: "最終交付物（上稿用 xlsx、CSV 等）"
+    path_suffix: "deliverables/"
+    immutable: false
+    examples:
+      - "ai/outputs/google-ads/lovefu/hillbed/evergreen-purchase-pmax/deliverables/2026-03-15-rsa-copy.deliverable.xlsx"
+
+  # dry-run: REMOVED (2026-03-16)
+  # Cross-agent validation outputs are now classified as approved-reference.
+  # There is no separate "dry-run" category. Scratch/test outputs go to scratch/google-ads/.
+
+# ─────────────────────────────────────────────
+# Canonical inputs (read-only references)
+# ─────────────────────────────────────────────
+
+canonical_inputs:
+  briefs:
+    path: "ai/inputs/briefs/"
+    description: "核可的 brief JSON 檔案（不可覆寫，版本遞增）"
+    policy: "見 ai/registry/canonical-briefs.yaml"
+  schemas:
+    path: "ai/schemas/"
+    description: "輸入/輸出 JSON Schema"
+  brand:
+    path: "ai/brand/"
+    description: "品牌定義 YAML"
+
+# ─────────────────────────────────────────────
+# Validation & reports (existing locations)
+# ─────────────────────────────────────────────
+
+validation:
+  path: "ai/validation/"
+  naming: "YYYY-MM-DD-{slug}.md"
+  description: "驗證報告與 regression baseline"
+
+reports:
+  path: "ai/reports/"
+  naming: "YYYY-MM-DD-{slug}.md"
+  description: "分析、審核、漂移檢查報告"
+
+# ─────────────────────────────────────────────
+# Scratch / temp (NOT under ai/outputs/)
+# ─────────────────────────────────────────────
+
+scratch:
+  path: "scratch/google-ads/"
+  description: "臨時檔案、測試輸出、探索性產出"
+  policy: |
+    - 不納入 artifact registry
+    - 不保證留存，可隨時清理
+    - Agent 測試、批次試跑、debug 輸出放這裡
+    - 禁止從 scratch 直接引用為正式產出
+
+# ─────────────────────────────────────────────
+# Existing lanes (registered)
+# ─────────────────────────────────────────────
+
+registered_lanes:
+  - lane_id: "evergreen-purchase-pmax"
+    brand: lovefu
+    product: hillbed
+    full_path: "ai/outputs/google-ads/lovefu/hillbed/evergreen-purchase-pmax/"
+    supported_matrix_ref: "hillbed-purchase-pmax"
+    status: production
+  - lane_id: "evergreen-store-visit-pmax"
+    brand: lovefu
+    product: experience-store
+    full_path: "ai/outputs/google-ads/lovefu/experience-store/evergreen-store-visit-pmax/"
+    supported_matrix_ref: "draft-candidate-only"
+    status: candidate
+
+# ─────────────────────────────────────────────
+# How to add a new lane
+# ─────────────────────────────────────────────
+# 1. 在 supported-matrix.yaml 新增 lane entry
+# 2. 在本檔 registered_lanes 新增對應路徑
+# 3. 建立目錄結構：golden/, approved-references/, pipeline/, deliverables/
+# 4. 在 artifacts.yaml 登記首批 artifact

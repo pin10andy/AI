@@ -1,0 +1,62 @@
+# Hillbed Tryout Booking PMax Initialization
+# 初始化山丘樂眠床第二條 lane：試躺預約導向，但尚未納入 supported capability
+
+task:
+  task_id: "lane-002"
+  title: "Hillbed Tryout Booking PMax Initialization"
+  status: validated
+  owner: codex
+  created_at: "2026-03-15"
+  updated_at: "2026-03-15"
+
+  goal: >
+    以既有 purchase canonical brief 為母本，初始化 hillbed 的 tryout booking lane，
+    明確定義與 purchase PMax 的差異、建立 draft brief 與 validation plan，
+    但不把這條 lane 提前登錄進 supported-matrix。
+
+  background: >
+    ADR-002 已確立擴張順序為「先同產品擴 goal，再跨產品」。
+    Hillbed purchase PMax 已正式 supported，因此下一條最低風險的候選 lane
+    是同產品的試躺預約導向 campaign。這輪只做初始化，不做 production 化。
+
+  references:
+    brand: "ai/brand/master-brand.yaml"
+    playbook: "ai/playbooks/google-ads-pmax.md"
+    schema: "ai/inputs/google-ads-brief.schema.json"
+    rubric: "ai/evals/ads-rubric.yaml"
+    related_adr: "ai/decisions/ADR-002-productization-v1-scope.md"
+    related_tasks:
+      - "prod-001"
+      - "gads-copy-004"
+
+  deliverables:
+    - description: "Draft brief forked from purchase canonical brief"
+      format: json
+      destination: "ai/inputs/briefs/lovefu-pmax-hillbed-tryout-booking-draft.json"
+    - description: "Candidate lane spec for tryout booking"
+      format: markdown
+      destination: "ai/specs/lovefu-hillbed-tryout-booking-pmax-lane-spec.md"
+    - description: "Validation plan before this lane can be supported"
+      format: markdown
+      destination: "ai/reports/2026-03-15-hillbed-tryout-booking-validation-plan.md"
+
+  validation:
+    method: automated + manual
+    rubric: ""
+    passing_criteria: >
+      Draft brief 通過 brief schema validation，
+      lane spec 明確列出與 purchase lane 的差異，
+      且 supported-matrix 維持不變。
+    validation_file: "ai/validation/2026-03-15-hillbed-tryout-booking-init.md"
+
+  notes: >
+    此任務不建立 output、不新增 supported-matrix entry、
+    不覆寫 ai/inputs/briefs/lovefu-pmax-hillbed.json。
+
+  metadata:
+    created_by: codex
+    compatible_agents:
+      - claude
+      - codex
+      - gemini
+      - openclaw

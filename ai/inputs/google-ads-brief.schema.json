@@ -1,0 +1,298 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Google Ads Brief",
+  "description": "Fixed input contract for the Search RSA copywriting MVP.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "brief_id",
+    "brand_name",
+    "product_name",
+    "campaign_type",
+    "goal",
+    "landing_page_summary",
+    "target_audience",
+    "keyword_cluster",
+    "usp",
+    "offers",
+    "constraints",
+    "tone",
+    "forbidden_claims"
+  ],
+  "properties": {
+    "brief_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-_]*$"
+    },
+    "brand_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "product_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "campaign_type": {
+      "type": "string",
+      "enum": ["search_rsa", "pmax"]
+    },
+    "goal": {
+      "type": "string",
+      "enum": ["lead", "purchase", "store_visit", "product_discovery"]
+    },
+    "landing_page_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["hero_message", "primary_cta", "supporting_points"],
+      "properties": {
+        "hero_message": {
+          "type": "string",
+          "minLength": 1
+        },
+        "primary_cta": {
+          "type": "string",
+          "minLength": 1
+        },
+        "supporting_points": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 5,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "target_audience": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["segments", "pain_points", "desired_outcomes"],
+      "properties": {
+        "segments": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "pain_points": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "desired_outcomes": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "keyword_cluster": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["primary_keywords", "secondary_keywords", "negative_themes"],
+      "properties": {
+        "primary_keywords": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 8,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "secondary_keywords": {
+          "type": "array",
+          "maxItems": 12,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "negative_themes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "usp": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 5,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "offers": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["must_include", "must_avoid", "character_policy"],
+      "properties": {
+        "must_include": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "must_avoid": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "character_policy": {
+          "type": "object"
+        }
+      }
+    },
+    "tone": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "forbidden_claims": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "seed_angles": {
+      "type": "array",
+      "maxItems": 3,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "campaign_type": {
+            "const": "search_rsa"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "constraints": {
+            "properties": {
+              "character_policy": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "headline_count",
+                  "headline_max",
+                  "description_count",
+                  "description_max"
+                ],
+                "properties": {
+                  "headline_count": {
+                    "type": "integer",
+                    "const": 15
+                  },
+                  "headline_max": {
+                    "type": "integer",
+                    "const": 30
+                  },
+                  "description_count": {
+                    "type": "integer",
+                    "const": 4
+                  },
+                  "description_max": {
+                    "type": "integer",
+                    "const": 90
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "campaign_type": {
+            "const": "pmax"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "constraints": {
+            "properties": {
+              "character_policy": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "short_headline_count",
+                  "short_headline_max",
+                  "long_headline_count",
+                  "long_headline_max",
+                  "description_count",
+                  "description_max"
+                ],
+                "properties": {
+                  "short_headline_count": {
+                    "type": "integer",
+                    "const": 15
+                  },
+                  "short_headline_max": {
+                    "type": "integer",
+                    "const": 30
+                  },
+                  "long_headline_count": {
+                    "type": "integer",
+                    "const": 5
+                  },
+                  "long_headline_max": {
+                    "type": "integer",
+                    "const": 90
+                  },
+                  "description_count": {
+                    "type": "integer",
+                    "const": 5
+                  },
+                  "description_max": {
+                    "type": "integer",
+                    "const": 90
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+# Experience Store PMax Upload Package
+# 把三店合併 booking PMax 草稿整理成投手可直接採用的上稿視角素材包。
+
+task:
+  task_id: "2026-03-16-experience-store-pmax-upload-package"
+  title: "Experience Store PMax Upload Package"
+  status: validated
+  owner: codex
+  created_at: "2026-03-16"
+  updated_at: "2026-03-16"
+
+  goal: >
+    把已完成的 booking PMax draft 與 LP alignment 結論，
+    整理成 media buyer 可直接使用的 upload-view package，
+    明確拆出主力先上、測試保留與先不要上的 legacy 素材。
+  background: >
+    使用者已接受 booking PMax 草稿與 LP alignment review，
+    下一步需要的是投手視角的 handoff，而不是再看一次 builder 報告。
+    由於目前 upstream 仍是三角度 draft，不適合硬套完整 v1.2 packager JSON，
+    這輪採 governed markdown deliverable，保留 pipeline input snapshot 與 validation。
+
+  references:
+    brand: "ai/brand/master-brand.yaml"
+    playbook: "ai/skill-src/google-ads/upload-packager/SKILL.md"
+    schema: ""
+    rubric: "ai/evals/google-ads-pmax-human-review.md"
+    related_adr: "ai/decisions/ADR-002-productization-v1-scope.md"
+    related_tasks:
+      - "2026-03-16-experience-store-pmax-booking-refresh"
+      - "2026-03-16-experience-store-lp-alignment-review"
+
+  deliverables:
+    - description: "Upload-package input snapshot"
+      format: json
+      destination: "ai/outputs/google-ads/lovefu/experience-store/evergreen-store-visit-pmax/pipeline/2026-03-16-experience-store-pmax-upload-package/input.json"
+    - description: "Internal packager markdown"
+      format: markdown
+      destination: "ai/outputs/google-ads/lovefu/experience-store/evergreen-store-visit-pmax/pipeline/2026-03-16-experience-store-pmax-upload-package/packager.md"
+    - description: "Media-buyer deliverable markdown"
+      format: markdown
+      destination: "ai/outputs/google-ads/lovefu/experience-store/evergreen-store-visit-pmax/deliverables/2026-03-16-experience-store-pmax-upload-package.deliverable.md"
+
+  validation:
+    method: automated + manual
+    rubric: "ai/evals/google-ads-pmax-human-review.md"
+    passing_criteria: >
+      upload package 必須明確拆出 primary / test / do-not-upload；
+      primary + test 的總數需與 builder 的 15 short / 5 long / 5 descriptions 對齊；
+      recommended LP 與 risky LP 必須明確；
+      governance_check=pass。
+    validation_file: "ai/validation/2026-03-16-experience-store-pmax-upload-package.md"
+    governance_check: pass
+
+  notes: >
+    本任務產出的是 handoff package，不是新的文案生成輪次。
+    內容仍以既有 builder / LP alignment 為唯一來源，不新增未驗證的 claim。
+
+  metadata:
+    created_by: codex
+    compatible_agents:
+      - claude
+      - codex
+      - gemini
+      - openclaw

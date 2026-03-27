@@ -1,0 +1,177 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Google Ads PMax Output",
+  "description": "Exact output contract for the PMax copywriting workflow.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "task_id",
+    "brief_id",
+    "campaign_type",
+    "brand_name",
+    "product_name",
+    "generated_by",
+    "generated_at",
+    "angles",
+    "short_headlines",
+    "long_headlines",
+    "descriptions",
+    "compliance_notes"
+  ],
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "brief_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "campaign_type": {
+      "type": "string",
+      "enum": ["pmax"]
+    },
+    "brand_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "product_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generated_by": {
+      "type": "string",
+      "enum": ["claude", "codex", "gemini", "openclaw"]
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "angles": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["key", "label", "rationale"],
+        "properties": {
+          "key": {
+            "type": "string",
+            "pattern": "^[a-z0-9_-]+$"
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "rationale": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "short_headlines": {
+      "type": "array",
+      "minItems": 15,
+      "maxItems": 15,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["text", "angle_key"],
+        "properties": {
+          "text": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 30
+          },
+          "angle_key": {
+            "type": "string",
+            "pattern": "^[a-z0-9_-]+$"
+          },
+          "keyword_used": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "long_headlines": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["text", "angle_key"],
+        "properties": {
+          "text": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 90
+          },
+          "angle_key": {
+            "type": "string",
+            "pattern": "^[a-z0-9_-]+$"
+          }
+        }
+      }
+    },
+    "descriptions": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["text", "angle_key"],
+        "properties": {
+          "text": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 90
+          },
+          "angle_key": {
+            "type": "string",
+            "pattern": "^[a-z0-9_-]+$"
+          }
+        }
+      }
+    },
+    "compliance_notes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "manual_review_required",
+        "checks_passed",
+        "policy_risks",
+        "brand_risks"
+      ],
+      "properties": {
+        "manual_review_required": {
+          "type": "boolean"
+        },
+        "checks_passed": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "policy_risks": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "brand_risks": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}

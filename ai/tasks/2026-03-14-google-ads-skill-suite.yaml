@@ -1,0 +1,68 @@
+task:
+  task_id: "gads-001"
+  title: "Google Ads AI Skill Suite — Phase 1"
+  status: validated          # proposed / in_progress / blocked / validated / shipped / archived
+  owner: claude
+  created_at: "2026-03-14"
+  updated_at: "2026-03-14"
+
+  goal: >
+    為 LOVEFU 大島樂眠建立 Google Ads 自動化分析技能套件，
+    以手動 CSV 輸入為起點，搭配 Claude 語意判斷，
+    降低搜尋字詞清理、廣告效益審查、廣告文案產製等重複性工作的人工負擔。
+
+  background: >
+    LOVEFU 廣告帳戶跑了 14 個月的 PMax + 搜尋廣告，
+    搜尋字詞報表超過 87,000 筆，人工審查效率極低。
+    規劃分五個技能分階段處理：量化預篩 → 效益審查 → 關鍵字架構 → 文案產製 → 落地頁對齊。
+
+  references:
+    brand: "ai/brand/master-brand.yaml"
+    playbook: ""
+    schema: ""
+    rubric: ""
+    related_adr: ""
+    related_tasks: []
+
+  deliverables:
+    - description: "search-terms-cleaner 技能（含 Python 分析腳本）"
+      format: "skill-dir"
+      destination: "ai/skill-src/google-ads/search-terms-cleaner/"
+
+    - description: "performance-reviewer 技能（含 Python 分析腳本）"
+      format: "skill-dir"
+      destination: "ai/skill-src/google-ads/performance-reviewer/"
+
+    - description: "keyword-architect 技能（含分組指南）"
+      format: "skill-dir"
+      destination: "ai/skill-src/google-ads/keyword-architect/"
+
+    - description: "ad-copy-builder 技能（含 RSA 驗證腳本）"
+      format: "skill-dir"
+      destination: "ai/skill-src/google-ads/ad-copy-builder/"
+
+    - description: "lp-alignment-auditor 技能（含對齊標準文件）"
+      format: "skill-dir"
+      destination: "ai/skill-src/google-ads/lp-alignment-auditor/"
+
+  validation:
+    method: manual
+    rubric: ""
+    passing_criteria: >
+      search_terms_analyzer.py 能正確解析真實 Google Ads CSV，
+      輸出否定字候選、浪費字詞、建議廣告群組等四類分類報告，
+      無欄位識別錯誤、無小計行混入。
+    validation_file: "ai/validation/2026-03-14-google-ads-csv-test.md"
+
+  notes: >
+    Phase 1 以 search-terms-cleaner 為主要驗收對象，其餘四個技能架構完整但尚未以真實 CSV 驗證。
+    keyword_analyzer.py（keyword-architect 技能）尚未建立，列為 Phase 2 待辦。
+    其他品牌（無厘頭動畫、青寓）的 master-brand.yaml 資料尚未填入。
+
+  metadata:
+    created_by: claude
+    compatible_agents:
+      - claude
+      - codex
+      - gemini
+      - openclaw

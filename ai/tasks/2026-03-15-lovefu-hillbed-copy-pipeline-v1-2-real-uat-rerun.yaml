@@ -1,0 +1,73 @@
+# LOVEFU 山丘樂眠床 Google Ads Copy Pipeline v1.2 真實 UAT Rerun
+
+task:
+  task_id: "gads-pipeline-013"
+  title: "LOVEFU 山丘樂眠床 Google Ads Copy Pipeline v1.2 Real UAT Rerun"
+  status: validated
+  owner: codex
+  created_at: "2026-03-15"
+  updated_at: "2026-03-16"
+
+  goal: >
+    使用真實 LOVEFU / 山丘樂眠床素材資源關聯報表，
+    端到端重跑 creative-performance-interpreter、
+    ad-copy-portfolio-builder、upload-packager 三層 v1.2 pipeline，
+    並產出可追溯的 UAT artifact 與驗證紀錄。
+
+  background: >
+    既有 v1.2 validation 仍屬 sample rerun。
+    這次使用真實 CSV 匯出驗證：
+    richer input layers 是否真的被 live export 支撐、
+    observe 子類別是否影響 builder routing、
+    candidate automation / safer rewrite / angle taxonomy
+    是否能在真實弱資料條件下維持三層串接。
+
+  references:
+    brand: "ai/brand/master-brand.yaml"
+    playbook: "ai/playbooks/google-ads-creative-interpretation.md"
+    related_task: "ai/tasks/2026-03-15-google-ads-copy-pipeline-v1-2.yaml"
+    source_csv: "/Users/andychou/Downloads/素材資源關聯報表 (1).csv"
+    validation_file: "ai/validation/2026-03-15-lovefu-hillbed-copy-pipeline-v1-2-real-uat-rerun.md"
+
+  deliverables:
+    - description: "Runtime-normalized real UAT input"
+      format: json
+      destination: "ai/outputs/lovefu-hillbed-copy-pipeline-v1-2-real-uat.input.json"
+    - description: "Interpreter real UAT artifact"
+      format: json
+      destination: "ai/outputs/lovefu-hillbed-copy-pipeline-v1-2-real-uat.interpreter.json"
+    - description: "Builder real UAT artifact"
+      format: json
+      destination: "ai/outputs/lovefu-hillbed-copy-pipeline-v1-2-real-uat.builder.json"
+    - description: "Packager real UAT artifact"
+      format: json + markdown
+      destination: "ai/outputs/lovefu-hillbed-copy-pipeline-v1-2-real-uat.packager.*"
+    - description: "Reproducible rerun script"
+      format: python
+      destination: "scripts/google_ads_copy_pipeline_v12_real_uat_rerun.py"
+    - description: "Validation report"
+      format: markdown
+      destination: "ai/validation/2026-03-15-lovefu-hillbed-copy-pipeline-v1-2-real-uat-rerun.md"
+
+  validation:
+    method: schema + manual UAT review
+    passing_criteria: >
+      runtime input 與三層 artifact 全數 schema pass，
+      final pack 收斂到真實 RSA 規模，
+      retire gap 皆有 replacement，
+      safer rewrite 能進 final pack 與 watchlist，
+      並且 source data 缺失 / warning 全數顯式保留。
+    validation_file: "ai/validation/2026-03-15-lovefu-hillbed-copy-pipeline-v1-2-real-uat-rerun.md"
+
+  notes: >
+    本次重點是「真實弱資料 export」下的 pipeline 韌性，
+    不處理 Google Ads API 上稿，也不宣稱真實轉換 uplift。
+
+  metadata:
+    created_by: codex
+    generated_by: codex
+    compatible_agents:
+      - claude
+      - codex
+      - gemini
+      - openclaw

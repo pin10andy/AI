@@ -1,0 +1,79 @@
+# Packager to Creative Auditor Adapter and Sample Preflight Audit
+
+task:
+  task_id: "gads-creative-audit-002"
+  title: "Packager to Creative Auditor Adapter and Sample Preflight Audit"
+  status: validated
+  owner: codex
+  created_at: "2026-03-23"
+  updated_at: "2026-03-23"
+
+  goal: >
+    將 upload-packager v1.2 output 正式接入 creative-auditor sidecar，
+    使 workflow 能在 packager 後自動進入 preflight review，
+    並用既有 LoveFu hillbed packager artifact 做一次 sample audit。
+
+  background: >
+    前一階段已建立 creative-auditor 的 schema、playbook、skill 與 ADR，
+    但尚未有 packager -> creative-auditor 的實際 handoff bridge。
+    若沒有 adapter，PM / 投手仍需手動重組 packager output，sidecar 無法真正進 workflow。
+
+  references:
+    brand: "ai/brand/master-brand.yaml"
+    playbook: "ai/playbooks/google-ads-creative-audit.md"
+    schema: "ai/schemas/google-ads-creative-audit-output.schema.json"
+    rubric: "ai/evals/google-ads-creative-audit-rubric.yaml"
+    related_adr: "ai/decisions/ADR-006-google-ads-creative-auditor-sidecar.md"
+    related_tasks:
+      - "gads-creative-audit-001"
+      - "gads-pipeline-013"
+
+  deliverables:
+    - description: "Packager to creative-audit adapter script"
+      format: file
+      destination: "scripts/google_ads_packager_to_creative_audit.py"
+    - description: "Adapter integration report"
+      format: markdown
+      destination: "ai/reports/2026-03-23-packager-to-creative-auditor-adapter.md"
+    - description: "Sample preflight audit report"
+      format: markdown
+      destination: "ai/reports/2026-03-23-lovefu-hillbed-packager-preflight-audit.md"
+    - description: "Creative audit playbook update"
+      format: markdown
+      destination: "ai/playbooks/google-ads-creative-audit.md"
+    - description: "Creative auditor skill update"
+      format: markdown
+      destination: "ai/skill-src/google-ads/creative-auditor/SKILL.md"
+    - description: "Upload packager skill handoff update"
+      format: markdown
+      destination: "ai/skill-src/google-ads/upload-packager/SKILL.md"
+    - description: "Validation record"
+      format: markdown
+      destination: "ai/validation/2026-03-23-packager-to-creative-auditor-adapter.md"
+    - description: "Change record"
+      format: markdown
+      destination: "ai/changes/2026-03-23-packager-to-creative-auditor-adapter.md"
+
+  validation:
+    method: automated + manual
+    rubric: "ai/evals/google-ads-creative-audit-rubric.yaml"
+    passing_criteria: >
+      Adapter script 可從既有 packager.json 正規化出 creative-audit input，
+      並生成完整 audit output 與 markdown report；
+      skill sync 完成、governance check 通過，
+      且 sample audit 能提供 PM / 投手可執行的 preflight 結論。
+    validation_file: "ai/validation/2026-03-23-packager-to-creative-auditor-adapter.md"
+    governance_check: "pass"
+
+  notes: >
+    本任務不新增 ai/outputs/google-ads 下的正式 creative-audit stage；
+    adapter 與 sample run 先落在 scripts / reports / validation，
+    等 workflow 穩定後再評估是否升級成正式 pipeline stage。
+
+  metadata:
+    created_by: codex
+    compatible_agents:
+      - claude
+      - codex
+      - gemini
+      - openclaw

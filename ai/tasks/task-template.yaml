@@ -1,0 +1,45 @@
+# task-template.yaml
+# 通用任務模板 — 所有 agent 使用此格式來定義和執行任務
+# 命名規則：YYYY-MM-DD-short-name.yaml
+# 複製此模板後填入具體內容
+
+task:
+  task_id: ""                         # 唯一 ID，如 "rnd-001" 或 "gads-rsa-001"
+  title: ""                           # 任務標題（簡短描述）
+  status: proposed                    # proposed / in_progress / blocked / validated / shipped / archived
+  owner: ""                           # 執行者或負責 agent（claude / codex / gemini / openclaw / human）
+  created_at: ""                      # 建立日期 YYYY-MM-DD
+  updated_at: ""                      # 最後更新日期
+
+  goal: ""                            # 這個任務要解決什麼問題
+  background: ""                      # 背景脈絡，為什麼需要這項工作
+
+  references:                         # 執行此任務需要讀取的共用檔案
+    brand: "ai/brand/master-brand.yaml"
+    playbook: ""                      # 如 "ai/playbooks/google-ads.md"
+    schema: ""                        # 如 "ai/schemas/ads-asset.schema.json"
+    rubric: ""                        # 如 "ai/evals/ads-rubric.yaml"
+    related_adr: ""                   # 如 "ai/decisions/ADR-001-xxx.md"
+    related_tasks: []                 # 相關任務 ID
+
+  deliverables:                       # 預期產出
+    - description: ""
+      format: ""                      # json / markdown / yaml / file
+      destination: ""                 # 輸出路徑
+
+  validation:                         # 驗證方式
+    method: ""                        # manual / automated / cross-agent
+    rubric: ""                        # 使用哪個 rubric 評估
+    passing_criteria: ""              # 通過標準
+    validation_file: ""               # 對應的驗證紀錄路徑
+    governance_check: ""              # Google Ads 任務必填：python3 scripts/check_artifact_governance.py 結果 (pass/fail)
+
+  notes: ""                           # 補充說明、備忘
+
+  metadata:
+    created_by: ""
+    compatible_agents:
+      - claude
+      - codex
+      - gemini
+      - openclaw

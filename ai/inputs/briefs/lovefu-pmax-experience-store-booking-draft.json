@@ -1,0 +1,100 @@
+{
+  "brief_id": "lovefu-pmax-experience-store-booking-draft",
+  "brand_name": "LOVEFU大島樂眠",
+  "product_name": "睡眠體驗店預約",
+  "campaign_type": "pmax",
+  "goal": "store_visit",
+  "landing_page_summary": {
+    "hero_message": "先預約體驗，再慢慢找到適合自己的睡感",
+    "primary_cta": "預約體驗",
+    "supporting_points": [
+      "體驗店可安排沉浸式試躺與睡眠顧問陪伴",
+      "量脖子、試枕、試躺可同場比較，讓選擇更有方向",
+      "三店合併投放時，文案以就近預約與低壓體驗為主，不強寫單一門市名"
+    ]
+  },
+  "target_audience": {
+    "segments": [
+      "想先預約體驗店試躺，再決定下一步的人",
+      "已看過很多床墊或枕頭資訊，但仍想親自感受差異的人",
+      "擔心進店有壓力，希望有人陪伴比較睡感的人"
+    ],
+    "pain_points": [
+      "只看規格或推薦文，還是不知道適不適合自己",
+      "怕進店後被快速推銷，沒有空間慢慢比較",
+      "想一次安排試躺、試枕與量測，降低來回決策成本"
+    ],
+    "desired_outcomes": [
+      "先感受身體被接住的放鬆感，再決定是否購買",
+      "用預約體驗取代衝動下單，讓選擇更安心",
+      "在睡眠顧問陪伴下更快找到適合自己的睡感與寢具組合"
+    ]
+  },
+  "keyword_cluster": {
+    "primary_keywords": [
+      "預約體驗",
+      "門市試躺",
+      "睡眠體驗店"
+    ],
+    "secondary_keywords": [
+      "預約試躺",
+      "睡眠顧問",
+      "量脖子",
+      "試枕",
+      "床墊試躺",
+      "沉浸式睡眠"
+    ],
+    "negative_themes": [
+      "免費",
+      "最低價",
+      "工廠",
+      "批發",
+      "醫療器材"
+    ]
+  },
+  "usp": [
+    "沉浸式試躺讓使用者先感受放鬆與支撐，再決定下一步",
+    "睡眠顧問陪同比較床墊與枕頭，不必只看規格做決定",
+    "量脖子、試枕、試躺可一起安排，讓預約體驗更完整",
+    "三店合併投放以就近預約與低壓體驗為主"
+  ],
+  "offers": [],
+  "constraints": {
+    "must_include": [
+      "預約體驗",
+      "門市試躺",
+      "睡眠顧問"
+    ],
+    "must_avoid": [
+      "最低價",
+      "限時瘋搶",
+      "保證治療"
+    ],
+    "character_policy": {
+      "short_headline_count": 15,
+      "short_headline_max": 30,
+      "long_headline_count": 5,
+      "long_headline_max": 90,
+      "description_count": 5,
+      "description_max": 90
+    }
+  },
+  "tone": [
+    "warm",
+    "approachable",
+    "comfort-focused",
+    "professional"
+  ],
+  "forbidden_claims": [
+    "保證一試就買",
+    "醫療級治療效果",
+    "全台最低價",
+    "睡一晚立刻不痠痛"
+  ],
+  "seed_angles": [
+    "沉浸式試躺體驗",
+    "顧問陪伴與適配",
+    "低壓預約行動"
+  ],
+  "notes": "source_csv: /Users/andychou/Downloads/素材資源關聯報表_預約.csv\nstatus: draft only; not added to supported-matrix\ncampaign_scope: combine Banqiao / Taoyuan / Taichung experience-store traffic into one PMax lane\ncopy_rule: retire city-specific headlines in final pack; keep generic booking language for shared delivery\nrecommended_lp: https://www.lovefu.tw/pages/lovefuhome\navoid_lp_for_this_adset: https://www.lovefu.tw/products/hillbed\nlp_alignment_report: ai/reports/2026-03-16-experience-store-lp-alignment-review.md\ndata_caveats:\n- Google Ads asset association report has zero text-asset impressions and clicks.\n- Booking-success signal only appears on a subset of description rows.\n- Final decisions therefore rely on association proxies (booking_success + store_visit + directions).\nvalidation_blockers:\n- Campaign URL still needs human confirmation in Google Ads.\n- Do not escalate this draft to supported capability or golden output until human review confirms the final LP setting."
+}

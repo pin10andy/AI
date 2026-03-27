@@ -1,0 +1,52 @@
+rubric:
+  name: "Creative Performance Interpretation Quality Rubric"
+  version: "1.2"
+  applies_to:
+    - ai/schemas/creative-performance-output.schema.json
+
+  dimensions:
+    - name: data_layer_honesty
+      weight: 0.20
+      scoring:
+        5: "清楚標示 click / conversion / placement / duration layer 的可用性，confidence 分級與資料層一致"
+        3: "有標記資料層，但 confidence 偏樂觀"
+        1: "忽略資料層缺口，假裝高信心"
+
+    - name: decision_consistency
+      weight: 0.20
+      scoring:
+        5: "每個 decision 都符合 asset-type cohort 規則，且含 decision_basis / decision_confidence / observe subtype"
+        3: "有 decision basis，但 observe 或 confidence 分流不穩定"
+        1: "decision 與 basis 無法追溯"
+
+    - name: legacy_model_integrity
+      weight: 0.15
+      scoring:
+        pass: "protected_phrase / must_include_token / reusable_motif 三類被正確分流，沒有 blanket retain"
+        fail: "任何 must_include_token 被當 protected_phrase，或 legacy 類型混用"
+
+    - name: candidate_pipeline_quality
+      weight: 0.20
+      scoring:
+        5: "retire gap 與 reinforce / safer-rewrite 都有對應 candidate，且欄位完整"
+        3: "有 candidate，但 gap fit 或 safer-rewrite 不完整"
+        1: "candidate pipeline 幾乎不可用"
+
+    - name: taxonomy_integrity
+      weight: 0.15
+      scoring:
+        pass: "asset_decisions / new_candidate_assets / brief additions 的 angle_key 全部對齊 taxonomy"
+        fail: "angle_key 缺失或仍依賴下游 heuristic"
+
+    - name: format_compliance
+      weight: 0.10
+      scoring:
+        pass: "schema pass，required 欄位完整"
+        fail: "schema fail 或關鍵欄位缺漏"
+
+  passing_threshold:
+    overall_score: 3.5
+    required_pass:
+      - legacy_model_integrity
+      - taxonomy_integrity
+      - format_compliance

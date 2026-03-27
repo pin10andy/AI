@@ -1,0 +1,63 @@
+brief_id: "tc-lovefu-store-visit-search"
+brand_name: "LOVEFU大島樂眠"
+product_name: "睡眠體驗門市試躺"
+campaign_type: "search_rsa"
+goal: "store_visit"
+landing_page_summary:
+  hero_message: "晚安，歡迎回家，先來門市躺一躺"
+  primary_cta: "預約門市試躺"
+  supporting_points:
+    - "睡眠顧問一對一帶看，不靠自己亂猜"
+    - "床墊與枕頭都可現場體驗"
+    - "量脖子服務幫你更快縮小選擇"
+target_audience:
+  segments:
+    - "想先實際體驗再決定的寢具購買者"
+    - "搜尋台北床墊試躺、門市推薦的在地用戶"
+  pain_points:
+    - "網路看再多還是不知道適不適合自己"
+    - "想進店體驗，但怕被強迫推銷"
+  desired_outcomes:
+    - "用體驗而不是價格戰來做選擇"
+    - "在安心、不有壓力的狀態下找到適合的寢具"
+keyword_cluster:
+  primary_keywords:
+    - "台北床墊試躺"
+    - "門市試躺"
+    - "台北枕頭推薦"
+  secondary_keywords:
+    - "睡眠體驗店"
+    - "台北床墊推薦"
+    - "量脖子服務"
+  negative_themes:
+    - "免費"
+    - "打折"
+    - "批發"
+    - "工廠"
+usp:
+  - "門市可同時試躺床墊與試枕"
+  - "睡眠顧問與量脖子服務一起協助判斷"
+  - "用沉浸式體驗建立信任，而非價格刺激"
+offers: []
+constraints:
+  must_include:
+    - "預約門市試躺"
+    - "量脖子"
+  must_avoid:
+    - "限時瘋搶"
+    - "最低價"
+    - "保證買到最好"
+  character_policy:
+    headline_count: 15
+    headline_max: 30
+    description_count: 4
+    description_max: 90
+tone:
+  - "warm"
+  - "approachable"
+  - "comfort-focused"
+forbidden_claims:
+  - "全台最低價"
+  - "保證你一試就買"
+  - "今天不買會後悔"
+notes: "用於測試以到店體驗為主的 Search RSA 產出。"

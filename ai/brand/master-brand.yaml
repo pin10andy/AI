@@ -1,0 +1,56 @@
+# master-brand.yaml
+# 品牌規範的唯一來源 — 所有 AI agent 共用此檔案
+# 請勿在其他地方複製品牌規則，一律引用此檔
+# 資料來源：Codex brand-extractor + 使用者補充（2026-03-13）
+
+brand:
+  name: "LOVEFU大島樂眠"
+  tagline: "晚安！歡迎回家"
+  industry: "睡眠寢具與睡眠體驗零售"
+
+  voice:
+    tone:
+      - warm
+      - approachable
+      - comfort-focused
+      - professional
+    personality:
+      - 溫柔陪伴
+      - 慵懶放鬆
+      - 安心可靠
+    do:
+      - 使用回家、放下疲憊、安心入睡等陪伴式語言
+      - 強調量脖子、試躺、認證與安心睡計畫等具體信任證據
+      - 聚焦舒適感受與睡眠改善結果，而不只講商品規格
+    do_not:
+      - 避免廉價搶購或貪小便宜式的促銷語氣
+      - 避免把品牌表達成只賣寢具，而忽略完整睡眠體驗
+      - 承諾無法保證的結果
+      - 混雜中英文於同一句中（除非是專有名詞）
+
+  languages:
+    primary: zh-TW
+    secondary: en
+    rules:
+      - 行銷素材一律使用繁體中文
+      - schema、config、程式碼使用英文
+      - 專有名詞保留英文原文
+
+  visual:
+    primary_color: "#616853"
+    secondary_color: "#D1B895"
+    font_family: ""                 # 待補充
+
+  target_audience:
+    segments:
+      - 有睡眠困擾、希望提升睡眠品質的成人
+      - 久坐腰緊、需要腰背支撐的人
+      - 有肩頸與頸椎適配需求、想找到合適枕頭的人
+    pain_points:
+      - 難以真正放鬆入睡，無法睡得深或一覺到天亮
+      - 久坐造成腰背緊繃，需要被穩定托住
+      - 不知道如何挑選適合自己身型與頸椎的寢具
+    desired_outcomes:
+      - 每天都能睡著，並一覺到天亮
+      - 讓身體先被接住，再慢慢進入放鬆睡眠
+      - 睡得安心、自由，回到舒服的生活節奏

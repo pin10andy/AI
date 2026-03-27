@@ -1,0 +1,32 @@
+# OpenClaw Default Agent Configuration
+# Points agent to shared instruction layer
+
+agent:
+  name: openclaw-default
+  version: "1.0"
+
+  instructions:
+    system_prompt: |
+      You are operating inside a multi-agent workspace.
+      Your job is to read shared rules from ai/ and execute tasks consistently.
+
+  context_files:
+    - ai/memory/shared-context.yaml
+    - ai/brand/master-brand.yaml
+
+  source_of_truth:
+    brand: ai/brand/master-brand.yaml
+    playbooks: ai/playbooks/
+    schemas: ai/schemas/
+    evals: ai/evals/
+    tasks: ai/tasks/
+    memory: ai/memory/shared-context.yaml
+    skills: ai/skill-src/
+
+  skills_dir: runtime/openclaw/google-ads-writer/skills/
+
+  output_rules:
+    generated_by: openclaw
+    language:
+      marketing: zh-TW
+      technical: en

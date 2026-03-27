@@ -1,0 +1,104 @@
+# Productization v1 — Hillbed Evergreen Purchase PMax
+# 把已驗證的 hillbed purchase PMax lane 封裝為正式可用能力
+
+task:
+  task_id: "prod-001"
+  title: "Hillbed Evergreen Purchase PMax Productization v1"
+  status: validated
+  owner: codex
+  created_at: "2026-03-14"
+  updated_at: "2026-03-14"
+
+  goal: >
+    把已驗證的 hillbed purchase PMax lane 從「驗證成功的實驗品」
+    升級為「正式可用、可重跑、可驗收、可交接、可稽核、可受控擴張」
+    的產品化能力。
+
+  background: >
+    Phase 1 已完成 5 個 task 全數 validated：
+    - Google Ads Skill Suite (gads-001)
+    - Search RSA MVP (gads-copy-001)
+    - PMax MVP (gads-copy-002)
+    - Batch Generator (gads-copy-003)
+    - Hillbed Golden Brief (gads-copy-004)
+    Golden brief 得分 4.65/5，human review 判定「可直接上稿」。
+    現在需要把散落的 playbook / schema / rubric / validation
+    整合為一套 PM 可追蹤、非作者可重跑的正式能力。
+
+  references:
+    brand: "ai/brand/master-brand.yaml"
+    playbook: "ai/playbooks/google-ads-pmax.md"
+    schema: "ai/inputs/google-ads-brief.schema.json"
+    rubric: "ai/evals/ads-rubric.yaml"
+    related_adr: "ai/decisions/ADR-002-productization-v1-scope.md"
+    related_tasks:
+      - "gads-001"
+      - "gads-copy-001"
+      - "gads-copy-002"
+      - "gads-copy-003"
+      - "gads-copy-004"
+
+  deliverables:
+    - description: "Supported Matrix — 正式支援的 lane 登錄表"
+      format: yaml
+      destination: "ai/registry/supported-matrix.yaml"
+
+    - description: "Canonical Brief Registry — 已核可的正式 brief 清單與版控政策"
+      format: yaml
+      destination: "ai/registry/canonical-briefs.yaml"
+
+    - description: "Writer Spec — hillbed purchase PMax 的正式規格"
+      format: markdown
+      destination: "ai/specs/lovefu-hillbed-pmax-writer-spec.md"
+
+    - description: "Runbook — 操作員導向的端到端執行手冊"
+      format: markdown
+      destination: "ai/playbooks/lovefu-hillbed-pmax-runbook.md"
+
+    - description: "Regression Baseline — 品質回歸基準線"
+      format: yaml
+      destination: "ai/validation/regression-baseline-hillbed-pmax.yaml"
+
+    - description: "Message Drift Report — 官網 vs brief vs 文案一致性比對"
+      format: markdown
+      destination: "ai/reports/2026-03-14-hillbed-message-drift.md"
+
+    - description: "Release Note — 正式版本發布紀錄"
+      format: markdown
+      destination: "ai/releases/2026-03-productization-v1.md"
+
+    - description: "Readiness Report — PM checkpoint 就緒報告"
+      format: markdown
+      destination: "ai/reports/2026-03-14-productization-v1-readiness.md"
+
+    - description: "Known Issues — 已知限制與待處理事項"
+      format: markdown
+      destination: "ai/reports/2026-03-14-productization-v1-known-issues.md"
+
+    - description: "ADR-002 — 產品化範圍決策紀錄"
+      format: markdown
+      destination: "ai/decisions/ADR-002-productization-v1-scope.md"
+
+  validation:
+    method: manual + automated
+    rubric: ""
+    passing_criteria: >
+      四個 PM checkpoint 全通過：
+      1. 正式可用 — hillbed purchase PMax 在 supported-matrix，status=production
+      2. 可重跑 — 非作者可依 runbook 完成端到端流程
+      3. 可稽核 — PM 可查 canonical brief、validation、boundaries、readiness
+      4. 可擴張 — 新增 lane 不需修改既有檔案
+    validation_file: "ai/validation/2026-03-14-productization-v1.md"
+
+  notes: >
+    本階段不做：不擴到其他 LOVEFU 產品、不取消 human review、
+    不做全自動批次生成、不做 OpenClaw/Gemini parity。
+    Productization v1 已由 Codex 完成非作者 dry run，Checkpoint 2 補齊。
+
+  metadata:
+    created_by: claude
+    compatible_agents:
+      - claude
+      - codex
+      - gemini
+      - openclaw

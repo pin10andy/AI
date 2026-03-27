@@ -1,0 +1,105 @@
+{
+  "brief_id": "lovefu-pmax-hillbed",
+  "brand_name": "LOVEFU大島樂眠",
+  "product_name": "山丘樂眠床",
+  "campaign_type": "pmax",
+  "goal": "purchase",
+  "landing_page_summary": {
+    "hero_message": "山丘樂眠床｜第2張床 擁有支撐腰背與放鬆的魔法",
+    "primary_cta": "立即選購",
+    "supporting_points": [
+      "高密度慢回彈泡棉搭配 2.4mm 高碳鋼獨立筒，支撐與包覆感兼具",
+      "通過歐盟 CertiPUR 與 OEKO-TEX 安全檢測，材質更安心",
+      "100 天安心睡全額退款與 10 年保固，降低選床風險",
+      "14,900 起的系列入門款，適合第 2 張床或首次升級"
+    ]
+  },
+  "target_audience": {
+    "segments": [
+      "久坐腰背緊繃、需要被穩定支撐的成人",
+      "正在比較床墊推薦與獨立筒床墊的人",
+      "想找系列入門款，但又不想犧牲支撐感的購買者"
+    ],
+    "pain_points": [
+      "睡醒後腰背還是緊，躺下卻沒有被穩穩接住",
+      "擔心床墊材質安全與支撐品質，看規格還是不放心",
+      "怕買錯床墊後難退換，只能硬睡下去"
+    ],
+    "desired_outcomes": [
+      "讓身體先被接住，再慢慢進入放鬆睡眠",
+      "用更安心的方式挑到合適床墊，不急著做決定",
+      "以入門價位開始，也能擁有不將就的支撐感"
+    ]
+  },
+  "keyword_cluster": {
+    "primary_keywords": [
+      "床墊推薦",
+      "獨立筒床墊",
+      "支撐床墊"
+    ],
+    "secondary_keywords": [
+      "腰痛床墊",
+      "護腰床墊",
+      "記憶床墊",
+      "床墊",
+      "lovefu床墊",
+      "樂眠床",
+      "床墊推薦dcard",
+      "床墊推薦ptt"
+    ],
+    "negative_themes": [
+      "免費",
+      "二手",
+      "DIY",
+      "修理",
+      "醫療器材"
+    ]
+  },
+  "usp": [
+    "MDI高密度慢回彈泡棉，通過歐盟CertiPUR與OEKO-TEX安全檢測",
+    "中鋼2.4mm高碳鋼獨立筒，支撐力提升20%",
+    "100天安心睡全額退款，10年保固",
+    "14,900起的系列入門款，第2張床也能不將就"
+  ],
+  "offers": [
+    "100天安心睡全額退款",
+    "10年保固"
+  ],
+  "constraints": {
+    "must_include": [
+      "山丘樂眠床",
+      "100天安心睡",
+      "立即選購"
+    ],
+    "must_avoid": [
+      "最低價",
+      "保證治好腰痛",
+      "醫療級治療"
+    ],
+    "character_policy": {
+      "short_headline_count": 15,
+      "short_headline_max": 30,
+      "long_headline_count": 5,
+      "long_headline_max": 90,
+      "description_count": 5,
+      "description_max": 90
+    }
+  },
+  "tone": [
+    "warm",
+    "comfort-focused",
+    "professional"
+  ],
+  "forbidden_claims": [
+    "保證治好腰痛",
+    "睡一晚立刻不痠痛",
+    "全台最低價",
+    "醫療級治療效果"
+  ],
+  "seed_angles": [
+    "材質安全與支撐品質",
+    "零風險購買信任",
+    "高CP值入門"
+  ],
+  "notes": "source_facts:\\n- landing_page_url: https://www.lovefu.tw/products/hillbed\\n- verified_product_facts: page title 含「山丘樂眠床｜第2張床 擁有支撐腰背與放鬆的魔法」；商品頁可驗 100天安心睡全額退款、10年保固、MDI高密度慢回彈泡棉、2.4mm高碳鋼獨立筒與 14,900 起。\\n- offer_note: 2026-03-14 實查商品頁主畫面展示新家樂眠方案與任選 5 件 85 折送睡窩淨化洗被袋；使用者草稿中的「購床贈竹眠防水保潔墊」較接近活動頁訊息，本輪不直接當成商品頁硬事實。\\nschema_blocked_fields:\\n- cta_supporting_message: 100天安心睡全額退款，10年保固\\n- usp_layers.core_features: MDI高密度慢回彈泡棉；中鋼2.4mm高碳鋼獨立筒；支撐力提升20%\\n- usp_layers.trust_signals: 100天安心睡全額退款；10年保固\\n- usp_layers.price_positioning: 14,900起，系列入門款\\n- evidence_map.product_page: 產品頁與站內商品列表皆可驗價格與材質；活動頁另有贈品訊息。\\nassumptions:\\n- goal 使用 purchase，因為此 brief 對應可直接購買的商品頁。\\n- primary_cta 使用立即選購；若後續投放改走門市導流，建議另開一份 store_visit brief。"
+}

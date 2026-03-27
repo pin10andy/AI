@@ -1,0 +1,55 @@
+# canonical-briefs.yaml
+# 已核可的正式 brief 清單
+# PM 可從此檔追蹤哪些 brief 是官方基準版本
+
+version: "1.0"
+updated_at: "2026-03-16"
+
+briefs:
+  - brief_id: "lovefu-pmax-hillbed"
+    file: "ai/inputs/briefs/lovefu-pmax-hillbed.json"
+    brand: "LOVEFU大島樂眠"
+    product: "山丘樂眠床"
+    campaign_type: pmax
+    goal: purchase
+    status: canonical              # canonical / draft / deprecated
+
+    # 核可與版本
+    approved_by: human
+    approved_at: "2026-03-14"
+    version: 1
+    version_history: []
+
+    # 對應產出
+    golden_output_json: "ai/outputs/google-ads/lovefu/hillbed/evergreen-purchase-pmax/golden/lovefu-pmax-hillbed.output.json"
+    golden_output_md: "ai/outputs/google-ads/lovefu/hillbed/evergreen-purchase-pmax/golden/lovefu-pmax-hillbed.output.md"
+    golden_score: 4.65
+
+    # 漂移檢查
+    drift_check:
+      last_checked: "2026-03-14"
+      next_check_due: "2026-04-14"     # 每月一次
+      checker: human
+      drift_report: "ai/reports/2026-03-14-hillbed-message-drift.md"
+
+    # 參考
+    field_grading: "ai/reports/2026-03-14-hillbed-brief-field-grading.md"
+    notes: "第一份正式 canonical brief。欄位分級見 field_grading。"
+
+# Brief 版本控制政策
+brief_version_policy:
+  when_to_update:
+    - "官網商品頁價格、保固、退款政策變更時"
+    - "landing page hero message 或 CTA 變更時"
+    - "品牌 forbidden_claims 或 must_avoid 擴張時"
+    - "活動促案需要新增 offer 時（建議另開 brief 而非覆寫）"
+  who_is_responsible: "PM 或品牌負責人"
+  how_to_trigger_drift_check:
+    - "每月定期比對官網商品頁與 brief 中的事實宣稱"
+    - "任何 brief 更新前必須先跑 message drift report"
+    - "drift report 格式見 ai/reports/ 下的 drift report"
+  versioning_rule: "版號遞增，舊版 brief 標記 deprecated 但保留不刪除"
+  update_flow:
+    - "發現事實變更 → 跑 drift report → 更新 brief JSON"
+    - "遞增 version → 記錄 version_history → 更新 updated_at"
+    - "若影響 regression baseline，需重新建立 baseline"

@@ -1,0 +1,2120 @@
+{
+  "interpretation_id": "lovefu-hillbed-search-rsa-real-uat-v1-2",
+  "brand_name": "LOVEFU大島樂眠",
+  "product_name": "山丘樂眠床",
+  "campaign_type": "search_rsa",
+  "goal": "purchase",
+  "reporting_period": {
+    "start_date": "2025-09-01",
+    "end_date": "2026-03-14"
+  },
+  "performance_data": {
+    "reporting_context": {
+      "asset_granularity": "asset_association_estimate",
+      "includes_asset_level_conversion": false,
+      "includes_asset_level_conversion_value": false,
+      "includes_placement_breakout": false,
+      "interpretation_layers": {
+        "click_layer": {
+          "status": "missing",
+          "required_fields": [
+            "impressions",
+            "clicks",
+            "ctr",
+            "active_duration_days"
+          ],
+          "notes": "CSV 有點擊／曝光欄位，但全數為 0；active_duration_days 來源缺失。"
+        },
+        "conversion_layer": {
+          "status": "partial",
+          "required_fields": [
+            "impressions",
+            "clicks",
+            "ctr",
+            "asset_level_conversions",
+            "active_duration_days"
+          ],
+          "recommended_fields": [
+            "conversion_value",
+            "placement_breakout"
+          ],
+          "notes": "只有跨多個 conversion action 的 asset association proxy，沒有真實 asset-level purchase conversions。"
+        },
+        "placement_layer": {
+          "status": "missing",
+          "required_fields": [
+            "placement_breakout",
+            "impressions",
+            "clicks",
+            "ctr"
+          ],
+          "notes": "素材關聯報表沒有 placement breakout。"
+        },
+        "duration_layer": {
+          "status": "missing",
+          "required_fields": [
+            "active_duration_days"
+          ],
+          "notes": "CSV 沒有 active_duration_days，runtime 僅以 0 placeholder 滿足 schema。"
+        }
+      },
+      "notes": "真實來源為素材資源關聯報表。曝光、點擊、CTR 全為 0；轉換欄位為 association proxy，非嚴格 asset-level conversion。"
+    },
+    "assets": [
+      {
+        "asset_id": "hl-01",
+        "asset_type": "headline",
+        "text": "200kg 不塌陷，最好睡的撐腰床墊",
+        "angle_key": "concrete_number",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 213.19
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-02",
+        "asset_type": "headline",
+        "text": "大島樂眠 LOVEFU 飄雲專利床墊",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 157.36
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-03",
+        "asset_type": "headline",
+        "text": "不再背痛失眠－LOVEFU山丘樂眠床",
+        "angle_key": "pain_point",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 152.26
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-04",
+        "asset_type": "headline",
+        "text": "100% MIT 更精湛的製床造詣",
+        "angle_key": "concrete_number",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 73.97
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-05",
+        "asset_type": "headline",
+        "text": "LOVEFU 飄雲床墊，97%壓倒性評價",
+        "angle_key": "social_proof",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 58.79
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-06",
+        "asset_type": "headline",
+        "text": "100 天安心睡計畫，改善睡眠品質",
+        "angle_key": "risk_reversal",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 57.43
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-07",
+        "asset_type": "headline",
+        "text": "專為台灣人的睡眠需求設計",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 36.98
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-08",
+        "asset_type": "headline",
+        "text": "大島樂眠床墊－MIT 床墊首選",
+        "angle_key": "entry_value",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 28.81
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-09",
+        "asset_type": "headline",
+        "text": "LOVEFU 飄雲床墊，樂眠好評如潮",
+        "angle_key": "social_proof",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 26.61
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-10",
+        "asset_type": "headline",
+        "text": "多尺寸床墊，IKEA MUJI 完美 fit",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 23.69
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-11",
+        "asset_type": "headline",
+        "text": "指定配送日，LOVEFU 配送超方便",
+        "angle_key": "cta_lower_friction",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 23.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-12",
+        "asset_type": "headline",
+        "text": "2026 護脊床墊推薦 - 山丘樂眠床",
+        "angle_key": "legacy_phrase",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 20.65
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-13",
+        "asset_type": "headline",
+        "text": "台灣製床墊，SGS 與歐盟多項認證",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 17.57
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-14",
+        "asset_type": "headline",
+        "text": "硬床選擇，LOVEFU 專利舒適",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 15.62
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-15",
+        "asset_type": "headline",
+        "text": "LOVEFU山丘樂眠床－腰臀健康首選",
+        "angle_key": "entry_value",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 13.57
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-16",
+        "asset_type": "headline",
+        "text": "專為台灣設計的 LOVEFU 床墊",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 13.32
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-17",
+        "asset_type": "headline",
+        "text": "LOVEFU 硬床墊，舒緩腰痛設計",
+        "angle_key": "pain_point",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 12.03
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-18",
+        "asset_type": "headline",
+        "text": "硬床墊選擇，LOVEFU 專利舒適",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 12.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-19",
+        "asset_type": "headline",
+        "text": "LOVEFU 硬床墊，支撐舒適兩全",
+        "angle_key": "product_feel",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 11.37
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-20",
+        "asset_type": "headline",
+        "text": "單人床墊，飄雲專利解決問題",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 10.56
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-21",
+        "asset_type": "headline",
+        "text": "200kg 不塌陷的 LOVEFU 獨立筒",
+        "angle_key": "concrete_number",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 10.34
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-22",
+        "asset_type": "headline",
+        "text": "單人床墊，飄雲專利無壓舒適",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 10.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-23",
+        "asset_type": "headline",
+        "text": "專為台灣人設計的支撐感",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 9.72
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-24",
+        "asset_type": "headline",
+        "text": "單人床墊推薦，飄雲專利好眠",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 9.56
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-25",
+        "asset_type": "headline",
+        "text": "山丘樂眠床，LOVEFU 支撐舒適",
+        "angle_key": "product_feel",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 9.11
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-26",
+        "asset_type": "headline",
+        "text": "LOVEFU飄雲專利硬床墊，無壓好眠",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 8.62
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-27",
+        "asset_type": "headline",
+        "text": "LoveFu - 樂於舒適，始於睡眠",
+        "angle_key": "product_feel",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 8.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-28",
+        "asset_type": "headline",
+        "text": "超越彈簧床，試試新一代舒適床墊",
+        "angle_key": "product_feel",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 8.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-29",
+        "asset_type": "headline",
+        "text": "飄雲專利床墊，讓您愛上無壓支撐",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 8.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-30",
+        "asset_type": "headline",
+        "text": "單人床墊，針對腰酸背痛設計",
+        "angle_key": "pain_point",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 7.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-31",
+        "asset_type": "headline",
+        "text": "單人床墊，柔軟包覆讓您好眠",
+        "angle_key": "product_feel",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 6.56
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-32",
+        "asset_type": "headline",
+        "text": "LOVEFU山丘樂眠床－腰椎更健康",
+        "angle_key": "pain_point",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 6.29
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-33",
+        "asset_type": "headline",
+        "text": "雲端般舒適感，LOVEFU 床墊推薦",
+        "angle_key": "product_feel",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 6.14
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-34",
+        "asset_type": "headline",
+        "text": "LOVEFU 飄雲專利，支撐無壓好眠",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 6.11
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-35",
+        "asset_type": "headline",
+        "text": "硬床墊推薦，LOVEFU 山丘樂眠床",
+        "angle_key": "legacy_phrase",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 6.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-36",
+        "asset_type": "headline",
+        "text": "白天你撐起生活，晚上山丘撐住你",
+        "angle_key": "life_scene",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 5.84
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-37",
+        "asset_type": "headline",
+        "text": "200kg 不塌陷的 LOVEFU 床墊",
+        "angle_key": "concrete_number",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 5.76
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-38",
+        "asset_type": "headline",
+        "text": "飄雲專利單人床墊，舒適支撐",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 5.56
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-39",
+        "asset_type": "headline",
+        "text": "山丘樂眠床 第2張床 擁有支撐腰背與放鬆的魔法",
+        "angle_key": "life_scene",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 5.24
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-40",
+        "asset_type": "headline",
+        "text": "床墊推薦，高評價的 LOVEFU 床墊",
+        "angle_key": "social_proof",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 5.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-41",
+        "asset_type": "headline",
+        "text": "LOVEFU 床墊，撐腰設計減輕腰痛",
+        "angle_key": "pain_point",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 4.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-42",
+        "asset_type": "headline",
+        "text": "LOVEFU山丘樂眠床，無壓支撐好眠",
+        "angle_key": "product_feel",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 4.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-43",
+        "asset_type": "headline",
+        "text": "獨立筒單人床墊，改善睡眠",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 4.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-44",
+        "asset_type": "headline",
+        "text": "硬床墊推薦，選 LOVEFU 專利",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 4.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-45",
+        "asset_type": "headline",
+        "text": "選 LOVEFU 床墊，告別腰痛困擾",
+        "angle_key": "pain_point",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 4.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-46",
+        "asset_type": "headline",
+        "text": "2026 護脊床墊推薦 - 山丘樂眠",
+        "angle_key": "concrete_number",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 3.71
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-47",
+        "asset_type": "headline",
+        "text": "一張你尋找已久的Ｑ彈撐腰床墊，",
+        "angle_key": "pain_point",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 3.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-48",
+        "asset_type": "headline",
+        "text": "單人床墊推薦，支撐力達 200kg",
+        "angle_key": "concrete_number",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 3.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-49",
+        "asset_type": "headline",
+        "text": "超過 10,000 家庭一致推薦",
+        "angle_key": "social_proof",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 3.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-50",
+        "asset_type": "headline",
+        "text": "撐腰設計，LOVEFU 床墊推薦首選",
+        "angle_key": "entry_value",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 2.84
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-51",
+        "asset_type": "headline",
+        "text": "LOVEFU 硬床墊，無壓支撐體驗",
+        "angle_key": "cta_lower_friction",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 2.58
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-52",
+        "asset_type": "headline",
+        "text": "推薦 LOVEFU 床墊，200kg 不塌陷",
+        "angle_key": "concrete_number",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 2.17
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-53",
+        "asset_type": "headline",
+        "text": "100天試睡，LOVEFU 床墊享舒適",
+        "angle_key": "risk_reversal",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 2.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-54",
+        "asset_type": "headline",
+        "text": "LOVEFU 床墊，免費送貨與試睡",
+        "angle_key": "risk_reversal",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 2.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-55",
+        "asset_type": "headline",
+        "text": "LOVEFU 床墊，專為腰椎支撐設計",
+        "angle_key": "pain_point",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 2.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-56",
+        "asset_type": "headline",
+        "text": "來店體驗，9 成客人當場入睡",
+        "angle_key": "concrete_number",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 2.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-57",
+        "asset_type": "headline",
+        "text": "單人床墊，提供無壓力好支撐",
+        "angle_key": "product_feel",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 2.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-58",
+        "asset_type": "headline",
+        "text": "撐腰床墊，體驗飄雲般舒適感",
+        "angle_key": "pain_point",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 2.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-59",
+        "asset_type": "headline",
+        "text": "獨立筒床墊，完美支撐您的睡眠",
+        "angle_key": "product_feel",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 2.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-60",
+        "asset_type": "headline",
+        "text": "獨立筒床墊，每晚舒適支撐樂眠",
+        "angle_key": "product_feel",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 2.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-61",
+        "asset_type": "headline",
+        "text": "LOVEFU 飄雲專利床墊，支撐舒適",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 1.62
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-62",
+        "asset_type": "headline",
+        "text": "LOVEFU 床墊，高性價比推薦首選",
+        "angle_key": "entry_value",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 1.24
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-63",
+        "asset_type": "headline",
+        "text": "爸爸專屬》來店測 BMI 享折扣",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 1.24
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-64",
+        "asset_type": "headline",
+        "text": "LOVEFU 獨立筒床墊，為好眠設計",
+        "angle_key": "product_feel",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 1.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-65",
+        "asset_type": "headline",
+        "text": "立即預約試躺，體驗雲端支撐感",
+        "angle_key": "cta_lower_friction",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 1.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-66",
+        "asset_type": "headline",
+        "text": "山丘樂眠床，LOVEFU 硬床墊選擇",
+        "angle_key": "legacy_phrase",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.76
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-67",
+        "asset_type": "headline",
+        "text": "LOVEFU 床墊，高評價的舒適支撐",
+        "angle_key": "social_proof",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.5
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-68",
+        "asset_type": "headline",
+        "text": "撐腰床墊推薦，LOVEFU 值得信賴",
+        "angle_key": "pain_point",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.5
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-69",
+        "asset_type": "headline",
+        "text": "2026 年首選飄雲專利獨立筒床墊",
+        "angle_key": "entry_value",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.44
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-70",
+        "asset_type": "headline",
+        "text": "全系列無毒認證，嬰幼兒也安心",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.33
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-71",
+        "asset_type": "headline",
+        "text": "2026 年首選飄雲專利獨利筒床墊",
+        "angle_key": "entry_value",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-72",
+        "asset_type": "headline",
+        "text": "98% 滿意度的床墊，睡眠專家推薦",
+        "angle_key": "social_proof",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-73",
+        "asset_type": "headline",
+        "text": "98% 滿意的飄雲專利獨立筒床墊",
+        "angle_key": "social_proof",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-74",
+        "asset_type": "headline",
+        "text": "LOVEFU 床墊，高支撐不塌陷",
+        "angle_key": "product_feel",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-75",
+        "asset_type": "headline",
+        "text": "一覺到天亮，享受極致好眠",
+        "angle_key": "product_feel",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-76",
+        "asset_type": "headline",
+        "text": "中鋼獨立筒，LOVEFU 床墊推薦",
+        "angle_key": "legacy_phrase",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-77",
+        "asset_type": "headline",
+        "text": "享受 LOVEFU 床墊的撐腰舒適",
+        "angle_key": "pain_point",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-78",
+        "asset_type": "headline",
+        "text": "全新支撐技術，體驗飄雲專利好眠",
+        "angle_key": "cta_lower_friction",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-79",
+        "asset_type": "headline",
+        "text": "台灣製造床墊，極致舒適支撐",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-80",
+        "asset_type": "headline",
+        "text": "告別晨起腰痛，肌肉不再夜間加班",
+        "angle_key": "pain_point",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-81",
+        "asset_type": "headline",
+        "text": "告別晨起腰痠，睡醒好輕鬆",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-82",
+        "asset_type": "headline",
+        "text": "單人床墊推薦，體驗穩定支撐",
+        "angle_key": "cta_lower_friction",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-83",
+        "asset_type": "headline",
+        "text": "壓縮捲包設計，輕鬆換新床",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-84",
+        "asset_type": "headline",
+        "text": "夠撐的男人，也該有張撐腰的床",
+        "angle_key": "pain_point",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-85",
+        "asset_type": "headline",
+        "text": "專利獨立筒，讓腰背徹底放鬆樂眠",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-86",
+        "asset_type": "headline",
+        "text": "山丘樂眠床，LOVEFU 提供好眠",
+        "angle_key": "product_feel",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-87",
+        "asset_type": "headline",
+        "text": "山丘樂眠床，LOVEFU硬床墊好選擇",
+        "angle_key": "legacy_phrase",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-88",
+        "asset_type": "headline",
+        "text": "彈簧床下一步，選飄雲專利床墊",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-89",
+        "asset_type": "headline",
+        "text": "彈簧床對手，飄雲專利更舒適",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-90",
+        "asset_type": "headline",
+        "text": "徹底放鬆脊椎，找回深層睡眠感",
+        "angle_key": "product_feel",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-91",
+        "asset_type": "headline",
+        "text": "捨棄舊床，樂眠一夜到天亮",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-92",
+        "asset_type": "headline",
+        "text": "換新床，體驗專利獨立筒一夜樂眠",
+        "angle_key": "cta_lower_friction",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-93",
+        "asset_type": "headline",
+        "text": "撐住肩腰臀，舒適不再疲憊",
+        "angle_key": "pain_point",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-94",
+        "asset_type": "headline",
+        "text": "支撐力強，單人床墊好選擇",
+        "angle_key": "product_feel",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-95",
+        "asset_type": "headline",
+        "text": "支撐好眠的飄雲專利獨立筒床墊",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-96",
+        "asset_type": "headline",
+        "text": "支撐與包覆，飄雲專利床墊推薦",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-97",
+        "asset_type": "headline",
+        "text": "森林系睡眠，放鬆自然感",
+        "angle_key": "product_feel",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-98",
+        "asset_type": "headline",
+        "text": "無壓支撐，飄雲專利床墊首選",
+        "angle_key": "entry_value",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-99",
+        "asset_type": "headline",
+        "text": "獨立支撐與舒適感，飄雲專利",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-100",
+        "asset_type": "headline",
+        "text": "獨立筒單人床墊，撐腰不痠痛",
+        "angle_key": "pain_point",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-101",
+        "asset_type": "headline",
+        "text": "獨立筒床墊 SGS 認證 彈簧材質、甲醛釋放、安全檢測完整揭露 Lovefu",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-102",
+        "asset_type": "headline",
+        "text": "翻身也無壓力，飄雲專利好體驗",
+        "angle_key": "cta_lower_friction",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-103",
+        "asset_type": "headline",
+        "text": "舒適來自飄雲專利床墊體驗",
+        "angle_key": "cta_lower_friction",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-104",
+        "asset_type": "headline",
+        "text": "飄雲專利單人床墊，無壓支撐",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-105",
+        "asset_type": "headline",
+        "text": "飄雲專利床墊，打造專屬好眠",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-106",
+        "asset_type": "headline",
+        "text": "飄雲專利床墊，舒適支撐超乎想像",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-107",
+        "asset_type": "headline",
+        "text": "飄雲專利技術，改變您的好眠",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-108",
+        "asset_type": "headline",
+        "text": "飄雲專利獨立筒，穩定支撐力",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-109",
+        "asset_type": "headline",
+        "text": "飄雲專利獨立筒，讓您睡得更好",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-110",
+        "asset_type": "headline",
+        "text": "飄雲專利，帶來前所未有的舒適感",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-111",
+        "asset_type": "headline",
+        "text": "體驗全新支撐，選飄雲專利床墊",
+        "angle_key": "cta_lower_friction",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "hl-112",
+        "asset_type": "headline",
+        "text": "高評價 LOVEFU 床墊，助你好眠",
+        "angle_key": "social_proof",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "desc-01",
+        "asset_type": "description",
+        "text": "腰椎不再酸痛，只要躺上它就足夠，2 次加熱的中鋼獨立筒彈簧，搭配獨家泡棉，創造飄雲Ｑ彈躺感。",
+        "angle_key": "pain_point",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 345.13
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "desc-02",
+        "asset_type": "description",
+        "text": "100 天安心睡，帶你最需要的放鬆、慵懶。最好躺的 LOVEFU 硬床，不再睡睡醒醒，一覺到天明。",
+        "angle_key": "risk_reversal",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 226.53
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "desc-03",
+        "asset_type": "description",
+        "text": "LOVEFU 飄雲專利床墊，98% 好評推薦，舒適支撐幫助緩解腰痛，讓您享受無壓樂眠。",
+        "angle_key": "social_proof",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 56.45
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "desc-04",
+        "asset_type": "description",
+        "text": "想找高評價的床墊？LOVEFU 飄雲床墊提供無壓支撐與柔軟包覆，專屬於您的樂眠推薦首選。",
+        "angle_key": "entry_value",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 25.21
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "desc-05",
+        "asset_type": "description",
+        "text": "中鋼獨立筒彈簧ｘ專屬泡棉，打造Ｑ彈特殊躺感，慵懶躺下，就能撐住你的體重，全面舒緩你的疲憊感",
+        "angle_key": "pain_point",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 21.9
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "desc-06",
+        "asset_type": "description",
+        "text": "LOVEFU 飄雲專利床墊，提供穩定支撐與適中軟硬度，適合追求無壓舒適感的消費者。",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 20.68
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "desc-07",
+        "asset_type": "description",
+        "text": "LOVEFU 飄雲專利硬床墊，支撐力高達 200kg，提供無壓舒適的睡眠體驗，適合腰痛患者。",
+        "angle_key": "pain_point",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 19.26
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "desc-08",
+        "asset_type": "description",
+        "text": "獨立筒單人床墊，專為腰背設計，柔軟包覆與強力支撐結合，解決睡眠煩惱，享受穩定好眠。",
+        "angle_key": "product_feel",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 15.56
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "desc-09",
+        "asset_type": "description",
+        "text": "高評價 LoveFu 床墊，結合撐腰設計與柔軟支撐，無壓睡眠體驗，現在購買還有免費送貨！",
+        "angle_key": "social_proof",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 11.68
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "desc-10",
+        "asset_type": "description",
+        "text": "撐腰設計讓你舒緩肩腰臀的疲憊，LoveFu 床墊助你輕鬆告別酸痛，享 100 天無風險試睡。",
+        "angle_key": "risk_reversal",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 10.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "desc-11",
+        "asset_type": "description",
+        "text": "專為台灣人設計的 LoveFu 床墊，200kg 不塌陷，帶來穩定支撐與完美舒適，立即試睡！",
+        "angle_key": "risk_reversal",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 8.67
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "desc-12",
+        "asset_type": "description",
+        "text": "想要更好的支撐力？飄雲專利獨立筒床墊提供比彈簧床更舒適的支撐與透氣性。",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 8.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "desc-13",
+        "asset_type": "description",
+        "text": "飄雲專利床墊，超越彈簧床的支撐與舒適，讓您享受穩定無壓的睡眠體驗。",
+        "angle_key": "cta_lower_friction",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 8.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "desc-14",
+        "asset_type": "description",
+        "text": "飄雲專利獨立筒單人床墊，專為個人打造，帶來無壓支撐與柔軟包覆，讓您每天充滿活力。",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 7.56
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "desc-15",
+        "asset_type": "description",
+        "text": "LOVEFU 山丘樂眠床，結合硬床墊的穩定支撐與柔軟包覆，讓您享受深度舒適睡眠。",
+        "angle_key": "product_feel",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 6.11
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "desc-16",
+        "asset_type": "description",
+        "text": "『100天安心睡計畫、10年保固、100%台灣血統製造』 最高分12期，0利率。",
+        "angle_key": "risk_reversal",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 5.82
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "desc-17",
+        "asset_type": "description",
+        "text": "告別腰酸背痛！選擇 LoveFu 獨立筒床墊，飄雲專利設計為您提供無壓力支撐，讓睡眠質量全面升級！",
+        "angle_key": "pain_point",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 4.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "desc-18",
+        "asset_type": "description",
+        "text": "森林系設計的獨立筒床墊，支撐與包覆兼具，帶來自然舒適感，讓每晚都如同在大自然中入眠。",
+        "angle_key": "product_feel",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 4.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "desc-19",
+        "asset_type": "description",
+        "text": "選擇 LoveFu 床墊，感受中鋼獨立筒與獨家泡棉的 Q 彈躺感，為你創造完美的睡眠體驗。",
+        "angle_key": "cta_lower_friction",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 4.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "desc-20",
+        "asset_type": "description",
+        "text": "100 天安心試睡，LoveFu 床墊舒緩腰痛與疲勞，帶你享受每晚無壓的輕鬆入眠。",
+        "angle_key": "risk_reversal",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 2.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "desc-21",
+        "asset_type": "description",
+        "text": "LoveFu 床墊，撐腰設計提升舒適感，100 天試睡保障，讓你無憂體驗理想睡眠！",
+        "angle_key": "risk_reversal",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 1.84
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "desc-22",
+        "asset_type": "description",
+        "text": "LOVEFU 山丘樂眠床，專為腰痛患者設計，提供強力支撐與舒適包覆，帶來每晚好眠。",
+        "angle_key": "pain_point",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "desc-23",
+        "asset_type": "description",
+        "text": "單人床墊推薦，飄雲專利獨立筒帶來無壓支撐與柔軟包覆感，讓您深度睡眠。",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "desc-24",
+        "asset_type": "description",
+        "text": "壓縮捲包設計，專人換床無需費力，LoveFu 床墊讓你享受舒適無憂的購物體驗。",
+        "angle_key": "cta_lower_friction",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "desc-25",
+        "asset_type": "description",
+        "text": "飄雲專利獨立筒單人床墊，支撐力達 200kg，無壓撐腰不痠痛，個人專屬舒適好眠。",
+        "angle_key": "pain_point",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "desc-26",
+        "asset_type": "description",
+        "text": "飄雲專利獨立筒床墊，支撐力超越傳統彈簧床，提供無壓支撐與柔軟包覆。",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "desc-27",
+        "asset_type": "description",
+        "text": "飄雲專利獨立筒，提供比彈簧床更精確的支撐，讓您徹底享受無壓力的好眠體驗。",
+        "angle_key": "cta_lower_friction",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      },
+      {
+        "asset_id": "desc-28",
+        "asset_type": "description",
+        "text": "飄雲專利的獨立筒床墊，提供卓越腰背支撐，讓 9 成人到店試躺立即入睡，睡得更安心！",
+        "angle_key": "concrete_number",
+        "metrics": {
+          "impressions": 0,
+          "clicks": 0,
+          "ctr": 0,
+          "association_proxy_conversions": 0.0
+        },
+        "active_duration_days": 0,
+        "status": "enabled"
+      }
+    ],
+    "campaign_level_metrics": {
+      "total_impressions": 0,
+      "total_clicks": 0,
+      "total_ctr": 0
+    }
+  },
+  "legacy_message_policy": {
+    "protected_phrases": [
+      {
+        "phrase": "100天安心睡",
+        "reason": "既有歷史資產與產品承諾都高度集中在此 phrase，刪除會直接丟失核心安心敘事。",
+        "source": "historical_performance",
+        "min_active_assets": 1,
+        "preferred_asset_types": [
+          "headline",
+          "description"
+        ]
+      }
+    ],
+    "must_include_tokens": [
+      {
+        "token": "山丘樂眠床",
+        "reason": "本次 UAT 目標產品為山丘樂眠床，產品名需在線上素材池持續可見。",
+        "source": "brand_guideline",
+        "min_active_assets": 2,
+        "preferred_asset_types": [
+          "headline",
+          "description"
+        ]
+      },
+      {
+        "token": "LOVEFU",
+        "reason": "真實素材池大量使用品牌名作為辨識入口，builder 需維持品牌可見性。",
+        "source": "historical_performance",
+        "min_active_assets": 2,
+        "preferred_asset_types": [
+          "headline",
+          "description"
+        ]
+      },
+      {
+        "token": "飄雲專利",
+        "reason": "真實素材池中的高轉換 proxy 資產多次承接此技術／系列語言，移除會造成 trust gap。",
+        "source": "historical_performance",
+        "min_active_assets": 1,
+        "preferred_asset_types": [
+          "headline",
+          "description"
+        ]
+      }
+    ],
+    "reusable_motifs": [
+      {
+        "motif_key": "concrete-number",
+        "description": "用 200kg、97%、2026、10年等數字做明確證據。",
+        "reason": "真實報表中高 proxy 資產反覆使用數字作為證據或分類鉤子。",
+        "source": "historical_performance"
+      },
+      {
+        "motif_key": "pain-point-solution",
+        "description": "從腰背壓力、睡醒負擔切入，再接支撐與放鬆。",
+        "reason": "痛點切入確實能帶來轉換關聯，但需要 safer rewrite 降風險。",
+        "source": "historical_performance"
+      },
+      {
+        "motif_key": "lower-friction-cta",
+        "description": "試睡、安心、配送、無憂等降低嘗試阻力的語言。",
+        "reason": "真實素材池中與試睡／配送便利相關的語言有穩定 proxy 表現。",
+        "source": "historical_performance"
+      },
+      {
+        "motif_key": "support-feel",
+        "description": "把穩定支撐、包覆、Q 彈、接住感轉成可感知睡感。",
+        "reason": "高表現的產品型資產大多不是只講規格，而是規格加睡感。",
+        "source": "historical_performance"
+      },
+      {
+        "motif_key": "trust-proof",
+        "description": "品牌、MIT、認證、專利與高評價等信任證據。",
+        "reason": "品牌與信任訊號在弱資料環境下仍是可重複保留的穩定 motif。",
+        "source": "historical_performance"
+      }
+    ]
+  },
+  "interpretation_config": {
+    "minimum_impressions_threshold": 1000,
+    "minimum_clicks_threshold": 60,
+    "minimum_conversion_threshold": 3,
+    "high_performer_percentile": 0.75,
+    "data_sufficiency_threshold": 5000,
+    "observe_stale_days": 21,
+    "retire_candidate_days": 35,
+    "decision_metric_priority": "hybrid"
+  },
+  "notes": "real_uat_rerun: true; source_csv=/Users/andychou/Downloads/素材資源關聯報表 (1).csv; runtime_placeholder_active_duration_days=0"
+}

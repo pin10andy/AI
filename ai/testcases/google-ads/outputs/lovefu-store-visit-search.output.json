@@ -1,0 +1,136 @@
+{
+  "task_id": "gads-copy-001",
+  "brief_id": "tc-lovefu-store-visit-search",
+  "campaign_type": "search_rsa",
+  "brand_name": "LOVEFU大島樂眠",
+  "product_name": "睡眠體驗門市試躺",
+  "generated_by": "codex",
+  "generated_at": "2026-03-14T11:10:00+08:00",
+  "angles": [
+    {
+      "key": "local_experience",
+      "label": "到店體驗",
+      "rationale": "主打門市試躺與試枕，讓搜尋台北試躺的人先感受再決定。"
+    },
+    {
+      "key": "guided_service",
+      "label": "顧問引導",
+      "rationale": "用睡眠顧問與量脖子服務，降低進店後的決策焦慮。"
+    },
+    {
+      "key": "cta_booking",
+      "label": "預約行動",
+      "rationale": "把主要目標收斂成預約門市試躺，讓 CTA 更明確。"
+    }
+  ],
+  "headlines": [
+    {
+      "text": "台北床墊試躺推薦",
+      "angle_key": "local_experience",
+      "keyword_used": true
+    },
+    {
+      "text": "大島樂眠 門市試躺",
+      "angle_key": "local_experience",
+      "keyword_used": false
+    },
+    {
+      "text": "門市試躺 比照片更準",
+      "angle_key": "local_experience",
+      "keyword_used": true
+    },
+    {
+      "text": "睡眠體驗店 先躺再選",
+      "angle_key": "local_experience",
+      "keyword_used": false
+    },
+    {
+      "text": "床墊枕頭 都能現場試",
+      "angle_key": "local_experience",
+      "keyword_used": false
+    },
+    {
+      "text": "睡眠顧問陪你慢慢挑",
+      "angle_key": "guided_service",
+      "keyword_used": false
+    },
+    {
+      "text": "量脖子服務 一起體驗",
+      "angle_key": "guided_service",
+      "keyword_used": false
+    },
+    {
+      "text": "不急著買 先感受差異",
+      "angle_key": "guided_service",
+      "keyword_used": false
+    },
+    {
+      "text": "台北枕頭推薦 可先試枕",
+      "angle_key": "guided_service",
+      "keyword_used": true
+    },
+    {
+      "text": "用體驗挑寢具 更放心",
+      "angle_key": "guided_service",
+      "keyword_used": false
+    },
+    {
+      "text": "預約門市試躺 更安心",
+      "angle_key": "cta_booking",
+      "keyword_used": true
+    },
+    {
+      "text": "晚安歡迎回家 先躺一躺",
+      "angle_key": "cta_booking",
+      "keyword_used": false
+    },
+    {
+      "text": "找到適合自己的睡感",
+      "angle_key": "cta_booking",
+      "keyword_used": false
+    },
+    {
+      "text": "台北床墊推薦 先預約",
+      "angle_key": "cta_booking",
+      "keyword_used": true
+    },
+    {
+      "text": "門市體驗 從放鬆開始",
+      "angle_key": "cta_booking",
+      "keyword_used": false
+    }
+  ],
+  "descriptions": [
+    {
+      "text": "如果你想先試躺再決定，大島樂眠歡迎預約門市體驗，親自感受床墊與枕頭的差異。",
+      "angle_key": "local_experience"
+    },
+    {
+      "text": "睡眠顧問會陪你一步一步比較支撐、包覆與枕高，讓進店體驗不再只是自己亂猜。",
+      "angle_key": "guided_service"
+    },
+    {
+      "text": "量脖子、試枕、試床可以一起安排，用更安心的方式找到適合自己的睡感與節奏。",
+      "angle_key": "guided_service"
+    },
+    {
+      "text": "這不是價格刺激的快選流程，而是讓你先放鬆感受，再決定下一步是否帶回家。",
+      "angle_key": "cta_booking"
+    }
+  ],
+  "compliance_notes": {
+    "manual_review_required": true,
+    "checks_passed": [
+      "exact_counts",
+      "char_limits",
+      "zh_tw_only",
+      "three_distinct_angles"
+    ],
+    "policy_risks": [
+      "台北地區字眼需確認實際投放範圍與門市位置一致"
+    ],
+    "brand_risks": [
+      "若 landing page 首屏偏品牌故事，需補強門市體驗與預約 CTA"
+    ]
+  }
+}

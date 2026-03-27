@@ -1,0 +1,46 @@
+rubric:
+  name: "Facebook Post Collection Quality Rubric"
+  version: "0.1"
+  applies_to:
+    - ai/schemas/facebook-post-collection.schema.json
+
+  dimensions:
+    - name: preflight_safety
+      weight: 0.20
+      scoring:
+        pass: "先確認 Chrome MCP、access state 與 scope；缺 MCP 或缺 access 時會 fail closed"
+        fail: "沒有 browser capability 或沒有授權內容時仍假裝完成擷取"
+
+    - name: capture_traceability
+      weight: 0.20
+      scoring:
+        5: "source、request、capture_environment 與 posts.capture_notes 都可追溯"
+        3: "大致可追溯，但 access 或 capture 條件註記不足"
+        1: "來源、範圍或擷取條件模糊"
+
+    - name: extraction_honesty
+      weight: 0.25
+      scoring:
+        5: "抓不到的欄位用 null 或 limitations 說明，未展開成功的 comments/reactors 不會捏造"
+        3: "大多誠實，但少數欄位過度推測"
+        1: "把不可見或未展開內容當成已擷取"
+
+    - name: scope_fit
+      weight: 0.20
+      scoring:
+        5: "符合 interactive / small-batch 目標，優先 direct post URLs，展開深度有節制"
+        3: "可用，但 scope 控制鬆散"
+        1: "把 skill 當成大規模 crawler 使用"
+
+    - name: format_compliance
+      weight: 0.15
+      scoring:
+        pass: "schema pass，required 欄位完整"
+        fail: "schema fail 或重要欄位缺漏"
+
+  passing_threshold:
+    overall_score: 3.5
+    required_pass:
+      - preflight_safety
+      - extraction_honesty
+      - format_compliance

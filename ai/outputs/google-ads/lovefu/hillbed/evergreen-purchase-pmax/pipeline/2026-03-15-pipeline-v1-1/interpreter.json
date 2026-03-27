@@ -1,0 +1,5524 @@
+{
+  "interpretation_id": "hillbed-rsa-2026q1-rerun-v1-1",
+  "brand_name": "LOVEFU大島樂眠",
+  "product_name": "山丘樂眠床",
+  "campaign_type": "search_rsa",
+  "generated_by": "claude",
+  "generated_at": "2026-03-15T18:00:00+08:00",
+  "data_sufficiency": {
+    "overall_verdict": "partial",
+    "total_impressions": 0,
+    "threshold_used": 1000,
+    "assets_below_threshold": 140,
+    "reporting_context": {
+      "asset_granularity": "asset_association_estimate",
+      "includes_asset_level_conversion": true,
+      "includes_asset_level_conversion_value": false,
+      "includes_placement_breakout": false
+    },
+    "gaps_identified": [
+      "報表完全缺乏 impression/click/CTR 數據，僅有 conversion association estimates",
+      "所有素材 impressions=0，無法計算真正的 CTR 或 conversion rate",
+      "Conversion association 為 Google 估算值，非精確歸因",
+      "缺乏 placement breakout，無法判斷 Search vs Display 貢獻"
+    ]
+  },
+  "asset_type_percentiles": [
+    {
+      "asset_type": "headline",
+      "primary_metric": "conversion_rate_asset_type_percentile",
+      "eligible_asset_count": 68,
+      "p25": 2.0,
+      "p50": 6.05,
+      "p75": 11.01
+    },
+    {
+      "asset_type": "description",
+      "primary_metric": "conversion_rate_asset_type_percentile",
+      "eligible_asset_count": 21,
+      "p25": 5.82,
+      "p50": 8.0,
+      "p75": 18.92
+    }
+  ],
+  "asset_decisions": [
+    {
+      "asset_id": "desc-01",
+      "text": "腰椎不再酸痛，只要躺上它就足夠，2 次加熱的中鋼獨立筒彈簧，搭配獨家泡棉，創造飄雲Ｑ彈躺感。",
+      "asset_type": "description",
+      "decision": "reinforce",
+      "decision_rationale": "在 description cohort 中 conv association 294.74 >= P75 18.92，高表現素材，值得萃取模式並擴寫。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "description",
+        "eligible_asset_count": 28,
+        "cohort_percentiles": {
+          "p25": 5.82,
+          "p50": 8.0,
+          "p75": 18.92
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "top",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 295
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": [
+          "concrete-number",
+          "pain-point-solution"
+        ]
+      }
+    },
+    {
+      "asset_id": "desc-02",
+      "text": "100 天安心睡，帶你最需要的放鬆、慵懶。最好躺的 LOVEFU 硬床，不再睡睡醒醒，一覺到天明。",
+      "asset_type": "description",
+      "decision": "reinforce",
+      "decision_rationale": "在 description cohort 中 conv association 191.36 >= P75 18.92，高表現素材，值得萃取模式並擴寫。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "description",
+        "eligible_asset_count": 28,
+        "cohort_percentiles": {
+          "p25": 5.82,
+          "p50": 8.0,
+          "p75": 18.92
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "top",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 191
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": [
+          "concrete-number",
+          "lower-friction-cta"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-01",
+      "text": "200kg 不塌陷，最好睡的撐腰床墊",
+      "asset_type": "headline",
+      "decision": "reinforce",
+      "decision_rationale": "在 headline cohort 中 conv association 182.94 >= P75 11.01，高表現素材，值得萃取模式並擴寫。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "top",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 183
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": [
+          "concrete-number"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-02",
+      "text": "大島樂眠 LOVEFU 飄雲專利床墊",
+      "asset_type": "headline",
+      "decision": "reinforce",
+      "decision_rationale": "在 headline cohort 中 conv association 136.45 >= P75 11.01，高表現素材，值得萃取模式並擴寫。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "top",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 136
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU",
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-03",
+      "text": "不再背痛失眠－LOVEFU山丘樂眠床",
+      "asset_type": "headline",
+      "decision": "reinforce",
+      "decision_rationale": "在 headline cohort 中 conv association 136.24 >= P75 11.01，高表現素材，值得萃取模式並擴寫。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "top",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 136
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "山丘樂眠床",
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": [
+          "pain-point-solution"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-04",
+      "text": "100% MIT 更精湛的製床造詣",
+      "asset_type": "headline",
+      "decision": "reinforce",
+      "decision_rationale": "在 headline cohort 中 conv association 61.63 >= P75 11.01，高表現素材，值得萃取模式並擴寫。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "top",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 62
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": [
+          "concrete-number"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-05",
+      "text": "LOVEFU 飄雲床墊，97%壓倒性評價",
+      "asset_type": "headline",
+      "decision": "reinforce",
+      "decision_rationale": "在 headline cohort 中 conv association 56.37 >= P75 11.01，高表現素材，值得萃取模式並擴寫。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "top",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 56
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": [
+          "concrete-number"
+        ]
+      }
+    },
+    {
+      "asset_id": "desc-03",
+      "text": "LOVEFU 飄雲專利床墊，98% 好評推薦，舒適支撐幫助緩解腰痛，讓您享受無壓樂眠。",
+      "asset_type": "description",
+      "decision": "reinforce",
+      "decision_rationale": "在 description cohort 中 conv association 56.37 >= P75 18.92，高表現素材，值得萃取模式並擴寫。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "description",
+        "eligible_asset_count": 28,
+        "cohort_percentiles": {
+          "p25": 5.82,
+          "p50": 8.0,
+          "p75": 18.92
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "top",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 56
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU",
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": [
+          "concrete-number",
+          "pain-point-solution"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-06",
+      "text": "100 天安心睡計畫，改善睡眠品質",
+      "asset_type": "headline",
+      "decision": "reinforce",
+      "decision_rationale": "在 headline cohort 中 conv association 44.6 >= P75 11.01，高表現素材，值得萃取模式並擴寫。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "top",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 45
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": [
+          "concrete-number",
+          "lower-friction-cta"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-07",
+      "text": "專為台灣人的睡眠需求設計",
+      "asset_type": "headline",
+      "decision": "reinforce",
+      "decision_rationale": "在 headline cohort 中 conv association 35.57 >= P75 11.01，高表現素材，值得萃取模式並擴寫。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "top",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 36
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "desc-04",
+      "text": "想找高評價的床墊？LOVEFU 飄雲床墊提供無壓支撐與柔軟包覆，專屬於您的樂眠推薦首選。",
+      "asset_type": "description",
+      "decision": "reinforce",
+      "decision_rationale": "在 description cohort 中 conv association 24.71 >= P75 18.92，高表現素材，值得萃取模式並擴寫。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "description",
+        "eligible_asset_count": 28,
+        "cohort_percentiles": {
+          "p25": 5.82,
+          "p50": 8.0,
+          "p75": 18.92
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "top",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 25
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-08",
+      "text": "大島樂眠床墊－MIT 床墊首選",
+      "asset_type": "headline",
+      "decision": "reinforce",
+      "decision_rationale": "在 headline cohort 中 conv association 23.98 >= P75 11.01，高表現素材，值得萃取模式並擴寫。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "top",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 24
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-09",
+      "text": "LOVEFU 飄雲床墊，樂眠好評如潮",
+      "asset_type": "headline",
+      "decision": "reinforce",
+      "decision_rationale": "在 headline cohort 中 conv association 22.53 >= P75 11.01，高表現素材，值得萃取模式並擴寫。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "top",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 23
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "desc-05",
+      "text": "中鋼獨立筒彈簧ｘ專屬泡棉，打造Ｑ彈特殊躺感，慵懶躺下，就能撐住你的體重，全面舒緩你的疲憊感",
+      "asset_type": "description",
+      "decision": "reinforce",
+      "decision_rationale": "在 description cohort 中 conv association 21.9 >= P75 18.92，高表現素材，值得萃取模式並擴寫。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "description",
+        "eligible_asset_count": 28,
+        "cohort_percentiles": {
+          "p25": 5.82,
+          "p50": 8.0,
+          "p75": 18.92
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "top",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 22
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": [
+          "pain-point-solution"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-10",
+      "text": "2026 護脊床墊推薦 - 山丘樂眠床",
+      "asset_type": "headline",
+      "decision": "reinforce",
+      "decision_rationale": "在 headline cohort 中 conv association 20.65 >= P75 11.01，高表現素材，值得萃取模式並擴寫。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "top",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 21
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "山丘樂眠床"
+        ],
+        "reusable_motifs_matched": [
+          "concrete-number"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-11",
+      "text": "指定配送日，LOVEFU 配送超方便",
+      "asset_type": "headline",
+      "decision": "reinforce",
+      "decision_rationale": "在 headline cohort 中 conv association 20.0 >= P75 11.01，高表現素材，值得萃取模式並擴寫。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "top",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 20
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "desc-06",
+      "text": "LOVEFU 飄雲專利床墊，提供穩定支撐與適中軟硬度，適合追求無壓舒適感的消費者。",
+      "asset_type": "description",
+      "decision": "reinforce",
+      "decision_rationale": "在 description cohort 中 conv association 18.92 >= P75 18.92，高表現素材，值得萃取模式並擴寫。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "description",
+        "eligible_asset_count": 28,
+        "cohort_percentiles": {
+          "p25": 5.82,
+          "p50": 8.0,
+          "p75": 18.92
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "top",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 19
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU",
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-12",
+      "text": "多尺寸床墊，IKEA MUJI 完美 fit",
+      "asset_type": "headline",
+      "decision": "reinforce",
+      "decision_rationale": "在 headline cohort 中 conv association 17.15 >= P75 11.01，高表現素材，值得萃取模式並擴寫。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "top",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 17
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "desc-07",
+      "text": "LOVEFU 飄雲專利硬床墊，支撐力高達 200kg，提供無壓舒適的睡眠體驗，適合腰痛患者。",
+      "asset_type": "description",
+      "decision": "retain",
+      "decision_rationale": "在 description cohort 中 conv association 16.5 >= P50 8.0，表現穩定，保留。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "description",
+        "eligible_asset_count": 28,
+        "cohort_percentiles": {
+          "p25": 5.82,
+          "p50": 8.0,
+          "p75": 18.92
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 16
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU",
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": [
+          "concrete-number",
+          "pain-point-solution",
+          "lower-friction-cta"
+        ]
+      }
+    },
+    {
+      "asset_id": "desc-08",
+      "text": "獨立筒單人床墊，專為腰背設計，柔軟包覆與強力支撐結合，解決睡眠煩惱，享受穩定好眠。",
+      "asset_type": "description",
+      "decision": "retain",
+      "decision_rationale": "在 description cohort 中 conv association 15.56 >= P50 8.0，表現穩定，保留。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "description",
+        "eligible_asset_count": 28,
+        "cohort_percentiles": {
+          "p25": 5.82,
+          "p50": 8.0,
+          "p75": 18.92
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 16
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-13",
+      "text": "台灣製床墊，SGS 與歐盟多項認證",
+      "asset_type": "headline",
+      "decision": "reinforce",
+      "decision_rationale": "在 headline cohort 中 conv association 15.06 >= P75 11.01，高表現素材，值得萃取模式並擴寫。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "top",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 15
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-14",
+      "text": "硬床選擇，LOVEFU 專利舒適",
+      "asset_type": "headline",
+      "decision": "reinforce",
+      "decision_rationale": "在 headline cohort 中 conv association 14.62 >= P75 11.01，高表現素材，值得萃取模式並擴寫。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "top",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 15
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-15",
+      "text": "LOVEFU山丘樂眠床－腰臀健康首選",
+      "asset_type": "headline",
+      "decision": "reinforce",
+      "decision_rationale": "在 headline cohort 中 conv association 13.57 >= P75 11.01，高表現素材，值得萃取模式並擴寫。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "top",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 14
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "山丘樂眠床",
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-16",
+      "text": "專為台灣設計的 LOVEFU 床墊",
+      "asset_type": "headline",
+      "decision": "reinforce",
+      "decision_rationale": "在 headline cohort 中 conv association 12.32 >= P75 11.01，高表現素材，值得萃取模式並擴寫。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "top",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 12
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-17",
+      "text": "LOVEFU 硬床墊，舒緩腰痛設計",
+      "asset_type": "headline",
+      "decision": "reinforce",
+      "decision_rationale": "在 headline cohort 中 conv association 11.03 >= P75 11.01，高表現素材，值得萃取模式並擴寫。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "top",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 11
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": [
+          "pain-point-solution"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-18",
+      "text": "硬床墊選擇，LOVEFU 專利舒適",
+      "asset_type": "headline",
+      "decision": "retain",
+      "decision_rationale": "在 headline cohort 中 conv association 11.0 >= P50 6.05，表現穩定，保留。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 11
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-19",
+      "text": "單人床墊，飄雲專利解決問題",
+      "asset_type": "headline",
+      "decision": "retain",
+      "decision_rationale": "在 headline cohort 中 conv association 10.56 >= P50 6.05，表現穩定，保留。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 11
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-20",
+      "text": "單人床墊，飄雲專利無壓舒適",
+      "asset_type": "headline",
+      "decision": "retain",
+      "decision_rationale": "在 headline cohort 中 conv association 10.0 >= P50 6.05，表現穩定，保留。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 10
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "desc-09",
+      "text": "撐腰設計讓你舒緩肩腰臀的疲憊，LoveFu 床墊助你輕鬆告別酸痛，享 100 天無風險試睡。",
+      "asset_type": "description",
+      "decision": "retain",
+      "decision_rationale": "在 description cohort 中 conv association 10.0 >= P50 8.0，表現穩定，保留。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "description",
+        "eligible_asset_count": 28,
+        "cohort_percentiles": {
+          "p25": 5.82,
+          "p50": 8.0,
+          "p75": 18.92
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 10
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": [
+          "concrete-number",
+          "pain-point-solution",
+          "lower-friction-cta"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-21",
+      "text": "專為台灣人設計的支撐感",
+      "asset_type": "headline",
+      "decision": "retain",
+      "decision_rationale": "在 headline cohort 中 conv association 9.72 >= P50 6.05，表現穩定，保留。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 10
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "desc-10",
+      "text": "高評價 LoveFu 床墊，結合撐腰設計與柔軟支撐，無壓睡眠體驗，現在購買還有免費送貨！",
+      "asset_type": "description",
+      "decision": "retain",
+      "decision_rationale": "在 description cohort 中 conv association 9.68 >= P50 8.0，表現穩定，保留。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "description",
+        "eligible_asset_count": 28,
+        "cohort_percentiles": {
+          "p25": 5.82,
+          "p50": 8.0,
+          "p75": 18.92
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 10
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": [
+          "lower-friction-cta"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-22",
+      "text": "LOVEFU 硬床墊，支撐舒適兩全",
+      "asset_type": "headline",
+      "decision": "retain",
+      "decision_rationale": "在 headline cohort 中 conv association 9.61 >= P50 6.05，表現穩定，保留。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 10
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-23",
+      "text": "單人床墊推薦，飄雲專利好眠",
+      "asset_type": "headline",
+      "decision": "retain",
+      "decision_rationale": "在 headline cohort 中 conv association 9.56 >= P50 6.05，表現穩定，保留。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 10
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-24",
+      "text": "200kg 不塌陷的 LOVEFU 獨立筒",
+      "asset_type": "headline",
+      "decision": "retain",
+      "decision_rationale": "在 headline cohort 中 conv association 9.34 >= P50 6.05，表現穩定，保留。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 9
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": [
+          "concrete-number"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-25",
+      "text": "山丘樂眠床，LOVEFU 支撐舒適",
+      "asset_type": "headline",
+      "decision": "retain",
+      "decision_rationale": "在 headline cohort 中 conv association 9.11 >= P50 6.05，表現穩定，保留。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 9
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "山丘樂眠床",
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-26",
+      "text": "LOVEFU飄雲專利硬床墊，無壓好眠",
+      "asset_type": "headline",
+      "decision": "retain",
+      "decision_rationale": "在 headline cohort 中 conv association 8.62 >= P50 6.05，表現穩定，保留。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 9
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU",
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-27",
+      "text": "超越彈簧床，試試新一代舒適床墊",
+      "asset_type": "headline",
+      "decision": "retain",
+      "decision_rationale": "在 headline cohort 中 conv association 8.0 >= P50 6.05，表現穩定，保留。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 8
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-28",
+      "text": "飄雲專利床墊，讓您愛上無壓支撐",
+      "asset_type": "headline",
+      "decision": "retain",
+      "decision_rationale": "在 headline cohort 中 conv association 8.0 >= P50 6.05，表現穩定，保留。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 8
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "desc-11",
+      "text": "想要更好的支撐力？飄雲專利獨立筒床墊提供比彈簧床更舒適的支撐與透氣性。",
+      "asset_type": "description",
+      "decision": "retain",
+      "decision_rationale": "在 description cohort 中 conv association 8.0 >= P50 8.0，表現穩定，保留。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "description",
+        "eligible_asset_count": 28,
+        "cohort_percentiles": {
+          "p25": 5.82,
+          "p50": 8.0,
+          "p75": 18.92
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 8
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "desc-12",
+      "text": "飄雲專利床墊，超越彈簧床的支撐與舒適，讓您享受穩定無壓的睡眠體驗。",
+      "asset_type": "description",
+      "decision": "retain",
+      "decision_rationale": "在 description cohort 中 conv association 8.0 >= P50 8.0，表現穩定，保留。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "description",
+        "eligible_asset_count": 28,
+        "cohort_percentiles": {
+          "p25": 5.82,
+          "p50": 8.0,
+          "p75": 18.92
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 8
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": [
+          "lower-friction-cta"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-29",
+      "text": "LoveFu - 樂於舒適，始於睡眠",
+      "asset_type": "headline",
+      "decision": "retain",
+      "decision_rationale": "在 headline cohort 中 conv association 8.0 >= P50 6.05，表現穩定，保留。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 8
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "desc-13",
+      "text": "飄雲專利獨立筒單人床墊，專為個人打造，帶來無壓支撐與柔軟包覆，讓您每天充滿活力。",
+      "asset_type": "description",
+      "decision": "observe",
+      "decision_rationale": "在 description cohort 中 conv association 7.56 介於 P25-P50 (5.82-8.0)，方向待確認。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "description",
+        "eligible_asset_count": 28,
+        "cohort_percentiles": {
+          "p25": 5.82,
+          "p50": 8.0,
+          "p75": 18.92
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 8
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-30",
+      "text": "單人床墊，針對腰酸背痛設計",
+      "asset_type": "headline",
+      "decision": "retain",
+      "decision_rationale": "在 headline cohort 中 conv association 7.0 >= P50 6.05，表現穩定，保留。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 7
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": [
+          "pain-point-solution"
+        ]
+      }
+    },
+    {
+      "asset_id": "desc-14",
+      "text": "專為台灣人設計的 LoveFu 床墊，200kg 不塌陷，帶來穩定支撐與完美舒適，立即試睡！",
+      "asset_type": "description",
+      "decision": "observe",
+      "decision_rationale": "在 description cohort 中 conv association 6.67 介於 P25-P50 (5.82-8.0)，方向待確認。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "description",
+        "eligible_asset_count": 28,
+        "cohort_percentiles": {
+          "p25": 5.82,
+          "p50": 8.0,
+          "p75": 18.92
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 7
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": [
+          "concrete-number",
+          "lower-friction-cta"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-31",
+      "text": "單人床墊，柔軟包覆讓您好眠",
+      "asset_type": "headline",
+      "decision": "retain",
+      "decision_rationale": "在 headline cohort 中 conv association 6.56 >= P50 6.05，表現穩定，保留。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 7
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-32",
+      "text": "LOVEFU山丘樂眠床－腰椎更健康",
+      "asset_type": "headline",
+      "decision": "retain",
+      "decision_rationale": "在 headline cohort 中 conv association 6.29 >= P50 6.05，表現穩定，保留。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 6
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "山丘樂眠床",
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-33",
+      "text": "雲端般舒適感，LOVEFU 床墊推薦",
+      "asset_type": "headline",
+      "decision": "retain",
+      "decision_rationale": "在 headline cohort 中 conv association 6.14 >= P50 6.05，表現穩定，保留。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 6
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "desc-15",
+      "text": "LOVEFU 山丘樂眠床，結合硬床墊的穩定支撐與柔軟包覆，讓您享受深度舒適睡眠。",
+      "asset_type": "description",
+      "decision": "observe",
+      "decision_rationale": "在 description cohort 中 conv association 6.11 介於 P25-P50 (5.82-8.0)，方向待確認。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "description",
+        "eligible_asset_count": 28,
+        "cohort_percentiles": {
+          "p25": 5.82,
+          "p50": 8.0,
+          "p75": 18.92
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 6
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "山丘樂眠床",
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-34",
+      "text": "LOVEFU 飄雲專利，支撐無壓好眠",
+      "asset_type": "headline",
+      "decision": "retain",
+      "decision_rationale": "在 headline cohort 中 conv association 6.11 >= P50 6.05，表現穩定，保留。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 6
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU",
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-35",
+      "text": "硬床墊推薦，LOVEFU 山丘樂眠床",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中 conv association 6.0 介於 P25-P50 (2.0-6.05)，方向待確認。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 6
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "山丘樂眠床",
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-36",
+      "text": "白天你撐起生活，晚上山丘撐住你",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中 conv association 5.84 介於 P25-P50 (2.0-6.05)，方向待確認。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 6
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "desc-16",
+      "text": "『100天安心睡計畫、10年保固、100%台灣血統製造』 最高分12期，0利率。",
+      "asset_type": "description",
+      "decision": "observe",
+      "decision_rationale": "在 description cohort 中 conv association 5.82 介於 P25-P50 (5.82-8.0)，方向待確認。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "description",
+        "eligible_asset_count": 28,
+        "cohort_percentiles": {
+          "p25": 5.82,
+          "p50": 8.0,
+          "p75": 18.92
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 6
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [
+          "100天安心睡"
+        ],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": [
+          "concrete-number",
+          "lower-friction-cta"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-37",
+      "text": "200kg 不塌陷的 LOVEFU 床墊",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中 conv association 5.76 介於 P25-P50 (2.0-6.05)，方向待確認。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 6
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": [
+          "concrete-number"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-38",
+      "text": "飄雲專利單人床墊，舒適支撐",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中 conv association 5.56 介於 P25-P50 (2.0-6.05)，方向待確認。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 6
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-39",
+      "text": "山丘樂眠床 第2張床 擁有支撐腰背與放鬆的魔法",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中 conv association 5.24 介於 P25-P50 (2.0-6.05)，方向待確認。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 5
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "山丘樂眠床"
+        ],
+        "reusable_motifs_matched": [
+          "concrete-number"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-40",
+      "text": "硬床墊推薦，選 LOVEFU 專利",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中 conv association 4.0 介於 P25-P50 (2.0-6.05)，方向待確認。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 4
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-41",
+      "text": "床墊推薦，高評價的 LOVEFU 床墊",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中 conv association 4.0 介於 P25-P50 (2.0-6.05)，方向待確認。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 4
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-42",
+      "text": "LOVEFU山丘樂眠床，無壓支撐好眠",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中 conv association 4.0 介於 P25-P50 (2.0-6.05)，方向待確認。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 4
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "山丘樂眠床",
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "desc-17",
+      "text": "森林系設計的獨立筒床墊，支撐與包覆兼具，帶來自然舒適感，讓每晚都如同在大自然中入眠。",
+      "asset_type": "description",
+      "decision": "retire",
+      "decision_rationale": "在 description cohort 中 conv association 4.0 < P25 5.82，無 protected phrase 保護，建議退場。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "description",
+        "eligible_asset_count": 28,
+        "cohort_percentiles": {
+          "p25": 5.82,
+          "p50": 8.0,
+          "p75": 18.92
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "low",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 4
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-43",
+      "text": "選 LOVEFU 床墊，告別腰痛困擾",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中 conv association 4.0 介於 P25-P50 (2.0-6.05)，方向待確認。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 4
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": [
+          "pain-point-solution"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-44",
+      "text": "獨立筒單人床墊，改善睡眠",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中 conv association 4.0 介於 P25-P50 (2.0-6.05)，方向待確認。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 4
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "desc-18",
+      "text": "選擇 LoveFu 床墊，感受中鋼獨立筒與獨家泡棉的 Q 彈躺感，為你創造完美的睡眠體驗。",
+      "asset_type": "description",
+      "decision": "retire",
+      "decision_rationale": "在 description cohort 中 conv association 4.0 < P25 5.82，無 protected phrase 保護，建議退場。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "description",
+        "eligible_asset_count": 28,
+        "cohort_percentiles": {
+          "p25": 5.82,
+          "p50": 8.0,
+          "p75": 18.92
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "low",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 4
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": [
+          "lower-friction-cta"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-45",
+      "text": "LOVEFU 床墊，撐腰設計減輕腰痛",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中 conv association 4.0 介於 P25-P50 (2.0-6.05)，方向待確認。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 4
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": [
+          "pain-point-solution"
+        ]
+      }
+    },
+    {
+      "asset_id": "desc-19",
+      "text": "告別腰酸背痛！選擇 LoveFu 獨立筒床墊，飄雲專利設計為您提供無壓力支撐，讓睡眠質量全面升級！",
+      "asset_type": "description",
+      "decision": "retire",
+      "decision_rationale": "在 description cohort 中 conv association 4.0 < P25 5.82，無 protected phrase 保護，建議退場。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "description",
+        "eligible_asset_count": 28,
+        "cohort_percentiles": {
+          "p25": 5.82,
+          "p50": 8.0,
+          "p75": 18.92
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "low",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 4
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": [
+          "pain-point-solution"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-46",
+      "text": "2026 護脊床墊推薦 - 山丘樂眠",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中 conv association 3.71 介於 P25-P50 (2.0-6.05)，方向待確認。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 4
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": [
+          "concrete-number"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-47",
+      "text": "一張你尋找已久的Ｑ彈撐腰床墊，",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中 conv association 3.0 介於 P25-P50 (2.0-6.05)，方向待確認。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 3
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-48",
+      "text": "超過 10,000 家庭一致推薦",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中 conv association 3.0 介於 P25-P50 (2.0-6.05)，方向待確認。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 3
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": [
+          "concrete-number"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-49",
+      "text": "單人床墊推薦，支撐力達 200kg",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中 conv association 3.0 介於 P25-P50 (2.0-6.05)，方向待確認。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 3
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": [
+          "concrete-number"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-50",
+      "text": "推薦 LOVEFU 床墊，200kg 不塌陷",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中 conv association 2.17 介於 P25-P50 (2.0-6.05)，方向待確認。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 2
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": [
+          "concrete-number"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-51",
+      "text": "LOVEFU 床墊，專為腰椎支撐設計",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中 conv association 2.0 介於 P25-P50 (2.0-6.05)，方向待確認。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 2
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-52",
+      "text": "來店體驗，9 成客人當場入睡",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中 conv association 2.0 介於 P25-P50 (2.0-6.05)，方向待確認。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 2
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": [
+          "concrete-number",
+          "lower-friction-cta"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-53",
+      "text": "獨立筒床墊，每晚舒適支撐樂眠",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中 conv association 2.0 介於 P25-P50 (2.0-6.05)，方向待確認。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 2
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-54",
+      "text": "撐腰床墊，體驗飄雲般舒適感",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中 conv association 2.0 介於 P25-P50 (2.0-6.05)，方向待確認。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 2
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": [
+          "lower-friction-cta"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-55",
+      "text": "獨立筒床墊，完美支撐您的睡眠",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中 conv association 2.0 介於 P25-P50 (2.0-6.05)，方向待確認。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 2
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "desc-20",
+      "text": "100 天安心試睡，LoveFu 床墊舒緩腰痛與疲勞，帶你享受每晚無壓的輕鬆入眠。",
+      "asset_type": "description",
+      "decision": "retire",
+      "decision_rationale": "在 description cohort 中 conv association 2.0 < P25 5.82，無 protected phrase 保護，建議退場。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "description",
+        "eligible_asset_count": 28,
+        "cohort_percentiles": {
+          "p25": 5.82,
+          "p50": 8.0,
+          "p75": 18.92
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "low",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 2
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": [
+          "concrete-number",
+          "pain-point-solution",
+          "lower-friction-cta"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-56",
+      "text": "LOVEFU 床墊，免費送貨與試睡",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中 conv association 2.0 介於 P25-P50 (2.0-6.05)，方向待確認。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 2
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": [
+          "lower-friction-cta"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-57",
+      "text": "100天試睡，LOVEFU 床墊享舒適",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中 conv association 2.0 介於 P25-P50 (2.0-6.05)，方向待確認。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 2
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": [
+          "concrete-number",
+          "lower-friction-cta"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-58",
+      "text": "單人床墊，提供無壓力好支撐",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中 conv association 2.0 介於 P25-P50 (2.0-6.05)，方向待確認。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "mid",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 2
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "desc-21",
+      "text": "LoveFu 床墊，撐腰設計提升舒適感，100 天試睡保障，讓你無憂體驗理想睡眠！",
+      "asset_type": "description",
+      "decision": "retire",
+      "decision_rationale": "在 description cohort 中 conv association 1.84 < P25 5.82，無 protected phrase 保護，建議退場。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "description",
+        "eligible_asset_count": 28,
+        "cohort_percentiles": {
+          "p25": 5.82,
+          "p50": 8.0,
+          "p75": 18.92
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "low",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 2
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": [
+          "concrete-number",
+          "lower-friction-cta"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-59",
+      "text": "撐腰設計，LOVEFU 床墊推薦首選",
+      "asset_type": "headline",
+      "decision": "retire",
+      "decision_rationale": "在 headline cohort 中 conv association 1.84 < P25 2.0，無 protected phrase 保護，建議退場。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "low",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 2
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-60",
+      "text": "LOVEFU 飄雲專利床墊，支撐舒適",
+      "asset_type": "headline",
+      "decision": "retire",
+      "decision_rationale": "在 headline cohort 中 conv association 1.62 < P25 2.0，無 protected phrase 保護，建議退場。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "low",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 2
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU",
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-61",
+      "text": "LOVEFU 床墊，高性價比推薦首選",
+      "asset_type": "headline",
+      "decision": "retire",
+      "decision_rationale": "在 headline cohort 中 conv association 1.24 < P25 2.0，無 protected phrase 保護，建議退場。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "low",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 1
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-62",
+      "text": "爸爸專屬》來店測 BMI 享折扣",
+      "asset_type": "headline",
+      "decision": "retire",
+      "decision_rationale": "在 headline cohort 中 conv association 1.24 < P25 2.0，無 protected phrase 保護，建議退場。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "low",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 1
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-63",
+      "text": "立即預約試躺，體驗雲端支撐感",
+      "asset_type": "headline",
+      "decision": "retire",
+      "decision_rationale": "在 headline cohort 中 conv association 1.0 < P25 2.0，無 protected phrase 保護，建議退場。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "low",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 1
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": [
+          "lower-friction-cta"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-64",
+      "text": "LOVEFU 硬床墊，無壓支撐體驗",
+      "asset_type": "headline",
+      "decision": "retire",
+      "decision_rationale": "在 headline cohort 中 conv association 0.58 < P25 2.0，無 protected phrase 保護，建議退場。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "low",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 1
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": [
+          "lower-friction-cta"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-65",
+      "text": "撐腰床墊推薦，LOVEFU 值得信賴",
+      "asset_type": "headline",
+      "decision": "retire",
+      "decision_rationale": "在 headline cohort 中 conv association 0.5 < P25 2.0，無 protected phrase 保護，建議退場。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "low",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-66",
+      "text": "LOVEFU 床墊，高評價的舒適支撐",
+      "asset_type": "headline",
+      "decision": "retire",
+      "decision_rationale": "在 headline cohort 中 conv association 0.5 < P25 2.0，無 protected phrase 保護，建議退場。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "low",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-67",
+      "text": "2026 年首選飄雲專利獨立筒床墊",
+      "asset_type": "headline",
+      "decision": "retire",
+      "decision_rationale": "在 headline cohort 中 conv association 0.44 < P25 2.0，無 protected phrase 保護，建議退場。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "low",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": [
+          "concrete-number"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-68",
+      "text": "全系列無毒認證，嬰幼兒也安心",
+      "asset_type": "headline",
+      "decision": "retire",
+      "decision_rationale": "在 headline cohort 中 conv association 0.33 < P25 2.0，無 protected phrase 保護，建議退場。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "low",
+      "performance_tier": "low",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": [
+          "lower-friction-cta"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-69",
+      "text": "無壓支撐，飄雲專利床墊首選",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "desc-22",
+      "text": "單人床墊推薦，飄雲專利獨立筒帶來無壓支撐與柔軟包覆感，讓您深度睡眠。",
+      "asset_type": "description",
+      "decision": "observe",
+      "decision_rationale": "在 description cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "description",
+        "eligible_asset_count": 28,
+        "cohort_percentiles": {
+          "p25": 5.82,
+          "p50": 8.0,
+          "p75": 18.92
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "desc-23",
+      "text": "壓縮捲包設計，專人換床無需費力，LoveFu 床墊讓你享受舒適無憂的購物體驗。",
+      "asset_type": "description",
+      "decision": "observe",
+      "decision_rationale": "在 description cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "description",
+        "eligible_asset_count": 28,
+        "cohort_percentiles": {
+          "p25": 5.82,
+          "p50": 8.0,
+          "p75": 18.92
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": [
+          "lower-friction-cta"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-70",
+      "text": "全新支撐技術，體驗飄雲專利好眠",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": [
+          "lower-friction-cta"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-71",
+      "text": "夠撐的男人，也該有張撐腰的床",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-72",
+      "text": "告別晨起腰痛，肌肉不再夜間加班",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": [
+          "pain-point-solution"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-73",
+      "text": "專利獨立筒，讓腰背徹底放鬆樂眠",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-74",
+      "text": "台灣製造床墊，極致舒適支撐",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-75",
+      "text": "支撐好眠的飄雲專利獨立筒床墊",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-76",
+      "text": "飄雲專利床墊，舒適支撐超乎想像",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-77",
+      "text": "2026 年首選飄雲專利獨利筒床墊",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": [
+          "concrete-number"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-78",
+      "text": "撐住肩腰臀，舒適不再疲憊",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": [
+          "pain-point-solution"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-79",
+      "text": "飄雲專利，帶來前所未有的舒適感",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-80",
+      "text": "LOVEFU 獨立筒床墊，為好眠設計",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-81",
+      "text": "飄雲專利獨立筒，讓您睡得更好",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-82",
+      "text": "98% 滿意的飄雲專利獨立筒床墊",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": [
+          "concrete-number"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-83",
+      "text": "告別晨起腰痠，睡醒好輕鬆",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": [
+          "pain-point-solution"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-84",
+      "text": "享受 LOVEFU 床墊的撐腰舒適",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-85",
+      "text": "支撐與包覆，飄雲專利床墊推薦",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-86",
+      "text": "高評價 LOVEFU 床墊，助你好眠",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-87",
+      "text": "單人床墊推薦，體驗穩定支撐",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": [
+          "lower-friction-cta"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-88",
+      "text": "換新床，體驗專利獨立筒一夜樂眠",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": [
+          "lower-friction-cta"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-89",
+      "text": "山丘樂眠床，LOVEFU 硬床墊選擇",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "山丘樂眠床",
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-90",
+      "text": "飄雲專利技術，改變您的好眠",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-91",
+      "text": "獨立支撐與舒適感，飄雲專利",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "desc-24",
+      "text": "飄雲專利獨立筒，提供比彈簧床更精確的支撐，讓您徹底享受無壓力的好眠體驗。",
+      "asset_type": "description",
+      "decision": "observe",
+      "decision_rationale": "在 description cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "description",
+        "eligible_asset_count": 28,
+        "cohort_percentiles": {
+          "p25": 5.82,
+          "p50": 8.0,
+          "p75": 18.92
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": [
+          "lower-friction-cta"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-92",
+      "text": "獨立筒單人床墊，撐腰不痠痛",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": [
+          "pain-point-solution"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-93",
+      "text": "彈簧床下一步，選飄雲專利床墊",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-94",
+      "text": "山丘樂眠床，LOVEFU 提供好眠",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "山丘樂眠床",
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-95",
+      "text": "98% 滿意度的床墊，睡眠專家推薦",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": [
+          "concrete-number"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-96",
+      "text": "森林系睡眠，放鬆自然感",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-97",
+      "text": "LOVEFU 床墊，高支撐不塌陷",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-98",
+      "text": "飄雲專利單人床墊，無壓支撐",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-99",
+      "text": "獨立筒床墊 SGS 認證 彈簧材質、甲醛釋放、安全檢測完整揭露 Lovefu",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-100",
+      "text": "一覺到天亮，享受極致好眠",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-101",
+      "text": "中鋼獨立筒，LOVEFU 床墊推薦",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-102",
+      "text": "捨棄舊床，樂眠一夜到天亮",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "desc-25",
+      "text": "LOVEFU 山丘樂眠床，專為腰痛患者設計，提供強力支撐與舒適包覆，帶來每晚好眠。",
+      "asset_type": "description",
+      "decision": "observe",
+      "decision_rationale": "在 description cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "description",
+        "eligible_asset_count": 28,
+        "cohort_percentiles": {
+          "p25": 5.82,
+          "p50": 8.0,
+          "p75": 18.92
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "山丘樂眠床",
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": [
+          "pain-point-solution"
+        ]
+      }
+    },
+    {
+      "asset_id": "desc-26",
+      "text": "飄雲專利的獨立筒床墊，提供卓越腰背支撐，讓 9 成人到店試躺立即入睡，睡得更安心！",
+      "asset_type": "description",
+      "decision": "observe",
+      "decision_rationale": "在 description cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "description",
+        "eligible_asset_count": 28,
+        "cohort_percentiles": {
+          "p25": 5.82,
+          "p50": 8.0,
+          "p75": 18.92
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": [
+          "concrete-number",
+          "lower-friction-cta"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-103",
+      "text": "飄雲專利床墊，打造專屬好眠",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-104",
+      "text": "舒適來自飄雲專利床墊體驗",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": [
+          "lower-friction-cta"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-105",
+      "text": "徹底放鬆脊椎，找回深層睡眠感",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-106",
+      "text": "壓縮捲包設計，輕鬆換新床",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-107",
+      "text": "山丘樂眠床，LOVEFU硬床墊好選擇",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "山丘樂眠床",
+          "LOVEFU"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-108",
+      "text": "支撐力強，單人床墊好選擇",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "desc-27",
+      "text": "飄雲專利獨立筒床墊，支撐力超越傳統彈簧床，提供無壓支撐與柔軟包覆。",
+      "asset_type": "description",
+      "decision": "observe",
+      "decision_rationale": "在 description cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "description",
+        "eligible_asset_count": 28,
+        "cohort_percentiles": {
+          "p25": 5.82,
+          "p50": 8.0,
+          "p75": 18.92
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-109",
+      "text": "體驗全新支撐，選飄雲專利床墊",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": [
+          "lower-friction-cta"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-110",
+      "text": "飄雲專利獨立筒，穩定支撐力",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "hl-111",
+      "text": "翻身也無壓力，飄雲專利好體驗",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": [
+          "lower-friction-cta"
+        ]
+      }
+    },
+    {
+      "asset_id": "hl-112",
+      "text": "彈簧床對手，飄雲專利更舒適",
+      "asset_type": "headline",
+      "decision": "observe",
+      "decision_rationale": "在 headline cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "headline",
+        "eligible_asset_count": 112,
+        "cohort_percentiles": {
+          "p25": 2.0,
+          "p50": 6.05,
+          "p75": 11.01
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": []
+      }
+    },
+    {
+      "asset_id": "desc-28",
+      "text": "飄雲專利獨立筒單人床墊，支撐力達 200kg，無壓撐腰不痠痛，個人專屬舒適好眠。",
+      "asset_type": "description",
+      "decision": "observe",
+      "decision_rationale": "在 description cohort 中無任何 conversion association，數據不足以判定方向。",
+      "decision_basis": {
+        "primary_metric": "conversion_rate_asset_type_percentile",
+        "asset_type_cohort": "description",
+        "eligible_asset_count": 28,
+        "cohort_percentiles": {
+          "p25": 5.82,
+          "p50": 8.0,
+          "p75": 18.92
+        },
+        "supporting_metrics_available": [
+          "conversion_association_count"
+        ],
+        "placement_breakout_available": false,
+        "notes": "報表缺乏 impression/click 數據，改用 conversion association count 作為 proxy metric。"
+      },
+      "decision_confidence": "directional",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": {
+        "impressions": 0,
+        "ctr": 0,
+        "conversions": 0
+      },
+      "legacy_tags": {
+        "protected_phrases_matched": [],
+        "must_include_tokens_matched": [
+          "飄雲專利"
+        ],
+        "reusable_motifs_matched": [
+          "concrete-number",
+          "pain-point-solution"
+        ]
+      }
+    }
+  ],
+  "high_value_language": {
+    "patterns": [
+      {
+        "pattern": "具體數字開頭（200kg、97%、100天）",
+        "evidence": "Top 3 標題 conv 分別為 182.9、136.4、61.6，全部含數字",
+        "confidence": "medium"
+      },
+      {
+        "pattern": "痛點→解方句式（不再背痛→LOVEFU山丘樂眠床）",
+        "evidence": "hl-03 conv=136.2，hl-01 使用「撐腰」亦屬此類",
+        "confidence": "medium"
+      },
+      {
+        "pattern": "技術規格＋體感描述（中鋼獨立筒＋Q彈躺感）",
+        "evidence": "desc-01 conv=294.7 為全場最高，使用此結構",
+        "confidence": "medium"
+      },
+      {
+        "pattern": "風險逆轉 CTA（100天安心睡）",
+        "evidence": "hl-06 conv=48.6，desc-02 conv=191.4 均使用此框架",
+        "confidence": "medium"
+      },
+      {
+        "pattern": "MIT / 台灣製造信任訴求",
+        "evidence": "hl-04 conv=61.6，排名第 4",
+        "confidence": "low"
+      }
+    ]
+  },
+  "legacy_message_state": {
+    "protected_phrases": [
+      {
+        "phrase": "100天安心睡",
+        "min_active_assets": 1,
+        "matched_asset_ids": [
+          "desc-16"
+        ],
+        "status": "covered"
+      }
+    ],
+    "must_include_tokens": [
+      {
+        "token": "山丘樂眠床",
+        "min_active_assets": 2,
+        "matched_asset_ids": [
+          "hl-03",
+          "hl-10",
+          "hl-15",
+          "hl-25",
+          "hl-32",
+          "desc-15",
+          "hl-35",
+          "hl-39",
+          "hl-42"
+        ],
+        "status": "covered"
+      },
+      {
+        "token": "LOVEFU",
+        "min_active_assets": 2,
+        "matched_asset_ids": [
+          "desc-02",
+          "hl-02",
+          "hl-03",
+          "hl-05",
+          "desc-03",
+          "desc-04",
+          "hl-09",
+          "hl-11",
+          "desc-06",
+          "desc-07"
+        ],
+        "status": "covered"
+      },
+      {
+        "token": "飄雲專利",
+        "min_active_assets": 1,
+        "matched_asset_ids": [
+          "hl-02",
+          "desc-03",
+          "desc-06",
+          "desc-07",
+          "hl-19",
+          "hl-20",
+          "hl-23",
+          "hl-26",
+          "hl-28",
+          "desc-11"
+        ],
+        "status": "covered"
+      }
+    ],
+    "reusable_motifs": [
+      {
+        "motif_key": "concrete-number",
+        "description": "使用具體數字強化說服力（200kg、97%、100天）",
+        "source_assets": [
+          "desc-01",
+          "desc-02",
+          "hl-01",
+          "hl-04",
+          "hl-05",
+          "desc-03",
+          "hl-06",
+          "hl-10"
+        ],
+        "recommendation": "作為 replacement 與 expansion 的優先句式",
+        "confidence": "medium"
+      },
+      {
+        "motif_key": "pain-point-solution",
+        "description": "先點痛點再給解方（腰痛→撐腰、背痛→山丘接住你）",
+        "source_assets": [
+          "desc-01",
+          "hl-03",
+          "desc-03",
+          "desc-05",
+          "hl-17"
+        ],
+        "recommendation": "作為 replacement 與 expansion 的優先句式",
+        "confidence": "medium"
+      },
+      {
+        "motif_key": "lower-friction-cta",
+        "description": "先體驗再決定的低壓 CTA（安心睡、試睡、體驗）",
+        "source_assets": [
+          "desc-02",
+          "hl-06"
+        ],
+        "recommendation": "作為 replacement 與 expansion 的優先句式",
+        "confidence": "medium"
+      }
+    ]
+  },
+  "next_round_brief_additions": {
+    "proven_angles": [
+      {
+        "key": "concrete-number-proof",
+        "label": "具體數字佐證",
+        "evidence": "Top 5 中 4 個含數字，平均 conv 比非數字標題高 3 倍"
+      },
+      {
+        "key": "pain-point-relief",
+        "label": "痛點舒緩",
+        "evidence": "「背痛」「撐腰」「腰椎」相關標題占 Top 10 的 40%"
+      },
+      {
+        "key": "risk-reversal",
+        "label": "風險逆轉 CTA",
+        "evidence": "100天安心睡系列在標題和說明中都是高轉換模式"
+      },
+      {
+        "key": "mit-pride",
+        "label": "MIT 台灣製造",
+        "evidence": "hl-04「100% MIT」conv=61.6，排名第 4"
+      },
+      {
+        "key": "tech-plus-feel",
+        "label": "技術＋體感",
+        "evidence": "desc-01 技術規格＋體感描述的結構為全場最高轉換"
+      }
+    ],
+    "language_to_avoid": [
+      "最低價（品牌定位不符）",
+      "保證治好腰痛（醫療宣稱違規）",
+      "「舒適」「支撐」等泛用形容詞單獨使用（低成效素材高頻出現）"
+    ],
+    "constraints_from_performance": {
+      "protected_phrases": [
+        "100天安心睡"
+      ],
+      "must_include_tokens": [
+        "山丘樂眠床",
+        "LOVEFU",
+        "飄雲專利"
+      ],
+      "reusable_motifs": [
+        "concrete-number",
+        "pain-point-solution",
+        "lower-friction-cta"
+      ]
+    }
+  },
+  "retire_now_assets": [
+    {
+      "asset_id": "desc-17",
+      "asset_text": "森林系設計的獨立筒床墊，支撐與包覆兼具，帶來自然舒適感，讓每晚都如同在大自然中入眠。",
+      "asset_type": "description",
+      "reason": "在 description cohort 中 conv association 4.0 < P25 5.82，無 protected phrase 保護，建議退場。",
+      "decision_confidence": "low",
+      "decision_basis_ref": "desc-17",
+      "coverage_gap_created": []
+    },
+    {
+      "asset_id": "desc-18",
+      "asset_text": "選擇 LoveFu 床墊，感受中鋼獨立筒與獨家泡棉的 Q 彈躺感，為你創造完美的睡眠體驗。",
+      "asset_type": "description",
+      "reason": "在 description cohort 中 conv association 4.0 < P25 5.82，無 protected phrase 保護，建議退場。",
+      "decision_confidence": "low",
+      "decision_basis_ref": "desc-18",
+      "coverage_gap_created": []
+    },
+    {
+      "asset_id": "desc-19",
+      "asset_text": "告別腰酸背痛！選擇 LoveFu 獨立筒床墊，飄雲專利設計為您提供無壓力支撐，讓睡眠質量全面升級！",
+      "asset_type": "description",
+      "reason": "在 description cohort 中 conv association 4.0 < P25 5.82，無 protected phrase 保護，建議退場。",
+      "decision_confidence": "low",
+      "decision_basis_ref": "desc-19",
+      "coverage_gap_created": [
+        "must_include_token:飄雲專利"
+      ]
+    },
+    {
+      "asset_id": "desc-20",
+      "asset_text": "100 天安心試睡，LoveFu 床墊舒緩腰痛與疲勞，帶你享受每晚無壓的輕鬆入眠。",
+      "asset_type": "description",
+      "reason": "在 description cohort 中 conv association 2.0 < P25 5.82，無 protected phrase 保護，建議退場。",
+      "decision_confidence": "low",
+      "decision_basis_ref": "desc-20",
+      "coverage_gap_created": []
+    },
+    {
+      "asset_id": "desc-21",
+      "asset_text": "LoveFu 床墊，撐腰設計提升舒適感，100 天試睡保障，讓你無憂體驗理想睡眠！",
+      "asset_type": "description",
+      "reason": "在 description cohort 中 conv association 1.84 < P25 5.82，無 protected phrase 保護，建議退場。",
+      "decision_confidence": "low",
+      "decision_basis_ref": "desc-21",
+      "coverage_gap_created": []
+    },
+    {
+      "asset_id": "hl-59",
+      "asset_text": "撐腰設計，LOVEFU 床墊推薦首選",
+      "asset_type": "headline",
+      "reason": "在 headline cohort 中 conv association 1.84 < P25 2.0，無 protected phrase 保護，建議退場。",
+      "decision_confidence": "low",
+      "decision_basis_ref": "hl-59",
+      "coverage_gap_created": [
+        "must_include_token:LOVEFU"
+      ]
+    },
+    {
+      "asset_id": "hl-60",
+      "asset_text": "LOVEFU 飄雲專利床墊，支撐舒適",
+      "asset_type": "headline",
+      "reason": "在 headline cohort 中 conv association 1.62 < P25 2.0，無 protected phrase 保護，建議退場。",
+      "decision_confidence": "low",
+      "decision_basis_ref": "hl-60",
+      "coverage_gap_created": [
+        "must_include_token:LOVEFU",
+        "must_include_token:飄雲專利"
+      ]
+    },
+    {
+      "asset_id": "hl-61",
+      "asset_text": "LOVEFU 床墊，高性價比推薦首選",
+      "asset_type": "headline",
+      "reason": "在 headline cohort 中 conv association 1.24 < P25 2.0，無 protected phrase 保護，建議退場。",
+      "decision_confidence": "low",
+      "decision_basis_ref": "hl-61",
+      "coverage_gap_created": [
+        "must_include_token:LOVEFU"
+      ]
+    },
+    {
+      "asset_id": "hl-62",
+      "asset_text": "爸爸專屬》來店測 BMI 享折扣",
+      "asset_type": "headline",
+      "reason": "在 headline cohort 中 conv association 1.24 < P25 2.0，無 protected phrase 保護，建議退場。",
+      "decision_confidence": "low",
+      "decision_basis_ref": "hl-62",
+      "coverage_gap_created": []
+    },
+    {
+      "asset_id": "hl-63",
+      "asset_text": "立即預約試躺，體驗雲端支撐感",
+      "asset_type": "headline",
+      "reason": "在 headline cohort 中 conv association 1.0 < P25 2.0，無 protected phrase 保護，建議退場。",
+      "decision_confidence": "low",
+      "decision_basis_ref": "hl-63",
+      "coverage_gap_created": []
+    },
+    {
+      "asset_id": "hl-64",
+      "asset_text": "LOVEFU 硬床墊，無壓支撐體驗",
+      "asset_type": "headline",
+      "reason": "在 headline cohort 中 conv association 0.58 < P25 2.0，無 protected phrase 保護，建議退場。",
+      "decision_confidence": "low",
+      "decision_basis_ref": "hl-64",
+      "coverage_gap_created": [
+        "must_include_token:LOVEFU"
+      ]
+    },
+    {
+      "asset_id": "hl-65",
+      "asset_text": "撐腰床墊推薦，LOVEFU 值得信賴",
+      "asset_type": "headline",
+      "reason": "在 headline cohort 中 conv association 0.5 < P25 2.0，無 protected phrase 保護，建議退場。",
+      "decision_confidence": "low",
+      "decision_basis_ref": "hl-65",
+      "coverage_gap_created": [
+        "must_include_token:LOVEFU"
+      ]
+    },
+    {
+      "asset_id": "hl-66",
+      "asset_text": "LOVEFU 床墊，高評價的舒適支撐",
+      "asset_type": "headline",
+      "reason": "在 headline cohort 中 conv association 0.5 < P25 2.0，無 protected phrase 保護，建議退場。",
+      "decision_confidence": "low",
+      "decision_basis_ref": "hl-66",
+      "coverage_gap_created": [
+        "must_include_token:LOVEFU"
+      ]
+    },
+    {
+      "asset_id": "hl-67",
+      "asset_text": "2026 年首選飄雲專利獨立筒床墊",
+      "asset_type": "headline",
+      "reason": "在 headline cohort 中 conv association 0.44 < P25 2.0，無 protected phrase 保護，建議退場。",
+      "decision_confidence": "low",
+      "decision_basis_ref": "hl-67",
+      "coverage_gap_created": [
+        "must_include_token:飄雲專利"
+      ]
+    },
+    {
+      "asset_id": "hl-68",
+      "asset_text": "全系列無毒認證，嬰幼兒也安心",
+      "asset_type": "headline",
+      "reason": "在 headline cohort 中 conv association 0.33 < P25 2.0，無 protected phrase 保護，建議退場。",
+      "decision_confidence": "low",
+      "decision_basis_ref": "hl-68",
+      "coverage_gap_created": []
+    }
+  ],
+  "new_candidate_assets": [
+    {
+      "candidate_id": "cand-01",
+      "asset_text": "腰痛醒來？山丘樂眠床讓你一覺到天明",
+      "asset_type": "headline",
+      "source": "reinforce_expansion",
+      "intent": "擴寫 Top3 痛點型標題的變體",
+      "related_gap": "reinforce hl-03「不再背痛失眠」的痛點角度",
+      "suggested_role": "測試",
+      "covers_tokens": [
+        "山丘樂眠床"
+      ],
+      "inherits_motifs": [
+        "pain-point-solution"
+      ]
+    },
+    {
+      "candidate_id": "cand-02",
+      "asset_text": "100 天試睡，不滿意免費退山丘床",
+      "asset_type": "headline",
+      "source": "reinforce_expansion",
+      "intent": "擴寫 100天安心睡風險逆轉模式",
+      "related_gap": "reinforce hl-06 的風險逆轉角度並加入 CTA",
+      "suggested_role": "測試",
+      "covers_tokens": [
+        "山丘樂眠床"
+      ],
+      "inherits_motifs": [
+        "concrete-number",
+        "lower-friction-cta"
+      ]
+    },
+    {
+      "candidate_id": "cand-03",
+      "asset_text": "中鋼獨立筒 × 飄雲專利泡棉，山丘樂眠床給你 Q 彈撐腰感。200kg 不塌陷，100 天安心試睡。",
+      "asset_type": "description",
+      "source": "reinforce_expansion",
+      "intent": "模仿 desc-01 的技術+體感結構，結合數據與風險逆轉",
+      "related_gap": "reinforce desc-01 的高轉換模式並加入更多賣點",
+      "suggested_role": "測試",
+      "covers_tokens": [
+        "山丘樂眠床",
+        "飄雲專利"
+      ],
+      "inherits_motifs": [
+        "concrete-number",
+        "lower-friction-cta"
+      ]
+    }
+  ],
+  "compliance_notes": {
+    "data_caveats": [
+      "報表完全無 impression / click / CTR 數據，decision_basis 實為 conversion association count proxy",
+      "所有 decision_confidence 上限為 low（無 CTR 支撐），zero-conv 素材為 directional",
+      "percentile 基於 conversion association count，非真正的 conversion rate",
+      "建議搭配 Google Ads UI 的素材等級 (best/good/low) 做交叉驗證"
+    ],
+    "manual_review_required": true,
+    "interpretation_confidence": "low"
+  }
+}

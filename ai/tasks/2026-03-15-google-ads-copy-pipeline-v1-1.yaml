@@ -1,0 +1,65 @@
+# Google Ads copy pipeline v1.1
+
+task:
+  task_id: "gads-pipeline-011"
+  title: "Google Ads Copy Pipeline v1.1 Contract Upgrade"
+  status: validated
+  owner: codex
+  created_at: "2026-03-15"
+  updated_at: "2026-03-15"
+
+  goal: >
+    將 creative-performance-interpreter、ad-copy-portfolio-builder、
+    upload-packager 三個 skill 升級到 v1.1，
+    完成 legacy 三分模型、decision basis / confidence、field-level handoff contract。
+
+  background: >
+    v1.0 雖然 schema、sample run、rubric 已存在，但 legacy 建模過粗、
+    decision basis 過度依賴混合 CTR、模組 handoff 停留在 object-level validation，
+    導致輸出形式完整但實質弱。
+
+  references:
+    brand: "ai/brand/master-brand.yaml"
+    playbook: "ai/playbooks/google-ads-creative-interpretation.md"
+    schema: "ai/schemas/creative-performance-output.schema.json"
+    rubric: "ai/evals/creative-performance-rubric.yaml"
+    related_adr: "ai/decisions/ADR-004-google-ads-copy-pipeline-v1-1-contracts.md"
+    related_tasks:
+      - "gads-copy-004"
+
+  deliverables:
+    - description: "v1.1 interpreter / builder / packager schemas"
+      format: json
+      destination: "ai/inputs/ + ai/schemas/"
+    - description: "v1.1 decision rules"
+      format: markdown
+      destination: "ai/skill-src/google-ads/*/references/decision-rules.md"
+    - description: "v1.1 sample runs"
+      format: markdown
+      destination: "ai/skill-src/google-ads/*/SKILL.md"
+    - description: "E2E validation checklist and LOVEFU rerun validation"
+      format: markdown
+      destination: "ai/validation/2026-03-15-google-ads-copy-pipeline-v1-1-e2e.md"
+    - description: "Change record"
+      format: markdown
+      destination: "ai/changes/2026-03-15-google-ads-copy-pipeline-v1-1.md"
+
+  validation:
+    method: manual + schema
+    rubric: "ai/evals/creative-performance-rubric.yaml"
+    passing_criteria: >
+      三個 skill 的 schema/decision rules/sample run 對齊 v1.1，
+      LOVEFU 山丘樂眠床 rerun 可通過欄位級 contract 檢查。
+    validation_file: "ai/validation/2026-03-15-google-ads-copy-pipeline-v1-1-e2e.md"
+
+  notes: >
+    本次只處理 legacy 模型重構、decision basis 升級、handoff contract 收緊，
+    不擴充 writer 或其他 Google Ads 子技能。
+
+  metadata:
+    created_by: codex
+    compatible_agents:
+      - claude
+      - codex
+      - gemini
+      - openclaw

@@ -1,0 +1,66 @@
+# Google Ads copy pipeline v1.2
+
+task:
+  task_id: "gads-pipeline-012"
+  title: "Google Ads Copy Pipeline v1.2 Input / Observe / Candidate / Taxonomy Upgrade"
+  status: validated
+  owner: codex
+  created_at: "2026-03-15"
+  updated_at: "2026-03-15"
+
+  goal: >
+    將 creative-performance-interpreter、ad-copy-portfolio-builder、
+    upload-packager 三個 skill 升級到 v1.2，
+    完成 richer input layers、observe 子類別、candidate pipeline automation、
+    與 angle taxonomy 標準化。
+
+  background: >
+    v1.1 已解掉 legacy 三分模型、decision basis / confidence、以及 field-level handoff，
+    但 rerun 顯示上游資料仍偏弱、observe 堆積、candidate 供給不足，
+    而且 angle_key 仍未完全變成可跨 skill 傳遞的硬欄位。
+
+  references:
+    brand: "ai/brand/master-brand.yaml"
+    playbook: "ai/playbooks/google-ads-creative-interpretation.md"
+    schema: "ai/schemas/creative-performance-output.schema.json"
+    rubric: "ai/evals/creative-performance-rubric.yaml"
+    related_adr: "ai/decisions/ADR-005-google-ads-copy-pipeline-v1-2-data-observe-taxonomy.md"
+    related_tasks:
+      - "gads-pipeline-011"
+
+  deliverables:
+    - description: "v1.2 interpreter / builder / packager schemas"
+      format: json
+      destination: "ai/inputs/ + ai/schemas/"
+    - description: "v1.2 decision rules"
+      format: markdown
+      destination: "ai/skill-src/google-ads/*/references/decision-rules.md"
+    - description: "v1.2 sample runs"
+      format: markdown
+      destination: "ai/skill-src/google-ads/*/SKILL.md"
+    - description: "v1.2 LoveFu rerun checklist and validation"
+      format: markdown
+      destination: "ai/validation/2026-03-15-google-ads-copy-pipeline-v1-2-rerun.md"
+    - description: "Change record"
+      format: markdown
+      destination: "ai/changes/2026-03-15-google-ads-copy-pipeline-v1-2.md"
+
+  validation:
+    method: manual + schema
+    rubric: "ai/evals/creative-performance-rubric.yaml"
+    passing_criteria: >
+      三個 skill 的 schema / decision rules / sample run 對齊 v1.2，
+      LoveFu / 山丘樂眠床 rerun 可展示 richer data basis、observe 下降策略、
+      candidate automation 與 taxonomy handoff。
+    validation_file: "ai/validation/2026-03-15-google-ads-copy-pipeline-v1-2-rerun.md"
+
+  notes: >
+    本次不處理 Google Ads API 上稿、dashboard、LP alignment 自動化或新增全新 skill。
+
+  metadata:
+    created_by: codex
+    compatible_agents:
+      - claude
+      - codex
+      - gemini
+      - openclaw

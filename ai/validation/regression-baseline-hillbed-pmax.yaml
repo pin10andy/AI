@@ -1,0 +1,227 @@
+# regression-baseline-hillbed-pmax.yaml
+# 山丘樂眠床 purchase PMax 回歸基準線
+# 以 3 筆 approved references 建立 production regression gate
+
+version: "2.0"
+lane_id: "hillbed-purchase-pmax"
+brief_id: "lovefu-pmax-hillbed"
+maintainer: "codex"
+updated_at: "2026-03-15"
+
+reference_outputs:
+  - reference_id: "ref-001-canonical"
+    role: "canonical"
+    approved: true
+    approved_at: "2026-03-14"
+    generated_by: "claude"
+    output_json: "ai/outputs/lovefu-pmax-hillbed.output.json"
+    output_md: "ai/outputs/lovefu-pmax-hillbed.output.md"
+    source_validation: "ai/validation/2026-03-14-lovefu-hillbed-golden-brief.md"
+    rubric_scores:
+      brand_consistency: 4.5
+      char_limit_compliance: pass
+      cta_clarity: 4.0
+      headline_diversity: 5.0
+      angle_coverage: 5.0
+      policy_safety: 4.0
+      language_quality: 5.0
+      overall: 4.65
+    asset_counts:
+      short_headlines: 15
+      long_headlines: 5
+      descriptions: 5
+      angles: 3
+    angle_coverage:
+      body-first-comfort:
+        short: 6
+        long: 2
+        description: 2
+      worry-free-choice:
+        short: 5
+        long: 1
+        description: 2
+      smart-start:
+        short: 4
+        long: 2
+        description: 1
+    keyword_message_fit:
+      short_with_primary_keyword: 4
+      long_with_primary_keyword: 2
+      description_with_primary_keyword: 1
+    must_include_check:
+      "山丘樂眠床": true
+      "100天安心睡": true
+      "立即選購": true
+    forbidden_claims_found: 0
+    human_review_verdict: "可直接上稿"
+
+  - reference_id: "ref-002-codex-dry-run"
+    role: "non_author_dry_run"
+    approved: true
+    approved_at: "2026-03-15"
+    generated_by: "codex"
+    output_json: "ai/outputs/lovefu-pmax-hillbed.codex-dry-run.output.json"
+    output_md: "ai/outputs/lovefu-pmax-hillbed.codex-dry-run.output.md"
+    source_validation: "ai/validation/2026-03-14-productization-v1.md"
+    rubric_scores:
+      brand_consistency: 4.5
+      char_limit_compliance: pass
+      cta_clarity: 4.0
+      headline_diversity: 5.0
+      angle_coverage: 5.0
+      policy_safety: 4.0
+      language_quality: 4.5
+      overall: 4.55
+    asset_counts:
+      short_headlines: 15
+      long_headlines: 5
+      descriptions: 5
+      angles: 3
+    angle_coverage:
+      body-first-comfort:
+        short: 6
+        long: 2
+        description: 2
+      worry-free-choice:
+        short: 5
+        long: 1
+        description: 2
+      smart-start:
+        short: 4
+        long: 2
+        description: 1
+    keyword_message_fit:
+      short_with_primary_keyword: 4
+      long_with_primary_keyword: 2
+      description_with_primary_keyword: 1
+    must_include_check:
+      "山丘樂眠床": true
+      "100天安心睡": true
+      "立即選購": true
+    forbidden_claims_found: 0
+    human_review_verdict: "可直接上稿"
+
+  - reference_id: "ref-003-hardening"
+    role: "approved_reference"
+    approved: true
+    approved_at: "2026-03-15"
+    generated_by: "codex"
+    output_json: "ai/outputs/lovefu-pmax-hillbed.approved-reference-03.output.json"
+    output_md: "ai/outputs/lovefu-pmax-hillbed.approved-reference-03.output.md"
+    source_validation: "ai/validation/2026-03-15-hillbed-pmax-hardening.md"
+    rubric_scores:
+      brand_consistency: 4.5
+      char_limit_compliance: pass
+      cta_clarity: 4.0
+      headline_diversity: 4.5
+      angle_coverage: 5.0
+      policy_safety: 4.0
+      language_quality: 5.0
+      overall: 4.50
+    asset_counts:
+      short_headlines: 15
+      long_headlines: 5
+      descriptions: 5
+      angles: 3
+    angle_coverage:
+      body-first-comfort:
+        short: 6
+        long: 2
+        description: 2
+      worry-free-choice:
+        short: 5
+        long: 1
+        description: 2
+      smart-start:
+        short: 4
+        long: 2
+        description: 1
+    keyword_message_fit:
+      short_with_primary_keyword: 4
+      long_with_primary_keyword: 2
+      description_with_primary_keyword: 1
+    must_include_check:
+      "山丘樂眠床": true
+      "100天安心睡": true
+      "立即選購": true
+    forbidden_claims_found: 0
+    human_review_verdict: "可直接上稿"
+
+aggregated_baseline:
+  approved_reference_ids:
+    - "ref-001-canonical"
+    - "ref-002-codex-dry-run"
+    - "ref-003-hardening"
+  reference_count: 3
+  asset_counts:
+    short_headlines: 15
+    long_headlines: 5
+    descriptions: 5
+    angles: 3
+  character_policy:
+    short_headline_max: 30
+    long_headline_max: 90
+    description_max: 90
+    at_least_one_description_under_60: true
+  score_band:
+    overall_min_approved: 4.50
+    overall_median_approved: 4.55
+    overall_max_approved: 4.65
+    minimum_single_rubric_score: 4.0
+  keyword_message_fit_floor:
+    short_with_primary_keyword: 3
+    long_with_primary_keyword: 1
+    description_with_primary_keyword: 1
+  angle_coverage_floor:
+    short_per_angle: 4
+    long_per_angle: 1
+    description_per_angle: 1
+  must_include_terms:
+    - "山丘樂眠床"
+    - "100天安心睡"
+    - "立即選購"
+  pattern_guards:
+    - "14,900起 只能出現在 smart-start 角度"
+    - "100天安心睡 / 10年保固 優先集中在 worry-free-choice"
+    - "不得把價格訊號擴散成整包低價敘事"
+
+regression_rules:
+  - dimension: schema_and_validator
+    method: hard_gate
+    threshold: "brief/output schema pass + ad_copy_validator pass"
+    action_if_fail: "不得上稿"
+
+  - dimension: must_include_and_forbidden_claims
+    method: hard_gate
+    threshold: "must_include 全 present + forbidden_claims_found = 0"
+    action_if_fail: "不得上稿"
+
+  - dimension: wording_watchlist
+    method: manual_gate
+    threshold: "Tier 2 / Tier 3 字句需依 watchlist 完成 reviewer 結論"
+    action_if_fail: "不得取代 canonical output"
+
+  - dimension: overall
+    method: score_floor
+    threshold: "overall >= 4.30"
+    action_if_fail: "調查原因，不得直接上稿"
+
+  - dimension: any_single_rubric
+    method: score_floor
+    threshold: "任一 rubric 維度不可低於 4.0"
+    action_if_fail: "調查原因，不得取代 canonical output"
+
+  - dimension: angle_coverage
+    method: structural
+    threshold: "每個 angle 至少 4 short / 1 long / 1 description"
+    action_if_fail: "回到生成步驟"
+
+  - dimension: price_signal_scope
+    method: structural
+    threshold: "14,900起 僅可出現在 smart-start"
+    action_if_fail: "回到生成步驟"
+
+  - dimension: human_review
+    method: qualitative
+    threshold: "至少 '可微調後上稿'；若要替換 canonical output，需 '可直接上稿'"
+    action_if_fail: "不得上稿"

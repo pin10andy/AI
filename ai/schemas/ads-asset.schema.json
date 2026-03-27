@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Google Ads Asset",
+  "description": "所有 AI agent 產出 Google Ads 素材的共用輸出格式",
+  "type": "object",
+  "required": ["meta", "assets"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["campaign_type", "product", "language", "generated_by", "generated_at"],
+      "properties": {
+        "campaign_type": {
+          "type": "string",
+          "enum": ["RSA", "display", "performance_max", "search"]
+        },
+        "product": { "type": "string" },
+        "language": { "type": "string", "default": "zh-TW" },
+        "target_audience": { "type": "string" },
+        "generated_by": {
+          "type": "string",
+          "description": "產出此素材的 agent 名稱 (claude/codex/gemini/openclaw)"
+        },
+        "generated_at": { "type": "string", "format": "date-time" }
+      }
+    },
+    "assets": {
+      "type": "object",
+      "properties": {
+        "headlines": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["text"],
+            "properties": {
+              "text": { "type": "string", "maxLength": 30 },
+              "pinned_position": { "type": "integer", "minimum": 1, "maximum": 3 }
+            }
+          },
+          "minItems": 3,
+          "maxItems": 15
+        },
+        "descriptions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["text"],
+            "properties": {
+              "text": { "type": "string", "maxLength": 90 }
+            }
+          },
+          "minItems": 2,
+          "maxItems": 4
+        },
+        "long_headline": { "type": "string", "maxLength": 90 },
+        "short_headline": { "type": "string", "maxLength": 25 },
+        "call_to_action": { "type": "string" },
+        "keywords": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "self_eval": {
+      "type": "object",
+      "description": "Agent 自我評估結果，依照 ads-rubric.yaml 評分",
+      "properties": {
+        "brand_consistency": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "char_limit_compliance": { "type": "boolean" },
+        "cta_clarity": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "diversity_score": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+# Claude Ads Skill integration mapping
+
+task:
+  task_id: "gads-arch-001"
+  title: "Claude Ads Skill Integration Mapping for Current Workspace"
+  status: validated
+  owner: codex
+  created_at: "2026-03-21"
+  updated_at: "2026-03-21"
+
+  goal: >
+    評估 Claude Ads Skill / MCP audit workflow 是否能與目前 workspace
+    的 Google Ads skill、playbook、artifact governance 與 R&D recording framework 整合，
+    並提出最低風險的整合形態。
+
+  background: >
+    使用者提供一篇 Tenten 文章作為參考方向，希望判斷現有開發框架是否能整合。
+    現有 repo 已有 Google Ads skill suite、pipeline contract、artifact governance、
+    與 task/change/validation 記錄鏈，但尚未建立 MCP connector layer
+    與 live write permission model。
+
+  references:
+    brand: "ai/brand/master-brand.yaml"
+    playbook: "ai/playbooks/google-ads.md"
+    schema: "ai/schemas/creative-performance-output.schema.json"
+    rubric: "ai/evals/creative-performance-rubric.yaml"
+    related_tasks:
+      - "gads-pipeline-012"
+      - "gads-pipeline-013"
+      - "gads-pipeline-014"
+
+  deliverables:
+    - description: "Integration mapping report"
+      format: markdown
+      destination: "ai/reports/2026-03-21-claude-ads-skill-integration-mapping.md"
+    - description: "Validation record"
+      format: markdown
+      destination: "ai/validation/2026-03-21-claude-ads-skill-integration-mapping.md"
+    - description: "Change record"
+      format: markdown
+      destination: "ai/changes/2026-03-21-claude-ads-skill-integration-mapping.md"
+
+  validation:
+    method: manual
+    rubric: "ai/evals/creative-performance-rubric.yaml"
+    passing_criteria: >
+      報告需明確回答是否能整合、哪部分可直接整合、
+      哪部分需要 adapter、哪部分目前不宜整合，
+      並給出具體 file-level mapping 與 next step。
+    validation_file: "ai/validation/2026-03-21-claude-ads-skill-integration-mapping.md"
+    governance_check: "pass"
+
+  notes: >
+    本任務只做 framework-fit evaluation，
+    不新增 skill、不接入 MCP、不改既有 schema 或 governance policy。
+
+  metadata:
+    created_by: codex
+    compatible_agents:
+      - claude
+      - codex
+      - gemini
+      - openclaw

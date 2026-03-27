@@ -1,0 +1,756 @@
+{
+  "interpretation_id": "hillbed-pmax-2026q1-rerun-v1-2",
+  "brand_name": "LOVEFU大島樂眠",
+  "product_name": "山丘樂眠床",
+  "campaign_type": "pmax",
+  "goal": "purchase",
+  "reporting_period": {
+    "start_date": "2026-01-15",
+    "end_date": "2026-03-14"
+  },
+  "performance_data": {
+    "reporting_context": {
+      "asset_granularity": "asset_level",
+      "includes_asset_level_conversion": true,
+      "includes_asset_level_conversion_value": true,
+      "includes_placement_breakout": true,
+      "interpretation_layers": {
+        "click_layer": {
+          "status": "ready",
+          "required_fields": ["impressions", "clicks", "ctr", "active_duration_days"]
+        },
+        "conversion_layer": {
+          "status": "ready",
+          "required_fields": [
+            "impressions",
+            "clicks",
+            "ctr",
+            "asset_level_conversions",
+            "active_duration_days"
+          ],
+          "recommended_fields": ["conversion_value", "placement_breakout"]
+        },
+        "placement_layer": {
+          "status": "ready",
+          "required_fields": ["placement_breakout", "impressions", "clicks", "ctr"]
+        },
+        "duration_layer": {
+          "status": "ready",
+          "required_fields": ["active_duration_days"]
+        }
+      },
+      "notes": "LOVEFU / 山丘樂眠床 v1.2 rerun data with asset-level conversions and Search / Display placement breakout."
+    },
+    "assets": [
+      {
+        "asset_id": "sh-01",
+        "asset_type": "short_headline",
+        "text": "床墊推薦 先接住身體再放鬆",
+        "angle_key": "product_feel",
+        "metrics": {
+          "impressions": 12400,
+          "clicks": 893,
+          "ctr": 0.072,
+          "asset_level_conversions": 36,
+          "conversion_value": 165600,
+          "conversion_rate": 0.040,
+          "placement_breakout": [
+            {
+              "placement": "search",
+              "impressions": 8200,
+              "clicks": 650,
+              "ctr": 0.079,
+              "asset_level_conversions": 29,
+              "conversion_value": 133400
+            },
+            {
+              "placement": "display",
+              "impressions": 4200,
+              "clicks": 243,
+              "ctr": 0.058,
+              "asset_level_conversions": 7,
+              "conversion_value": 32200
+            }
+          ]
+        },
+        "active_duration_days": 54,
+        "status": "enabled",
+        "google_performance_label": "best"
+      },
+      {
+        "asset_id": "sh-04",
+        "asset_type": "short_headline",
+        "text": "山丘樂眠床 溫柔接住你",
+        "angle_key": "product_feel",
+        "metrics": {
+          "impressions": 10200,
+          "clicks": 694,
+          "ctr": 0.068,
+          "asset_level_conversions": 31,
+          "conversion_value": 142600,
+          "conversion_rate": 0.045,
+          "placement_breakout": [
+            {
+              "placement": "search",
+              "impressions": 7000,
+              "clicks": 550,
+              "ctr": 0.079,
+              "asset_level_conversions": 25,
+              "conversion_value": 115000
+            },
+            {
+              "placement": "display",
+              "impressions": 3200,
+              "clicks": 144,
+              "ctr": 0.045,
+              "asset_level_conversions": 6,
+              "conversion_value": 27600
+            }
+          ]
+        },
+        "active_duration_days": 54,
+        "status": "enabled",
+        "google_performance_label": "best"
+      },
+      {
+        "asset_id": "sh-07",
+        "asset_type": "short_headline",
+        "text": "100天安心睡 不怕選錯",
+        "angle_key": "risk_reversal",
+        "metrics": {
+          "impressions": 11500,
+          "clicks": 863,
+          "ctr": 0.075,
+          "asset_level_conversions": 41,
+          "conversion_value": 188600,
+          "conversion_rate": 0.048,
+          "placement_breakout": [
+            {
+              "placement": "search",
+              "impressions": 7800,
+              "clicks": 640,
+              "ctr": 0.082,
+              "asset_level_conversions": 33,
+              "conversion_value": 151800
+            },
+            {
+              "placement": "display",
+              "impressions": 3700,
+              "clicks": 223,
+              "ctr": 0.060,
+              "asset_level_conversions": 8,
+              "conversion_value": 36800
+            }
+          ]
+        },
+        "active_duration_days": 48,
+        "status": "enabled",
+        "google_performance_label": "best"
+      },
+      {
+        "asset_id": "sh-09",
+        "asset_type": "short_headline",
+        "text": "買床不踩雷 先安心睡再說",
+        "angle_key": "cta_lower_friction",
+        "metrics": {
+          "impressions": 9400,
+          "clicks": 611,
+          "ctr": 0.065,
+          "asset_level_conversions": 29,
+          "conversion_value": 133400,
+          "conversion_rate": 0.047,
+          "placement_breakout": [
+            {
+              "placement": "search",
+              "impressions": 6200,
+              "clicks": 462,
+              "ctr": 0.075,
+              "asset_level_conversions": 23,
+              "conversion_value": 105800
+            },
+            {
+              "placement": "display",
+              "impressions": 3200,
+              "clicks": 149,
+              "ctr": 0.047,
+              "asset_level_conversions": 6,
+              "conversion_value": 27600
+            }
+          ]
+        },
+        "active_duration_days": 46,
+        "status": "enabled",
+        "google_performance_label": "best"
+      },
+      {
+        "asset_id": "sh-12",
+        "asset_type": "short_headline",
+        "text": "14,900起 好支撐入門",
+        "angle_key": "concrete_number",
+        "metrics": {
+          "impressions": 6500,
+          "clicks": 260,
+          "ctr": 0.040,
+          "asset_level_conversions": 11,
+          "conversion_value": 50600,
+          "conversion_rate": 0.042,
+          "placement_breakout": [
+            {
+              "placement": "search",
+              "impressions": 4300,
+              "clicks": 190,
+              "ctr": 0.044,
+              "asset_level_conversions": 9,
+              "conversion_value": 41400
+            },
+            {
+              "placement": "display",
+              "impressions": 2200,
+              "clicks": 70,
+              "ctr": 0.032,
+              "asset_level_conversions": 2,
+              "conversion_value": 9200
+            }
+          ]
+        },
+        "active_duration_days": 40,
+        "status": "enabled",
+        "google_performance_label": "good"
+      },
+      {
+        "asset_id": "sh-14",
+        "asset_type": "short_headline",
+        "text": "第2張床 從山丘開始",
+        "angle_key": "life_scene",
+        "metrics": {
+          "impressions": 1400,
+          "clicks": 63,
+          "ctr": 0.045,
+          "asset_level_conversions": 2,
+          "conversion_value": 9200,
+          "conversion_rate": 0.032,
+          "placement_breakout": [
+            {
+              "placement": "search",
+              "impressions": 900,
+              "clicks": 47,
+              "ctr": 0.052,
+              "asset_level_conversions": 2,
+              "conversion_value": 9200
+            },
+            {
+              "placement": "display",
+              "impressions": 500,
+              "clicks": 16,
+              "ctr": 0.032,
+              "asset_level_conversions": 0,
+              "conversion_value": 0
+            }
+          ]
+        },
+        "active_duration_days": 7,
+        "status": "enabled",
+        "google_performance_label": "pending"
+      },
+      {
+        "asset_id": "sh-15",
+        "asset_type": "short_headline",
+        "text": "山丘樂眠床 立即選購",
+        "angle_key": "legacy_phrase",
+        "metrics": {
+          "impressions": 5800,
+          "clicks": 145,
+          "ctr": 0.025,
+          "asset_level_conversions": 4,
+          "conversion_value": 18400,
+          "conversion_rate": 0.028,
+          "placement_breakout": [
+            {
+              "placement": "search",
+              "impressions": 3900,
+              "clicks": 108,
+              "ctr": 0.028,
+              "asset_level_conversions": 4,
+              "conversion_value": 18400
+            },
+            {
+              "placement": "display",
+              "impressions": 1900,
+              "clicks": 37,
+              "ctr": 0.019,
+              "asset_level_conversions": 0,
+              "conversion_value": 0
+            }
+          ]
+        },
+        "active_duration_days": 49,
+        "status": "enabled",
+        "google_performance_label": "low"
+      },
+      {
+        "asset_id": "sh-16",
+        "asset_type": "short_headline",
+        "text": "睡醒腰不酸 山丘接住你",
+        "angle_key": "pain_point",
+        "metrics": {
+          "impressions": 9200,
+          "clicks": 720,
+          "ctr": 0.078,
+          "asset_level_conversions": 33,
+          "conversion_value": 151800,
+          "conversion_rate": 0.046,
+          "placement_breakout": [
+            {
+              "placement": "search",
+              "impressions": 6100,
+              "clicks": 548,
+              "ctr": 0.090,
+              "asset_level_conversions": 28,
+              "conversion_value": 128800
+            },
+            {
+              "placement": "display",
+              "impressions": 3100,
+              "clicks": 172,
+              "ctr": 0.055,
+              "asset_level_conversions": 5,
+              "conversion_value": 23000
+            }
+          ]
+        },
+        "active_duration_days": 47,
+        "status": "enabled",
+        "google_performance_label": "best"
+      },
+      {
+        "asset_id": "lh-01",
+        "asset_type": "long_headline",
+        "text": "山丘樂眠床用高密度慢回彈泡棉搭配高碳鋼獨立筒，讓每晚都被穩穩接住",
+        "angle_key": "product_feel",
+        "metrics": {
+          "impressions": 6200,
+          "clicks": 384,
+          "ctr": 0.062,
+          "asset_level_conversions": 19,
+          "conversion_value": 87400,
+          "conversion_rate": 0.049,
+          "placement_breakout": [
+            {
+              "placement": "search",
+              "impressions": 4200,
+              "clicks": 290,
+              "ctr": 0.069,
+              "asset_level_conversions": 16,
+              "conversion_value": 73600
+            },
+            {
+              "placement": "display",
+              "impressions": 2000,
+              "clicks": 94,
+              "ctr": 0.047,
+              "asset_level_conversions": 3,
+              "conversion_value": 13800
+            }
+          ]
+        },
+        "active_duration_days": 54,
+        "status": "enabled",
+        "google_performance_label": "best"
+      },
+      {
+        "asset_id": "lh-03",
+        "asset_type": "long_headline",
+        "text": "100天安心睡全額退款搭配10年保固，選山丘樂眠床不用急著下決定",
+        "angle_key": "risk_reversal",
+        "metrics": {
+          "impressions": 7100,
+          "clicks": 497,
+          "ctr": 0.070,
+          "asset_level_conversions": 25,
+          "conversion_value": 115000,
+          "conversion_rate": 0.050,
+          "placement_breakout": [
+            {
+              "placement": "search",
+              "impressions": 4800,
+              "clicks": 369,
+              "ctr": 0.077,
+              "asset_level_conversions": 21,
+              "conversion_value": 96600
+            },
+            {
+              "placement": "display",
+              "impressions": 2300,
+              "clicks": 128,
+              "ctr": 0.056,
+              "asset_level_conversions": 4,
+              "conversion_value": 18400
+            }
+          ]
+        },
+        "active_duration_days": 52,
+        "status": "enabled",
+        "google_performance_label": "best"
+      },
+      {
+        "asset_id": "lh-04",
+        "asset_type": "long_headline",
+        "text": "第2張床也值得好好選，14,900起的山丘樂眠床讓入門不必將就支撐感",
+        "angle_key": "entry_value",
+        "metrics": {
+          "impressions": 4800,
+          "clicks": 182,
+          "ctr": 0.038,
+          "asset_level_conversions": 8,
+          "conversion_value": 36800,
+          "conversion_rate": 0.044,
+          "placement_breakout": [
+            {
+              "placement": "search",
+              "impressions": 3200,
+              "clicks": 136,
+              "ctr": 0.043,
+              "asset_level_conversions": 7,
+              "conversion_value": 32200
+            },
+            {
+              "placement": "display",
+              "impressions": 1600,
+              "clicks": 46,
+              "ctr": 0.029,
+              "asset_level_conversions": 1,
+              "conversion_value": 4600
+            }
+          ]
+        },
+        "active_duration_days": 35,
+        "status": "enabled",
+        "google_performance_label": "good"
+      },
+      {
+        "asset_id": "lh-05",
+        "asset_type": "long_headline",
+        "text": "腰痠背痛的夜晚，也能被山丘穩穩接住一整晚",
+        "angle_key": "pain_point",
+        "metrics": {
+          "impressions": 5400,
+          "clicks": 356,
+          "ctr": 0.066,
+          "asset_level_conversions": 21,
+          "conversion_value": 96600,
+          "conversion_rate": 0.059,
+          "placement_breakout": [
+            {
+              "placement": "search",
+              "impressions": 3600,
+              "clicks": 268,
+              "ctr": 0.074,
+              "asset_level_conversions": 18,
+              "conversion_value": 82800
+            },
+            {
+              "placement": "display",
+              "impressions": 1800,
+              "clicks": 88,
+              "ctr": 0.049,
+              "asset_level_conversions": 3,
+              "conversion_value": 13800
+            }
+          ]
+        },
+        "active_duration_days": 50,
+        "status": "enabled",
+        "google_performance_label": "best"
+      },
+      {
+        "asset_id": "lh-06",
+        "asset_type": "long_headline",
+        "text": "通過歐盟安全檢測與10年保固，讓第一次買床也能安心決定",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 5300,
+          "clicks": 241,
+          "ctr": 0.045,
+          "asset_level_conversions": 12,
+          "conversion_value": 55200,
+          "conversion_rate": 0.050,
+          "placement_breakout": [
+            {
+              "placement": "search",
+              "impressions": 3500,
+              "clicks": 183,
+              "ctr": 0.052,
+              "asset_level_conversions": 10,
+              "conversion_value": 46000
+            },
+            {
+              "placement": "display",
+              "impressions": 1800,
+              "clicks": 58,
+              "ctr": 0.032,
+              "asset_level_conversions": 2,
+              "conversion_value": 9200
+            }
+          ]
+        },
+        "active_duration_days": 38,
+        "status": "enabled",
+        "google_performance_label": "good"
+      },
+      {
+        "asset_id": "desc-01",
+        "asset_type": "description",
+        "text": "100天安心睡，選床少一點壓力；不適合就退，不用急著一次選對。",
+        "angle_key": "risk_reversal",
+        "metrics": {
+          "impressions": 9200,
+          "clicks": 552,
+          "ctr": 0.060,
+          "asset_level_conversions": 27,
+          "conversion_value": 124200,
+          "conversion_rate": 0.049,
+          "placement_breakout": [
+            {
+              "placement": "search",
+              "impressions": 6100,
+              "clicks": 404,
+              "ctr": 0.066,
+              "asset_level_conversions": 23,
+              "conversion_value": 105800
+            },
+            {
+              "placement": "display",
+              "impressions": 3100,
+              "clicks": 148,
+              "ctr": 0.048,
+              "asset_level_conversions": 4,
+              "conversion_value": 18400
+            }
+          ]
+        },
+        "active_duration_days": 48,
+        "status": "enabled",
+        "google_performance_label": "best"
+      },
+      {
+        "asset_id": "desc-02",
+        "asset_type": "description",
+        "text": "山丘樂眠床以MDI高密度慢回彈泡棉搭配2.4mm高碳鋼獨立筒，支撐與包覆一次到位。",
+        "angle_key": "product_feel",
+        "metrics": {
+          "impressions": 7600,
+          "clicks": 327,
+          "ctr": 0.043,
+          "asset_level_conversions": 15,
+          "conversion_value": 69000,
+          "conversion_rate": 0.046,
+          "placement_breakout": [
+            {
+              "placement": "search",
+              "impressions": 5000,
+              "clicks": 241,
+              "ctr": 0.048,
+              "asset_level_conversions": 13,
+              "conversion_value": 59800
+            },
+            {
+              "placement": "display",
+              "impressions": 2600,
+              "clicks": 86,
+              "ctr": 0.033,
+              "asset_level_conversions": 2,
+              "conversion_value": 9200
+            }
+          ]
+        },
+        "active_duration_days": 45,
+        "status": "enabled",
+        "google_performance_label": "good"
+      },
+      {
+        "asset_id": "desc-03",
+        "asset_type": "description",
+        "text": "通過歐盟CertiPUR與OEKO-TEX安全檢測，讓支撐床墊的品質不只靠感覺，而是有認證背書。",
+        "angle_key": "brand_trust",
+        "metrics": {
+          "impressions": 6400,
+          "clicks": 250,
+          "ctr": 0.039,
+          "asset_level_conversions": 13,
+          "conversion_value": 59800,
+          "conversion_rate": 0.052,
+          "placement_breakout": [
+            {
+              "placement": "search",
+              "impressions": 4200,
+              "clicks": 188,
+              "ctr": 0.045,
+              "asset_level_conversions": 11,
+              "conversion_value": 50600
+            },
+            {
+              "placement": "display",
+              "impressions": 2200,
+              "clicks": 62,
+              "ctr": 0.028,
+              "asset_level_conversions": 2,
+              "conversion_value": 9200
+            }
+          ]
+        },
+        "active_duration_days": 44,
+        "status": "enabled",
+        "google_performance_label": "good"
+      },
+      {
+        "asset_id": "desc-04",
+        "asset_type": "description",
+        "text": "14,900起的入門系列，不走低價路線，把好支撐與好放鬆一起帶回家。",
+        "angle_key": "entry_value",
+        "metrics": {
+          "impressions": 5400,
+          "clicks": 146,
+          "ctr": 0.027,
+          "asset_level_conversions": 7,
+          "conversion_value": 32200,
+          "conversion_rate": 0.048,
+          "placement_breakout": [
+            {
+              "placement": "search",
+              "impressions": 3600,
+              "clicks": 115,
+              "ctr": 0.032,
+              "asset_level_conversions": 6,
+              "conversion_value": 27600
+            },
+            {
+              "placement": "display",
+              "impressions": 1800,
+              "clicks": 31,
+              "ctr": 0.017,
+              "asset_level_conversions": 1,
+              "conversion_value": 4600
+            }
+          ]
+        },
+        "active_duration_days": 43,
+        "status": "enabled",
+        "google_performance_label": "low"
+      },
+      {
+        "asset_id": "desc-05",
+        "asset_type": "description",
+        "text": "怕一買就後悔？先睡100天、再決定要不要留下這張山丘樂眠床。",
+        "angle_key": "cta_lower_friction",
+        "metrics": {
+          "impressions": 6300,
+          "clicks": 301,
+          "ctr": 0.048,
+          "asset_level_conversions": 18,
+          "conversion_value": 82800,
+          "conversion_rate": 0.060,
+          "placement_breakout": [
+            {
+              "placement": "search",
+              "impressions": 4200,
+              "clicks": 231,
+              "ctr": 0.055,
+              "asset_level_conversions": 15,
+              "conversion_value": 69000
+            },
+            {
+              "placement": "display",
+              "impressions": 2100,
+              "clicks": 70,
+              "ctr": 0.033,
+              "asset_level_conversions": 3,
+              "conversion_value": 13800
+            }
+          ]
+        },
+        "active_duration_days": 37,
+        "status": "enabled",
+        "google_performance_label": "good"
+      }
+    ],
+    "campaign_level_metrics": {
+      "total_impressions": 117300,
+      "total_clicks": 6524,
+      "total_ctr": 0.056,
+      "total_asset_level_conversions": 352,
+      "total_conversion_value": 1619200,
+      "total_cost": 318000,
+      "average_cpa": 903.4,
+      "average_roas": 5.09
+    }
+  },
+  "legacy_message_policy": {
+    "protected_phrases": [
+      {
+        "phrase": "100天安心睡",
+        "reason": "品牌核心承諾，至少保留 1 則活躍 carrier。",
+        "source": "brand_guideline",
+        "min_active_assets": 1,
+        "preferred_asset_types": ["short_headline", "long_headline", "description"]
+      }
+    ],
+    "must_include_tokens": [
+      {
+        "token": "山丘樂眠床",
+        "reason": "產品正式名稱需在活躍素材持續可見。",
+        "source": "brand_guideline",
+        "min_active_assets": 2,
+        "preferred_asset_types": ["short_headline", "long_headline", "description"]
+      },
+      {
+        "token": "立即選購",
+        "reason": "主 CTA 仍需保留至少 1 個可上稿入口，但不等於保留特定舊句。",
+        "source": "pm_decision",
+        "min_active_assets": 1,
+        "preferred_asset_types": ["short_headline", "description"]
+      }
+    ],
+    "reusable_motifs": [
+      {
+        "motif_key": "lower-friction-cta",
+        "description": "先體驗 / 先安心 / 再決定 的低壓 CTA 結構。",
+        "reason": "歷史高轉換素材反覆出現。",
+        "source": "historical_performance"
+      },
+      {
+        "motif_key": "steady-support",
+        "description": "接住身體 / 穩穩支撐 / 好放鬆 的支撐感句式。",
+        "reason": "產品感受型素材在 click 與 conversion 都表現穩定。",
+        "source": "historical_performance"
+      }
+    ]
+  },
+  "new_drafts": [
+    {
+      "text": "山丘樂眠床 先試睡再決定",
+      "asset_type": "short_headline",
+      "angle_key": "cta_lower_friction"
+    },
+    {
+      "text": "支撐感不是喊出來，是每晚都能穩穩接住你",
+      "asset_type": "description",
+      "angle_key": "product_feel"
+    },
+    {
+      "text": "第一次買床也能用認證與保固慢慢比",
+      "asset_type": "long_headline",
+      "angle_key": "brand_trust"
+    }
+  ],
+  "interpretation_config": {
+    "minimum_impressions_threshold": 1000,
+    "minimum_clicks_threshold": 60,
+    "minimum_conversion_threshold": 3,
+    "high_performer_percentile": 0.75,
+    "data_sufficiency_threshold": 5000,
+    "observe_stale_days": 21,
+    "retire_candidate_days": 35,
+    "decision_metric_priority": "hybrid"
+  },
+  "notes": "v1.2 rerun sample with richer data. sh-15 測試 legacy token retire 補位；sh-16 / lh-05 測試高效但高風險語言的 safer rewrite candidate generation。"
+}

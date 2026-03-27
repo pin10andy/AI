@@ -1,0 +1,102 @@
+{
+  "brief_id": "lovefu-pmax-hillbed-tryout-booking-draft",
+  "brand_name": "LOVEFU大島樂眠",
+  "product_name": "山丘樂眠床",
+  "campaign_type": "pmax",
+  "goal": "store_visit",
+  "landing_page_summary": {
+    "hero_message": "山丘樂眠床｜先試躺，再決定適不適合你",
+    "primary_cta": "預約門市試躺",
+    "supporting_points": [
+      "先實際感受山丘樂眠床的支撐與包覆，再決定下一步",
+      "睡眠顧問陪你比較睡感，不必只看規格做決定",
+      "門市可同步體驗床墊與枕頭，縮小選擇更有效率",
+      "100天安心睡與10年保固保留在信任敘事，但本lane轉換先聚焦預約"
+    ]
+  },
+  "target_audience": {
+    "segments": [
+      "想先實際試躺山丘樂眠床，再決定是否購買的人",
+      "正在比較床墊推薦，但不想只靠網路規格判斷的人",
+      "希望在低壓狀態下預約體驗，慢慢找到適合睡感的人"
+    ],
+    "pain_points": [
+      "看了很多床墊資訊，還是不知道實際躺起來適不適合",
+      "擔心進店後被快速推銷，沒有空間慢慢比較",
+      "想知道支撐與包覆差異，但難用文字想像"
+    ],
+    "desired_outcomes": [
+      "先親自感受山丘樂眠床的支撐與放鬆感，再決定下一步",
+      "用預約試躺取代衝動下單，降低選床壓力",
+      "在睡眠顧問陪伴下更快縮小選擇範圍"
+    ]
+  },
+  "keyword_cluster": {
+    "primary_keywords": [
+      "床墊試躺",
+      "門市試躺",
+      "預約試躺"
+    ],
+    "secondary_keywords": [
+      "山丘樂眠床",
+      "床墊推薦",
+      "睡眠體驗",
+      "試枕",
+      "睡眠顧問"
+    ],
+    "negative_themes": [
+      "免費",
+      "二手",
+      "DIY",
+      "修理",
+      "醫療器材"
+    ]
+  },
+  "usp": [
+    "可先實際感受山丘樂眠床的支撐與包覆，再決定下一步",
+    "睡眠顧問協助比較睡感，不必只看規格",
+    "100天安心睡全額退款，10年保固",
+    "門市可同步試躺床墊與試枕，讓體驗更完整"
+  ],
+  "offers": [
+    "100天安心睡全額退款",
+    "10年保固"
+  ],
+  "constraints": {
+    "must_include": [
+      "山丘樂眠床",
+      "預約門市試躺",
+      "試躺"
+    ],
+    "must_avoid": [
+      "最低價",
+      "保證一躺就買",
+      "醫療級治療"
+    ],
+    "character_policy": {
+      "short_headline_count": 15,
+      "short_headline_max": 30,
+      "long_headline_count": 5,
+      "long_headline_max": 90,
+      "description_count": 5,
+      "description_max": 90
+    }
+  },
+  "tone": [
+    "warm",
+    "approachable",
+    "comfort-focused"
+  ],
+  "forbidden_claims": [
+    "保證一躺就買",
+    "睡一晚立刻不痠痛",
+    "全台最低價",
+    "醫療級治療效果"
+  ],
+  "seed_angles": [
+    "實際試躺體驗",
+    "顧問陪伴與低壓決策",
+    "預約行動與下一步清楚"
+  ],
+  "notes": "forked_from: ai/inputs/briefs/lovefu-pmax-hillbed.json\nlane_label: tryout booking\nschema_goal_mapping: tryout booking -> store_visit\nstatus: draft only; not added to supported-matrix\nassumptions:\n- 先以 store_visit 作為 schema goal，對應試躺預約導向。\n- 尚未綁定最終 landing page，因此暫不寫入地區名或門市細節。\n- 穩定承諾可沿用 100天安心睡 / 10年保固，但此 lane 的主要 CTA 改為預約門市試躺。\nvalidation_blockers:\n- 需先完成實際 landing page alignment review。\n- 需確認門市預約流程與 CTA 承接。"
+}

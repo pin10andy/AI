@@ -1,0 +1,62 @@
+task:
+  task_id: "gads-copy-003"
+  title: "Google Ads 文案批次生成工具"
+  status: validated
+  owner: codex
+  created_at: "2026-03-14"
+  updated_at: "2026-03-14"
+
+  goal: >
+    建立一個可直接讀取多份 Google Ads brief 的 batch generator，
+    批次產出 Search RSA / PMax 的第一版 JSON + Markdown 草稿，
+    讓團隊能快速把多份 brief 轉成可 review 的文案包。
+
+  background: >
+    目前 repo 已有 Search RSA 與 PMax 的 contract、playbook、testcase 與樣本輸出，
+    但缺少真正可執行的批次工具。
+    若沒有 batch generator，現況仍偏向 skill-based 手動流程，較難做大量 brief 的一致化產出。
+
+  references:
+    brand: "ai/brand/master-brand.yaml"
+    playbook: "ai/playbooks/google-ads-search-rsa.md + ai/playbooks/google-ads-pmax.md"
+    schema: "ai/schemas/google-ads-search-output.schema.json + ai/schemas/google-ads-pmax-output.schema.json"
+    rubric: "ai/evals/ads-rubric.yaml + ai/evals/google-ads-human-review.md + ai/evals/google-ads-pmax-human-review.md"
+    related_adr: ""
+    related_tasks:
+      - "gads-copy-001"
+      - "gads-copy-002"
+
+  deliverables:
+    - description: "批次生成腳本"
+      format: "ruby-script"
+      destination: "ai/skill-src/google-ads-writer/scripts/batch_generate_ads_copy.rb"
+
+    - description: "google-ads-writer skill 補上 batch usage"
+      format: "skill-doc"
+      destination: "ai/skill-src/google-ads-writer/SKILL.md"
+
+    - description: "批次生成驗證紀錄"
+      format: "markdown"
+      destination: "ai/validation/2026-03-14-google-ads-batch-generator.md"
+
+  validation:
+    method: "automated + manual"
+    rubric: "ai/evals/ads-rubric.yaml"
+    passing_criteria: >
+      腳本可讀取 6 份 brief；
+      可輸出 Search RSA 與 PMax 的 JSON + Markdown；
+      生成的 6 份 JSON 皆可通過現有 validator；
+      skill 已同步到 .agents/skills/、.claude/skills/、runtime/openclaw/。
+    validation_file: "ai/validation/2026-03-14-google-ads-batch-generator.md"
+
+  notes: >
+    這個腳本定位是「第一版草稿生成器」，不是最終品質保證器。
+    所有輸出仍必須經過 human review。
+
+  metadata:
+    created_by: codex
+    compatible_agents:
+      - claude
+      - codex
+      - gemini
+      - openclaw

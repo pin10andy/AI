@@ -1,0 +1,52 @@
+rubric:
+  name: "Upload Packager Quality Rubric"
+  version: "1.2"
+  applies_to:
+    - ai/schemas/upload-packager-output.schema.json
+
+  dimensions:
+    - name: handoff_validation
+      weight: 0.20
+      scoring:
+        pass: "field-level handoff validation 完整，validated_sections 正確，含 taxonomy / observe / rewrite metadata"
+        fail: "仍停留在 object-level 驗證"
+
+    - name: content_fidelity
+      weight: 0.20
+      scoring:
+        pass: "文案逐字一致，無改寫"
+        fail: "任何文案被改寫或遺漏"
+
+    - name: metadata_passthrough
+      weight: 0.20
+      scoring:
+        5: "angle_key / decision_confidence / rewrite_mode / coverage_after_replacement 完整保留"
+        3: "部分 metadata 有保留，但不完整"
+        1: "關鍵 metadata 遺失"
+
+    - name: strategic_notes_quality
+      weight: 0.15
+      scoring:
+        5: "main / test / do_not_expand / safer_rewrite_watchlist 四塊 notes 可直接執行"
+        3: "有 strategic notes，但 taxonomy 訊號不足"
+        1: "缺 strategic notes 或僅形式化"
+
+    - name: checklist_quality
+      weight: 0.15
+      scoring:
+        5: "checklist 包含 coverage、observe 回看、safer rewrite QA"
+        3: "checklist 可用，但漏掉關鍵 follow-up"
+        1: "checklist 與實際狀態不一致"
+
+    - name: format_compliance
+      weight: 0.10
+      scoring:
+        pass: "schema pass，required 欄位完整"
+        fail: "schema fail 或 required 欄位缺漏"
+
+  passing_threshold:
+    overall_score: 3.5
+    required_pass:
+      - handoff_validation
+      - content_fidelity
+      - format_compliance

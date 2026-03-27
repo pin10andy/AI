@@ -1,0 +1,98 @@
+#!/usr/bin/env bash
+# pre-commit hook: artifact governance gate for Google Ads
+#
+# Canonical source: scripts/hooks/pre-commit
+# Install: bash scripts/install-hooks.sh
+# Full check: python3 scripts/check_artifact_governance.py
+#
+# This hook blocks commits that introduce governance violations.
+# It does NOT block legacy files that are already untracked/committed.
+
+set -euo pipefail
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+
+# ─── Check 1: No new Google Ads outputs in repo root ─────────────────────────
+
+GADS_ROOT_FILES=$(git diff --cached --name-only --diff-filter=A | grep -iE '^(LoveFu|lovefu|google.?ads|pipeline|pmax|rsa)' | grep -vE '^\.' | grep -vE '^(CLAUDE|AGENTS|GEMINI|README)\.md$' || true)
+
+if [ -n "$GADS_ROOT_FILES" ]; then
+    echo ""
+    echo "╔══════════════════════════════════════════════════════════╗"
+    echo "║  BLOCKED: Google Ads artifact(s) in repo root           ║"
+    echo "╚══════════════════════════════════════════════════════════╝"
+    echo ""
+    echo "The following staged files violate artifact governance policy:"
+    echo "$GADS_ROOT_FILES" | while read -r f; do echo "  ✗ $f"; done
+    echo ""
+    echo "Official outputs must go to:"
+    echo "  ai/outputs/google-ads/{brand}/{product}/{lane}/{type}/"
+    echo ""
+    echo "Scratch/temp files must go to:"
+    echo "  scratch/google-ads/"
+    echo ""
+    echo "See: ai/policies/artifact-write-policy.md"
+    echo ""
+    exit 1
+fi
+
+# ─── Check 2: No naming violations in official output paths ──────────────────
+
+GADS_OUTPUT_FILES=$(git diff --cached --name-only --diff-filter=A | grep -E '^ai/outputs/google-ads/' || true)
+
+if [ -n "$GADS_OUTPUT_FILES" ]; then
+    VIOLATIONS=""
+
+    while IFS= read -r filepath; do
+        filename=$(basename "$filepath")
+
+        # Skip .gitkeep
+        [ "$filename" = ".gitkeep" ] && continue
+
+        # Check for anti-patterns: uppercase, underscores, CJK, spaces
+        if echo "$filename" | grep -qE '[A-Z_\s]|[\xE4-\xE9]'; then
+            VIOLATIONS="${VIOLATIONS}\n  ✗ ${filepath} (naming violation: uppercase, underscore, CJK, or space)"
+        fi
+
+        # Check pipeline files are in task subdirectory (not flat)
+        if echo "$filepath" | grep -qE '/pipeline/[^/]+\.(json|md)$'; then
+            VIOLATIONS="${VIOLATIONS}\n  ✗ ${filepath} (pipeline file must be inside a task subdirectory)"
+        fi
+
+    done <<< "$GADS_OUTPUT_FILES"
+
+    if [ -n "$VIOLATIONS" ]; then
+        echo ""
+        echo "╔══════════════════════════════════════════════════════════╗"
+        echo "║  BLOCKED: Artifact naming violations                    ║"
+        echo "╚══════════════════════════════════════════════════════════╝"
+        echo ""
+        echo -e "The following staged files violate naming policy:$VIOLATIONS"
+        echo ""
+        echo "See: ai/policies/artifact-naming-policy.md"
+        echo ""
+        exit 1
+    fi
+fi
+
+# ─── Check 3: No scratch files inside ai/outputs/ ────────────────────────────
+
+SCRATCH_IN_OUTPUTS=$(git diff --cached --name-only --diff-filter=A | grep -E '^ai/outputs/' | grep -iE '(scratch|temp|tmp|debug|draft)' || true)
+
+if [ -n "$SCRATCH_IN_OUTPUTS" ]; then
+    echo ""
+    echo "╔══════════════════════════════════════════════════════════╗"
+    echo "║  BLOCKED: Scratch file in official output path          ║"
+    echo "╚══════════════════════════════════════════════════════════╝"
+    echo ""
+    echo "The following staged files look like scratch/temp but are in ai/outputs/:"
+    echo "$SCRATCH_IN_OUTPUTS" | while read -r f; do echo "  ✗ $f"; done
+    echo ""
+    echo "Scratch files must go to: scratch/google-ads/"
+    echo ""
+    echo "See: ai/policies/artifact-write-policy.md"
+    echo ""
+    exit 1
+fi
+
+# All checks passed

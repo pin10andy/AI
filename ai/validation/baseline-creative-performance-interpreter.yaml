@@ -1,0 +1,114 @@
+# baseline-creative-performance-interpreter.yaml
+# Creative Performance Interpreter v1.0 — Skill Baseline
+# 凍結版本，後續 Ad Copy Portfolio Builder / 上稿素材包輸出器 以此為基礎
+
+version: "1.0"
+skill_id: "creative-performance-interpreter"
+frozen_at: "2026-03-15"
+frozen_by: "claude"
+status: "frozen"
+
+# Skill 定義檔案清單（凍結內容）
+skill_files:
+  skill_definition: "ai/skill-src/google-ads/creative-performance-interpreter/SKILL.md"
+  decision_rules: "ai/skill-src/google-ads/creative-performance-interpreter/references/decision-rules.md"
+  report_template: "ai/skill-src/google-ads/creative-performance-interpreter/templates/interpretation-report.md"
+  input_schema: "ai/inputs/creative-performance-input.schema.json"
+  output_schema: "ai/schemas/creative-performance-output.schema.json"
+  rubric: "ai/evals/creative-performance-rubric.yaml"
+  playbook: "ai/playbooks/google-ads-creative-interpretation.md"
+  route_table: "ai/skill-src/google-ads/SKILL.md"
+
+# Baseline Dry Run 記錄
+baseline_dry_run:
+  input: "ai/inputs/lovefu-pmax-hillbed-performance.json"
+  output_json: "ai/outputs/lovefu-pmax-hillbed-performance-interpretation.json"
+  output_md: "ai/outputs/lovefu-pmax-hillbed-performance-interpretation.md"
+  validation: "ai/validation/2026-03-15-creative-performance-interpreter-baseline.md"
+  rubric_score: 5.0
+  required_pass:
+    legacy_preservation: pass
+    format_compliance: pass
+
+# Dry Run 統計基準
+baseline_metrics:
+  total_assets: 25
+  asset_breakdown:
+    short_headlines: 15
+    long_headlines: 5
+    descriptions: 5
+  decision_distribution:
+    reinforce: 2
+    retain: 15
+    observe: 4
+    retire: 4
+  legacy_assets: 11
+  retire_now_count: 4
+  new_candidate_count: 6
+  patterns_extracted: 5
+  data_caveats_count: 5
+  interpretation_confidence: "medium"
+
+# 回歸規則
+regression_rules:
+  - dimension: schema_validation
+    method: hard_gate
+    threshold: "output JSON 通過 creative-performance-output.schema.json validation"
+    action_if_fail: "不得使用"
+
+  - dimension: legacy_protection
+    method: hard_gate
+    threshold: "所有 validated_legacy_messaging 都在 asset_decisions 中為 retain"
+    action_if_fail: "不得使用"
+
+  - dimension: decision_rule_compliance
+    method: hard_gate
+    threshold: "每個 decision 都符合 decision-rules.md 觸發條件"
+    action_if_fail: "不得使用"
+
+  - dimension: retire_mapping
+    method: structural
+    threshold: "retire decision 必須對應 retire_now_assets；observe/retain 不可出現在 retire_now_assets"
+    action_if_fail: "回到分析步驟"
+
+  - dimension: rationale_quality
+    method: score_floor
+    threshold: "每個 decision_rationale 必須包含具體 CTR、impressions、percentile 數字"
+    action_if_fail: "補充具體數字"
+
+  - dimension: rubric_overall
+    method: score_floor
+    threshold: "overall >= 3.5"
+    action_if_fail: "調查原因"
+
+  - dimension: human_review
+    method: qualitative
+    threshold: "manual_review_required = true"
+    action_if_fail: "不得使用"
+
+# 已知限制（不影響 baseline 凍結）
+known_limitations:
+  - id: "legacy-scope-too-wide"
+    description: "產品名「山丘樂眠床」作為 legacy messaging 保護導致 52% 素材自動 retain"
+    mitigation: "建議 PM 區分 legacy messaging 與 must-include keyword"
+    severity: "medium"
+
+  - id: "no-asset-level-conversion"
+    description: "僅以 CTR 做分類，缺少素材層級轉換數據"
+    mitigation: "下輪爭取 asset-level conversion 匯出"
+    severity: "medium"
+
+  - id: "no-placement-split"
+    description: "所有素材混合計算 percentile，未考慮版位差異"
+    mitigation: "未來可按 asset_type 分組計算"
+    severity: "low"
+
+# 下游依賴（等待建立）
+downstream_skills:
+  - skill_id: "ad-copy-portfolio-builder"
+    status: "planned"
+    dependency: "消費 creative-performance-interpreter 的 output（asset_decisions + retire_now_assets + new_candidate_assets）"
+
+  - skill_id: "asset-package-exporter"
+    status: "planned"
+    dependency: "消費 new_candidate_assets + retain 的 asset_decisions，產出可直接上稿的素材包"

@@ -1,0 +1,449 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Upload Packager Output",
+  "description": "可直接上稿、可交付 PM / 投手 / 客戶的素材包。v1.2 新增 angle-taxonomy strategic notes、observe breakdown handoff 驗證與 safer-rewrite watchlist。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "package_id",
+    "source_portfolio_id",
+    "brand_name",
+    "product_name",
+    "campaign_type",
+    "generated_by",
+    "generated_at",
+    "delivery_metadata",
+    "handoff_validation",
+    "angle_taxonomy",
+    "strategic_notes",
+    "upload_ready_assets",
+    "retirement_changelog",
+    "character_audit",
+    "redundancy_warnings",
+    "action_checklist",
+    "compliance_notes"
+  ],
+  "properties": {
+    "package_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-_]*$"
+    },
+    "source_portfolio_id": {
+      "type": "string"
+    },
+    "brand_name": { "type": "string", "minLength": 1 },
+    "product_name": { "type": "string", "minLength": 1 },
+    "campaign_type": {
+      "type": "string",
+      "enum": ["search_rsa", "pmax"]
+    },
+    "generated_by": {
+      "type": "string",
+      "enum": ["claude", "codex", "gemini", "openclaw"]
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "delivery_metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["delivery_target", "version_label", "sign_off_status"],
+      "properties": {
+        "delivery_target": {
+          "type": "string",
+          "enum": ["pm", "media_buyer", "client", "all"]
+        },
+        "version_label": { "type": "string" },
+        "source_interpretation_id": { "type": "string" },
+        "upstream_confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low"]
+        },
+        "angle_taxonomy_version": {
+          "type": "string",
+          "const": "v1.2"
+        },
+        "sign_off_status": {
+          "type": "string",
+          "enum": ["pending_review", "pm_approved", "ready_to_upload"]
+        }
+      }
+    },
+    "handoff_validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "portfolio_field_validation_passed",
+        "validated_sections"
+      ],
+      "properties": {
+        "portfolio_field_validation_passed": {
+          "type": "boolean",
+          "const": true
+        },
+        "validated_sections": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "angle_taxonomy": {
+      "$ref": "#/definitions/angle_taxonomy"
+    },
+    "strategic_notes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "main_angles",
+        "test_angles",
+        "do_not_expand_angles",
+        "safer_rewrite_watchlist"
+      ],
+      "properties": {
+        "main_angles": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/angle_note" }
+        },
+        "test_angles": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/angle_note" }
+        },
+        "do_not_expand_angles": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/angle_note" }
+        },
+        "safer_rewrite_watchlist": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["source_asset_id", "source_text", "reason", "recommended_candidate_id"],
+            "properties": {
+              "source_asset_id": { "type": "string" },
+              "source_text": { "type": "string" },
+              "reason": { "type": "string" },
+              "recommended_candidate_id": { "type": "string" },
+              "recommended_text": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "upload_ready_assets": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["primary_pack", "test_pack"],
+      "properties": {
+        "primary_pack": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "short_headlines": {
+              "type": "array",
+              "items": { "$ref": "#/definitions/upload_asset" }
+            },
+            "long_headlines": {
+              "type": "array",
+              "items": { "$ref": "#/definitions/upload_asset" }
+            },
+            "headlines": {
+              "type": "array",
+              "items": { "$ref": "#/definitions/upload_asset" }
+            },
+            "descriptions": {
+              "type": "array",
+              "items": { "$ref": "#/definitions/upload_asset" }
+            }
+          }
+        },
+        "test_pack": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "short_headlines": {
+              "type": "array",
+              "items": { "$ref": "#/definitions/upload_asset" }
+            },
+            "long_headlines": {
+              "type": "array",
+              "items": { "$ref": "#/definitions/upload_asset" }
+            },
+            "headlines": {
+              "type": "array",
+              "items": { "$ref": "#/definitions/upload_asset" }
+            },
+            "descriptions": {
+              "type": "array",
+              "items": { "$ref": "#/definitions/upload_asset" }
+            }
+          }
+        }
+      }
+    },
+    "retirement_changelog": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "retired_asset_id",
+          "retired_text",
+          "retired_asset_type",
+          "retirement_reason",
+          "action",
+          "replacement_gap_unfilled",
+          "replacement_decision_confidence",
+          "coverage_after_replacement"
+        ],
+        "properties": {
+          "retired_asset_id": { "type": "string" },
+          "retired_text": { "type": "string" },
+          "retired_asset_type": {
+            "type": "string",
+            "enum": ["short_headline", "long_headline", "headline", "description"]
+          },
+          "retirement_reason": { "type": "string" },
+          "action": {
+            "type": "string",
+            "enum": ["replaced", "removed_no_replacement"]
+          },
+          "replacement_gap_unfilled": {
+            "type": "boolean"
+          },
+          "replacement_asset_id": { "type": "string" },
+          "replacement_text": { "type": "string" },
+          "replacement_rationale": { "type": "string" },
+          "replacement_decision_confidence": {
+            "type": "string",
+            "enum": ["high", "medium", "low", "directional"]
+          },
+          "rewrite_mode": {
+            "enum": ["retain-intent", "safer-rewrite", "exploratory", null]
+          },
+          "coverage_after_replacement": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "character_audit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["results", "all_pass"],
+      "properties": {
+        "results": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["asset_id", "text", "asset_type", "char_count", "char_limit", "pass"],
+            "properties": {
+              "asset_id": { "type": "string" },
+              "text": { "type": "string" },
+              "asset_type": { "type": "string" },
+              "role": { "type": "string", "enum": ["主力", "測試"] },
+              "char_count": { "type": "integer", "minimum": 0 },
+              "char_limit": { "type": "integer", "minimum": 1 },
+              "pass": { "type": "boolean" },
+              "note": { "type": "string" }
+            }
+          }
+        },
+        "all_pass": {
+          "type": "boolean"
+        }
+      }
+    },
+    "redundancy_warnings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["asset_a_id", "asset_a_text", "asset_b_id", "asset_b_text", "similarity_reason", "recommendation"],
+        "properties": {
+          "asset_a_id": { "type": "string" },
+          "asset_a_text": { "type": "string" },
+          "asset_b_id": { "type": "string" },
+          "asset_b_text": { "type": "string" },
+          "similarity_reason": { "type": "string" },
+          "recommendation": {
+            "type": "string",
+            "enum": ["keep_both", "review_and_choose", "remove_one"]
+          }
+        }
+      }
+    },
+    "action_checklist": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["step", "action", "detail", "done"],
+        "properties": {
+          "step": { "type": "integer", "minimum": 1 },
+          "action": { "type": "string" },
+          "detail": { "type": "string" },
+          "done": {
+            "type": "boolean",
+            "const": false
+          }
+        }
+      }
+    },
+    "compliance_notes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "inherited_caveats",
+        "packager_warnings",
+        "manual_review_required"
+      ],
+      "properties": {
+        "inherited_caveats": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "packager_warnings": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "manual_review_required": {
+          "type": "boolean",
+          "const": true
+        }
+      }
+    }
+  },
+  "definitions": {
+    "angle_key": {
+      "type": "string",
+      "enum": [
+        "product_feel",
+        "risk_reversal",
+        "brand_trust",
+        "entry_value",
+        "life_scene",
+        "concrete_number",
+        "pain_point",
+        "social_proof",
+        "legacy_phrase",
+        "cta_lower_friction"
+      ]
+    },
+    "angle_taxonomy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["version", "keys"],
+      "properties": {
+        "version": {
+          "type": "string",
+          "const": "v1.2"
+        },
+        "keys": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/angle_key" }
+        }
+      }
+    },
+    "angle_note": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["angle_key", "label", "evidence"],
+      "properties": {
+        "angle_key": { "$ref": "#/definitions/angle_key" },
+        "label": { "type": "string" },
+        "evidence": { "type": "string" },
+        "recommendation": { "type": "string" }
+      }
+    },
+    "upload_asset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "asset_id",
+        "text",
+        "char_count",
+        "char_pass",
+        "source",
+        "angle_key",
+        "decision_confidence",
+        "coverage_tags"
+      ],
+      "properties": {
+        "asset_id": { "type": "string" },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "char_count": { "type": "integer", "minimum": 0 },
+        "char_pass": {
+          "type": "boolean"
+        },
+        "source": {
+          "type": "string",
+          "enum": [
+            "retained",
+            "retained_protected_phrase",
+            "retained_observe",
+            "replacement",
+            "expansion",
+            "brief_new",
+            "safer_rewrite"
+          ]
+        },
+        "angle_key": { "$ref": "#/definitions/angle_key" },
+        "performance_tier": {
+          "type": "string",
+          "enum": ["top", "mid", "low", "insufficient_data", "stale", "borderline", "new"]
+        },
+        "decision_confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low", "directional"]
+        },
+        "observe_subtype": {
+          "enum": [
+            "observe_new",
+            "observe_insufficient_data",
+            "observe_stale",
+            "observe_borderline",
+            null
+          ]
+        },
+        "risk_level": {
+          "enum": ["low", "medium", "high", null]
+        },
+        "rewrite_mode": {
+          "enum": ["retain-intent", "safer-rewrite", "exploratory", null]
+        },
+        "is_protected_phrase_carrier": { "type": "boolean" },
+        "coverage_tags": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "protected_phrases",
+            "must_include_tokens",
+            "reusable_motifs"
+          ],
+          "properties": {
+            "protected_phrases": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "must_include_tokens": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "reusable_motifs": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        },
+        "status_note": { "type": "string" }
+      }
+    }
+  }
+}

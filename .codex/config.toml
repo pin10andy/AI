@@ -1,0 +1,13 @@
+# Codex configuration
+# Points Codex to the shared instruction layer
+
+[instructions]
+# Codex reads AGENTS.md as its primary instruction file
+file = "AGENTS.md"
+
+[context]
+# Additional context files Codex should load
+files = [
+  "ai/memory/shared-context.yaml",
+  "ai/brand/master-brand.yaml"
+]

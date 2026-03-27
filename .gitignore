@@ -1,0 +1,17 @@
+.DS_Store
+**/.DS_Store
+
+__pycache__/
+**/__pycache__/
+*.pyc
+
+.tmp/
+scratch/
+
+.claude/settings.local.json
+
+.claude/skills/
+.agents/skills/
+runtime/openclaw/
+
+base knowledge/

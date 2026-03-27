@@ -1,0 +1,432 @@
+# artifacts.yaml
+# Artifact registry for Google Ads formal outputs
+# Every formal artifact MUST be registered here.
+# For storage paths, see: ai/registry/storage-map.yaml
+# For naming rules, see: ai/policies/artifact-naming-policy.md
+
+version: "1.0"
+created_at: "2026-03-16"
+scope: google-ads
+
+# ─────────────────────────────────────────────
+# Field definitions
+# ─────────────────────────────────────────────
+
+field_definitions:
+  artifact_id:
+    type: string
+    required: true
+    description: "唯一識別碼，格式：{brief_id}.{artifact_type} 或 {task_id}.{artifact_type}"
+    examples:
+      - "lovefu-pmax-hillbed.golden"
+      - "2026-03-15-pipeline-v1-2-uat.pipeline"
+
+  task_id:
+    type: string
+    required: true
+    description: "產生此 artifact 的任務 ID，對應 ai/tasks/ 下的檔案"
+    examples:
+      - "2026-03-14-google-ads-pmax-mvp"
+      - "2026-03-15-google-ads-copy-pipeline-v1-2"
+
+  artifact_type:
+    type: enum
+    required: true
+    values: [golden, approved-reference, pipeline, deliverable]
+    description: "Artifact 類型，對應 storage-map.yaml 中的 artifact_types。dry-run 已於 2026-03-16 重新分類為 approved-reference。"
+
+  brand:
+    type: string
+    required: true
+    description: "品牌 slug（kebab-case）"
+    examples: [lovefu]
+
+  product:
+    type: string
+    required: true
+    description: "產品 slug（kebab-case）"
+    examples: [hillbed]
+
+  lane:
+    type: string
+    required: true
+    description: "Lane ID，格式：{message_scope}-{goal}-{campaign_type}"
+    examples: [evergreen-purchase-pmax]
+
+  status:
+    type: enum
+    required: true
+    values: [draft, validated, approved, superseded, archived]
+    description: |
+      draft: 已產出但未驗證
+      validated: 已通過自動驗證
+      approved: 已通過 human review
+      superseded: 已被更新版本取代
+      archived: 已歸檔不再使用
+
+  canonical_path:
+    type: string
+    required: true
+    description: "Artifact 在 repo 中的正式路徑（相對於 repo root）"
+
+  source_brief:
+    type: string
+    required: true
+    description: "來源 brief ID，對應 canonical-briefs.yaml"
+    examples: [lovefu-pmax-hillbed]
+
+  validation_refs:
+    type: list
+    required: false
+    description: "相關驗證報告路徑列表"
+    examples:
+      - ["ai/validation/2026-03-14-google-ads-copy-mvp.md"]
+
+  generated_by:
+    type: string
+    required: true
+    description: "產出此 artifact 的 agent 或流程"
+    examples: [claude, codex, gemini, openclaw, pipeline-v1.2, human]
+
+  owner:
+    type: string
+    required: true
+    description: "負責此 artifact 的角色或人員"
+    examples: [pm, human, agent-team]
+
+  created_at:
+    type: string
+    required: true
+    format: "YYYY-MM-DD"
+    description: "Artifact 建立日期"
+
+  notes:
+    type: string
+    required: false
+    description: "備註或附加說明"
+
+# ─────────────────────────────────────────────
+# Registered artifacts
+# ─────────────────────────────────────────────
+# Below are existing formal artifacts that predate this registry.
+# Their current physical paths are recorded as legacy_path.
+# canonical_path reflects the governed target path.
+# Migration status tracks whether the file has been moved.
+
+artifacts:
+
+  # ── Golden output ──────────────────────────
+  - artifact_id: "lovefu-pmax-hillbed.golden"
+    task_id: "2026-03-14-google-ads-pmax-mvp"
+    artifact_type: golden
+    brand: lovefu
+    product: hillbed
+    lane: evergreen-purchase-pmax
+    status: approved
+    canonical_path: "ai/outputs/google-ads/lovefu/hillbed/evergreen-purchase-pmax/golden/lovefu-pmax-hillbed.output.json"
+    legacy_path: "ai/outputs/lovefu-pmax-hillbed.output.json"
+    source_brief: "lovefu-pmax-hillbed"
+    validation_refs:
+      - "ai/validation/2026-03-14-google-ads-copy-mvp.md"
+    generated_by: claude
+    owner: pm
+    created_at: "2026-03-14"
+    migration_status: completed   # migrated 2026-03-16
+    notes: "Golden score 4.65/5。Human review 判定可直接上稿。"
+
+  - artifact_id: "lovefu-pmax-hillbed.golden-md"
+    task_id: "2026-03-14-google-ads-pmax-mvp"
+    artifact_type: golden
+    brand: lovefu
+    product: hillbed
+    lane: evergreen-purchase-pmax
+    status: approved
+    canonical_path: "ai/outputs/google-ads/lovefu/hillbed/evergreen-purchase-pmax/golden/lovefu-pmax-hillbed.output.md"
+    legacy_path: "ai/outputs/lovefu-pmax-hillbed.output.md"
+    source_brief: "lovefu-pmax-hillbed"
+    validation_refs:
+      - "ai/validation/2026-03-14-google-ads-copy-mvp.md"
+    generated_by: claude
+    owner: pm
+    created_at: "2026-03-14"
+    migration_status: completed   # migrated 2026-03-16
+    notes: "Markdown companion of golden output."
+
+  # ── Approved reference ─────────────────────
+  - artifact_id: "lovefu-pmax-hillbed.ref-03"
+    task_id: "2026-03-14-google-ads-pmax-mvp"
+    artifact_type: approved-reference
+    brand: lovefu
+    product: hillbed
+    lane: evergreen-purchase-pmax
+    status: approved
+    canonical_path: "ai/outputs/google-ads/lovefu/hillbed/evergreen-purchase-pmax/approved-references/lovefu-pmax-hillbed.ref-03.output.json"
+    legacy_path: "ai/outputs/lovefu-pmax-hillbed.approved-reference-03.output.json"
+    source_brief: "lovefu-pmax-hillbed"
+    validation_refs: []
+    generated_by: claude
+    owner: pm
+    created_at: "2026-03-15"
+    migration_status: completed   # migrated 2026-03-16
+    notes: "第三版 approved reference。"
+
+  - artifact_id: "lovefu-pmax-hillbed.ref-03-md"
+    task_id: "2026-03-14-google-ads-pmax-mvp"
+    artifact_type: approved-reference
+    brand: lovefu
+    product: hillbed
+    lane: evergreen-purchase-pmax
+    status: approved
+    canonical_path: "ai/outputs/google-ads/lovefu/hillbed/evergreen-purchase-pmax/approved-references/lovefu-pmax-hillbed.ref-03.output.md"
+    legacy_path: "ai/outputs/lovefu-pmax-hillbed.approved-reference-03.output.md"
+    source_brief: "lovefu-pmax-hillbed"
+    validation_refs: []
+    generated_by: claude
+    owner: pm
+    created_at: "2026-03-15"
+    migration_status: completed   # migrated 2026-03-16
+    notes: "Markdown companion of ref-03."
+
+  # ── Approved reference 02 (ex-Codex dry-run) ─
+  - artifact_id: "lovefu-pmax-hillbed.ref-02"
+    task_id: "2026-03-14-google-ads-pmax-mvp"
+    artifact_type: approved-reference
+    brand: lovefu
+    product: hillbed
+    lane: evergreen-purchase-pmax
+    status: approved
+    canonical_path: "ai/outputs/google-ads/lovefu/hillbed/evergreen-purchase-pmax/approved-references/lovefu-pmax-hillbed.ref-02.output.json"
+    legacy_path: "ai/outputs/lovefu-pmax-hillbed.codex-dry-run.output.json"
+    source_brief: "lovefu-pmax-hillbed"
+    validation_refs:
+      - "ai/validation/2026-03-15-hillbed-pmax-hardening.md"
+    generated_by: codex
+    owner: agent-team
+    created_at: "2026-03-14"
+    migration_status: completed   # migrated 2026-03-16, reclassified 2026-03-16
+    notes: "Cross-agent validation output by Codex. Originally classified as dry-run; reclassified as approved-reference (ref-02) because it passed full validation gates (schema, ad_copy_validator, rubric) and is cited in hardening report."
+
+  - artifact_id: "lovefu-pmax-hillbed.ref-02-md"
+    task_id: "2026-03-14-google-ads-pmax-mvp"
+    artifact_type: approved-reference
+    brand: lovefu
+    product: hillbed
+    lane: evergreen-purchase-pmax
+    status: approved
+    canonical_path: "ai/outputs/google-ads/lovefu/hillbed/evergreen-purchase-pmax/approved-references/lovefu-pmax-hillbed.ref-02.output.md"
+    legacy_path: "ai/outputs/lovefu-pmax-hillbed.codex-dry-run.output.md"
+    source_brief: "lovefu-pmax-hillbed"
+    validation_refs:
+      - "ai/validation/2026-03-15-hillbed-pmax-hardening.md"
+    generated_by: codex
+    owner: agent-team
+    created_at: "2026-03-14"
+    migration_status: completed   # migrated 2026-03-16, reclassified 2026-03-16
+    notes: "Markdown companion of ref-02."
+
+  # ── Pipeline v1.2 UAT ─────────────────────
+  - artifact_id: "2026-03-15-pipeline-v1-2-uat.pipeline"
+    task_id: "2026-03-15-google-ads-copy-pipeline-v1-2"
+    artifact_type: pipeline
+    brand: lovefu
+    product: hillbed
+    lane: evergreen-purchase-pmax
+    status: validated
+    canonical_path: "ai/outputs/google-ads/lovefu/hillbed/evergreen-purchase-pmax/pipeline/2026-03-15-pipeline-v1-2-uat/"
+    legacy_path: "ai/outputs/lovefu-hillbed-copy-pipeline-v1-2-real-uat.*.json"
+    source_brief: "lovefu-pmax-hillbed"
+    validation_refs:
+      - "ai/validation/2026-03-15-google-ads-copy-pipeline-v1-2-rerun.md"
+    generated_by: pipeline-v1.2
+    owner: pm
+    created_at: "2026-03-15"
+    migration_status: completed   # migrated 2026-03-16
+    files:
+      - "builder.json"
+      - "interpreter.json"
+      - "packager.json"
+      - "packager.md"
+      - "input.json"
+    notes: "Pipeline v1.2 real UAT run。含 builder → interpreter → packager 全階段。"
+
+  # ── Pipeline v1.1 rerun ────────────────────
+  - artifact_id: "2026-03-15-pipeline-v1-1.pipeline"
+    task_id: "2026-03-15-google-ads-copy-pipeline-v1-1"
+    artifact_type: pipeline
+    brand: lovefu
+    product: hillbed
+    lane: evergreen-purchase-pmax
+    status: validated
+    canonical_path: "ai/outputs/google-ads/lovefu/hillbed/evergreen-purchase-pmax/pipeline/2026-03-15-pipeline-v1-1/"
+    source_brief: "lovefu-pmax-hillbed"
+    validation_refs:
+      - "ai/validation/2026-03-15-google-ads-copy-pipeline-v1-1-e2e.md"
+    generated_by: pipeline-v1.1
+    owner: pm
+    created_at: "2026-03-15"
+    migration_status: completed   # migrated from repo root 2026-03-16 (Phase 2)
+    files:
+      - "builder.json"
+      - "interpreter.json"
+      - "packager.json"
+      - "packager.md"
+    notes: "Pipeline v1.1 full rerun。portfolio_id=hillbed-rsa-2026q1-portfolio-v1-1。Superseded by v1.2 UAT run."
+
+  # ── Performance interpretation ─────────────
+  - artifact_id: "lovefu-pmax-hillbed.performance-interpretation"
+    task_id: "2026-03-15-google-ads-copy-pipeline-v1-1"
+    artifact_type: pipeline
+    brand: lovefu
+    product: hillbed
+    lane: evergreen-purchase-pmax
+    status: validated
+    canonical_path: "ai/outputs/google-ads/lovefu/hillbed/evergreen-purchase-pmax/pipeline/2026-03-15-performance-interpretation/"
+    legacy_path: "ai/outputs/lovefu-pmax-hillbed-performance-interpretation.json"
+    source_brief: "lovefu-pmax-hillbed"
+    validation_refs: []
+    generated_by: claude
+    owner: pm
+    created_at: "2026-03-15"
+    migration_status: completed   # migrated 2026-03-16
+    files:
+      - "interpretation.json"
+      - "interpretation.md"
+    notes: "Creative performance interpretation output。"
+
+  # ── Experience-store booking draft pipeline ─
+  - artifact_id: "2026-03-16-experience-store-pmax-booking-refresh.pipeline"
+    task_id: "2026-03-16-experience-store-pmax-booking-refresh"
+    artifact_type: pipeline
+    brand: lovefu
+    product: experience-store
+    lane: evergreen-store-visit-pmax
+    status: validated
+    canonical_path: "ai/outputs/google-ads/lovefu/experience-store/evergreen-store-visit-pmax/pipeline/2026-03-16-experience-store-pmax-booking-refresh/"
+    source_brief: "lovefu-pmax-experience-store-booking-draft"
+    validation_refs:
+      - "ai/validation/2026-03-16-experience-store-pmax-booking-refresh.md"
+    generated_by: codex
+    owner: agent-team
+    created_at: "2026-03-16"
+    files:
+      - "input.json"
+      - "builder.json"
+      - "builder.md"
+    notes: "Three-store experience-store booking draft. Uses association proxy only (booking_success + store_visit + directions). Not a supported lane and not a golden output."
+
+  # ── Experience-store upload package pipeline ─
+  - artifact_id: "2026-03-16-experience-store-pmax-upload-package.pipeline"
+    task_id: "2026-03-16-experience-store-pmax-upload-package"
+    artifact_type: pipeline
+    brand: lovefu
+    product: experience-store
+    lane: evergreen-store-visit-pmax
+    status: validated
+    canonical_path: "ai/outputs/google-ads/lovefu/experience-store/evergreen-store-visit-pmax/pipeline/2026-03-16-experience-store-pmax-upload-package/"
+    source_brief: "lovefu-pmax-experience-store-booking-draft"
+    validation_refs:
+      - "ai/validation/2026-03-16-experience-store-pmax-upload-package.md"
+    generated_by: codex
+    owner: agent-team
+    created_at: "2026-03-16"
+    files:
+      - "input.json"
+      - "packager.md"
+    notes: "Upload-view handoff package for media buyer. Splits current builder output into primary launch assets, test reserve, and do-not-upload legacy copy."
+
+  # ── Experience-store upload deliverable ─────
+  - artifact_id: "2026-03-16-experience-store-pmax-upload-package.deliverable"
+    task_id: "2026-03-16-experience-store-pmax-upload-package"
+    artifact_type: deliverable
+    brand: lovefu
+    product: experience-store
+    lane: evergreen-store-visit-pmax
+    status: validated
+    canonical_path: "ai/outputs/google-ads/lovefu/experience-store/evergreen-store-visit-pmax/deliverables/2026-03-16-experience-store-pmax-upload-package.deliverable.md"
+    source_brief: "lovefu-pmax-experience-store-booking-draft"
+    validation_refs:
+      - "ai/validation/2026-03-16-experience-store-pmax-upload-package.md"
+    generated_by: codex
+    owner: agent-team
+    created_at: "2026-03-16"
+    notes: "Media-buyer deliverable markdown with recommended LP, primary pack, test reserve, and do-not-upload list."
+
+# ─────────────────────────────────────────────
+# Archived (Phase 2 — 2026-03-16)
+# ─────────────────────────────────────────────
+# These files were in the repo root and have been archived to scratch/.
+# They are NOT formal artifacts and are NOT registered.
+# Location: scratch/google-ads/archive/
+# See: ai/validation/2026-03-16-artifact-migration-phase-2.md
+
+archived:
+  # Group A: migrated to governed path (registered above as 2026-03-15-pipeline-v1-1.pipeline)
+  - original_path: "LoveFu_pipeline_v1-1_rerun_builder.json"
+    archived_to: "ai/outputs/google-ads/lovefu/hillbed/evergreen-purchase-pmax/pipeline/2026-03-15-pipeline-v1-1/builder.json"
+    action: migrated   # promoted to formal artifact
+    phase: 2
+  - original_path: "LoveFu_pipeline_v1-1_rerun_interpreter.json"
+    archived_to: "ai/outputs/google-ads/lovefu/hillbed/evergreen-purchase-pmax/pipeline/2026-03-15-pipeline-v1-1/interpreter.json"
+    action: migrated
+    phase: 2
+  - original_path: "LoveFu_pipeline_v1-1_rerun_packager.json"
+    archived_to: "ai/outputs/google-ads/lovefu/hillbed/evergreen-purchase-pmax/pipeline/2026-03-15-pipeline-v1-1/packager.json"
+    action: migrated
+    phase: 2
+  - original_path: "LoveFu_pipeline_v1-1_rerun_packager.md"
+    archived_to: "ai/outputs/google-ads/lovefu/hillbed/evergreen-purchase-pmax/pipeline/2026-03-15-pipeline-v1-1/packager.md"
+    action: migrated
+    phase: 2
+  - original_path: "LoveFu_pipeline_v1-1_full_rerun_report.md"
+    archived_to: "ai/reports/2026-03-15-pipeline-v1-1-full-rerun-report.md"
+    action: migrated   # report, not registered in artifacts.yaml
+    phase: 2
+
+  # Group B: v1.2 initial run — archived to scratch (NOT the same as governed v1.2 UAT run)
+  - original_path: "LoveFu_pipeline_v1-2_builder.json"
+    archived_to: "scratch/google-ads/archive/2026-03-15-pipeline-v1-2-initial-run/LoveFu_pipeline_v1-2_builder.json"
+    action: archived   # initial-run snapshot; governed version is the UAT rerun (different run_id)
+    md5_archived: "acf278f90edb57e07b19b3d82fb1eb07"
+    governed_md5: "3bb2fb63361b957f58ccb5d9ff99c524"   # governed (UAT rerun) — DIFFERENT run
+    phase: 2
+  - original_path: "LoveFu_pipeline_v1-2_interpreter.json"
+    archived_to: "scratch/google-ads/archive/2026-03-15-pipeline-v1-2-initial-run/LoveFu_pipeline_v1-2_interpreter.json"
+    action: archived
+    md5_archived: "7f2aa8a9a8b53d401b503dabb7400c31"
+    governed_md5: "2f31a3dc0d6b38fcccfeb497826cdb4d"
+    phase: 2
+  - original_path: "LoveFu_pipeline_v1-2_packager.json"
+    archived_to: "scratch/google-ads/archive/2026-03-15-pipeline-v1-2-initial-run/LoveFu_pipeline_v1-2_packager.json"
+    action: archived
+    md5_archived: "59638d9e6f94687f0d26476258638f30"
+    governed_md5: "f3a430b558b83dafd68d95a10ef93bed"
+    phase: 2
+  - original_path: "LoveFu_pipeline_v1-2_packager.md"
+    archived_to: "scratch/google-ads/archive/2026-03-15-pipeline-v1-2-initial-run/LoveFu_pipeline_v1-2_packager.md"
+    action: archived
+    md5_archived: "d1919b34435a5e2bf5041d1a5f53701b"
+    governed_md5: "19f7fabc1ae84f2299940de92423958e"
+    phase: 2
+  - original_path: "LoveFu_pipeline_v1-2_UAT_validation.md"
+    archived_to: "scratch/google-ads/archive/2026-03-15-pipeline-v1-2-initial-run/LoveFu_pipeline_v1-2_UAT_validation.md"
+    action: archived   # earlier draft; governed version is ai/validation/2026-03-15-lovefu-hillbed-copy-pipeline-v1-2-real-uat-rerun.md
+    md5_archived: "57b4f9e37a2eb42a34f78a06059d2c40"
+    governed_md5: "3ac2f4eea02ef8f5a0f3f997f693e549"
+    phase: 2
+  - original_path: "LoveFu_pipeline_v1-2_input_sufficiency.md"
+    archived_to: "scratch/google-ads/archive/2026-03-15-pipeline-v1-2-initial-run/LoveFu_pipeline_v1-2_input_sufficiency.md"
+    action: archived   # content subsumed in governed validation file
+    md5_archived: "52ffdf0b66391501c6fba7945d7d7342"
+    phase: 2
+
+  # Group C: RSA strategy proposals — archived to scratch (original CJK filenames preserved)
+  - original_path: "LoveFu_山丘樂眠床_RSA新文案.md"
+    archived_to: "scratch/google-ads/archive/2026-03-15-hillbed-rsa-proposals/LoveFu_山丘樂眠床_RSA新文案.md"
+    action: archived   # strategy proposal doc, not a pipeline deliverable
+    md5_archived: "f49eac1d4b37e0c596020a76044b3b1d"
+    phase: 2
+  - original_path: "LoveFu_山丘樂眠床_RSA新文案.xlsx"
+    archived_to: "scratch/google-ads/archive/2026-03-15-hillbed-rsa-proposals/LoveFu_山丘樂眠床_RSA新文案.xlsx"
+    action: archived
+    md5_archived: "af876ecacc70c2b880a08d130c4a187b"
+    phase: 2

@@ -1,0 +1,59 @@
+# Claude vs Codex v1.2 rerun comparison
+
+task:
+  task_id: "gads-pipeline-014"
+  title: "Claude vs Codex Google Ads Copy Pipeline v1.2 Rerun Comparison"
+  status: validated
+  owner: codex
+  created_at: "2026-03-16"
+  updated_at: "2026-03-16"
+
+  goal: >
+    在不重跑 pipeline、不修改 skill 規格的前提下，
+    以 artifact-level review 比較 Claude 與 Codex
+    的 Google Ads copy pipeline v1.2 rerun 成果，
+    產出可供 PM / 開發決策的正式 comparison report。
+
+  background: >
+    workspace 同時存在 Claude archived initial-run artifacts
+    與 Codex governed real-UAT rerun artifacts。
+    需要用同一套驗收標準比較兩邊的 contract fidelity、
+    business realism、honesty、reproducibility 與 review usefulness，
+    並回答目前誰更適合當默認 runner。
+
+  references:
+    shared_context: "ai/memory/shared-context.yaml"
+    playbook: "ai/playbooks/google-ads.md"
+    claude_artifacts_dir: "scratch/google-ads/archive/2026-03-15-pipeline-v1-2-initial-run/"
+    codex_outputs_dir: "ai/outputs/"
+    registry: "ai/registry/artifacts.yaml"
+
+  deliverables:
+    - description: "Formal comparison report"
+      format: markdown
+      destination: "ai/reports/2026-03-15-claude-vs-codex-v1-2-rerun-comparison.md"
+    - description: "Validation record for the comparison"
+      format: markdown
+      destination: "ai/validation/2026-03-16-claude-vs-codex-v1-2-rerun-comparison.md"
+    - description: "Change record"
+      format: markdown
+      destination: "ai/changes/2026-03-16-claude-vs-codex-v1-2-rerun-comparison.md"
+
+  validation:
+    method: artifact inspection + section completeness check
+    passing_criteria: >
+      comparison report 已寫入 workspace，
+      含 Executive Summary、Artifact Completeness Check、
+      五維打分表、Key Differences、Risks and Limitations、
+      Final Verdict、Recommended Next Step，
+      並明確給出默認 runner 建議。
+    validation_file: "ai/validation/2026-03-16-claude-vs-codex-v1-2-rerun-comparison.md"
+
+  metadata:
+    created_by: codex
+    generated_by: codex
+    compatible_agents:
+      - claude
+      - codex
+      - gemini
+      - openclaw

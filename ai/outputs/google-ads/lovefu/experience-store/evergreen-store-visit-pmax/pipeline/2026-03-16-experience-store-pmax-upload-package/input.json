@@ -1,0 +1,60 @@
+{
+  "task_id": "2026-03-16-experience-store-pmax-upload-package",
+  "source_builder": "ai/outputs/google-ads/lovefu/experience-store/evergreen-store-visit-pmax/pipeline/2026-03-16-experience-store-pmax-booking-refresh/builder.json",
+  "source_lp_alignment_report": "ai/reports/2026-03-16-experience-store-lp-alignment-review.md",
+  "recommended_lp": "https://www.lovefu.tw/pages/lovefuhome",
+  "avoid_lp": "https://www.lovefu.tw/products/hillbed",
+  "primary_pack": {
+    "short_headlines": [
+      { "asset_id": "sh-01", "text": "預約試躺 30 分沉浸式好眠" },
+      { "asset_id": "sh-02", "text": "體驗真正放鬆的慵懶時光" },
+      { "asset_id": "sh-04", "text": "門市試躺 比規格更準" },
+      { "asset_id": "sh-06", "text": "你的專屬睡眠顧問" },
+      { "asset_id": "sh-07", "text": "量身打造你的專屬寢具組合" },
+      { "asset_id": "sh-08", "text": "專人測量頸部曲線" },
+      { "asset_id": "sh-11", "text": "不急著買 先預約體驗" },
+      { "asset_id": "sh-13", "text": "預約體驗 找到適合睡感" },
+      { "asset_id": "sh-14", "text": "預約門市試躺 更安心" },
+      { "asset_id": "sh-15", "text": "就近預約體驗 更方便" }
+    ],
+    "long_headlines": [
+      { "asset_id": "lh-01", "text": "還在看網路推薦卻不知道適不適合？不如先到體驗店試躺，親自感受更準。" },
+      { "asset_id": "lh-03", "text": "睡眠顧問陪你比較床墊與枕頭，量脖子後再慢慢找到適合自己的睡感。" },
+      { "asset_id": "lh-04", "text": "不急著買也沒關係，先預約體驗，讓身體被接住後再決定下一步。" }
+    ],
+    "descriptions": [
+      { "asset_id": "d-01", "text": "先預約體驗，再決定下一步。" },
+      { "asset_id": "d-02", "text": "還在看網路推薦卻不知道適不適合自己？到體驗店實際試躺，會比只看規格更有感。" },
+      { "asset_id": "d-04", "text": "量脖子、試枕、試躺可以一起安排，把預約體驗排進生活節奏裡，更安心也更有效率。" }
+    ]
+  },
+  "test_reserve": {
+    "short_headlines": [
+      { "asset_id": "sh-03", "text": "沉浸式睡眠體驗 感受放鬆" },
+      { "asset_id": "sh-05", "text": "床墊枕頭一次試躺" },
+      { "asset_id": "sh-09", "text": "睡眠顧問陪你慢慢找" },
+      { "asset_id": "sh-10", "text": "量脖子試枕一起安排" },
+      { "asset_id": "sh-12", "text": "先躺再選 更安心" }
+    ],
+    "long_headlines": [
+      { "asset_id": "lh-02", "text": "體驗過沉浸式睡眠了嗎？來體驗店躺一躺，你會更快知道什麼睡感適合自己。" },
+      { "asset_id": "lh-05", "text": "量脖子、試枕、試躺一次安排，用更低壓的方式找到適合自己的寢具組合。" }
+    ],
+    "descriptions": [
+      { "asset_id": "d-03", "text": "睡眠顧問會陪你比較床墊、枕頭與支撐感，不必急著下決定，也能慢慢找到適合的組合。" },
+      { "asset_id": "d-05", "text": "就近預約體驗店，先感受沉浸式試躺與放鬆流程，再慢慢決定下一步帶什麼回家。" }
+    ]
+  },
+  "do_not_upload_legacy": [
+    "LOVEFU台中，你的專屬睡眠顧問",
+    "LOVEFU板橋店，你的專屬睡眠顧問",
+    "LOVEFU桃園店，你的專屬睡眠顧問",
+    "立即預約 LOVEFU 大島樂眠",
+    "浸式睡眠體驗，感受極致放鬆",
+    "專業輔睡員，為你找到最適寢具",
+    "帶您找回久違的深度睡眠",
+    "為睡眠困擾者打造的全新體驗",
+    "告別錯誤床墊帶來的腰痠背痛，親自感受無光厚墊或山丘樂眠床的完美支撐與包覆",
+    "別再躺不適合的枕頭了，量身訂做你專屬的枕頭，才能擁有真正好眠"
+  ]
+}

@@ -1,0 +1,52 @@
+rubric:
+  name: "Google Ads Creative Audit Quality Rubric"
+  version: "0.1"
+  applies_to:
+    - ai/schemas/google-ads-creative-audit-output.schema.json
+
+  dimensions:
+    - name: source_data_honesty
+      weight: 0.20
+      scoring:
+        5: "清楚區分 pack-only / export-backed / live snapshot，且不在弱證據下假裝能高信心判斷 fatigue 或 platform-fit"
+        3: "有標示資料層，但部分判斷仍偏樂觀"
+        1: "忽略資料限制，把推論包裝成確定結論"
+
+    - name: finding_specificity
+      weight: 0.20
+      scoring:
+        5: "finding 有明確 category、severity、evidence、affected_assets，可直接定位問題"
+        3: "finding 有方向，但證據或影響範圍不夠清楚"
+        1: "只有抽象建議，沒有可執行 evidence"
+
+    - name: blocker_discipline
+      weight: 0.20
+      scoring:
+        5: "只在真正阻斷上稿的情況標 blocker；其餘正確落到 high/medium/low"
+        3: "blocker 標記略寬或略鬆，但整體仍可用"
+        1: "blocker 與 warning 混用，無法作為 gate"
+
+    - name: integration_usefulness
+      weight: 0.20
+      scoring:
+        5: "packager_blockers / upstream_constraints / challenger_notes 可直接餵回現有 pipeline"
+        3: "有整合欄位，但仍偏評論性文字"
+        1: "與現有 pipeline 幾乎無法銜接"
+
+    - name: actionability
+      weight: 0.10
+      scoring:
+        5: "recommended_actions 有優先級、owner、原因，可直接進工作清單"
+        3: "有行動建議，但優先級或 owner 不夠清楚"
+        1: "只有方向，無法直接執行"
+
+    - name: format_compliance
+      weight: 0.10
+      scoring:
+        pass: "schema pass，required 欄位完整"
+        fail: "schema fail 或關鍵欄位缺漏"
+
+  passing_threshold:
+    overall_score: 3.5
+    required_pass:
+      - format_compliance

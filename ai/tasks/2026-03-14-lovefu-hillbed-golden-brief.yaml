@@ -1,0 +1,76 @@
+task:
+  task_id: "gads-copy-004"
+  title: "LOVEFU 山丘樂眠床 Golden Brief 實作與驗證"
+  status: validated
+  owner: codex
+  created_at: "2026-03-14"
+  updated_at: "2026-03-14"
+
+  goal: >
+    依既有 Google Ads PMax workflow，建立一份可通過驗證的 hillbed golden brief，
+    並用這份 brief 跑完整 output、validator、rubric、human review 與欄位分級，
+    驗收 brief-driven workflow 已可進入實作與驗證階段。
+
+  background: >
+    目前 repo 已具備 brief schema、PMax playbook、output schema、template、validator、
+    rubric 與 human review checklist，但缺少產品層級 brief，因此無法實際產出
+    「LOVEFU｜山丘樂眠床」的 PMax 文案。
+    既定決策是先做一份 golden brief，跑完整 workflow，並同步記錄哪些欄位未來適合半自動化。
+
+  references:
+    brand: "ai/brand/master-brand.yaml"
+    playbook: "ai/playbooks/google-ads-pmax.md"
+    schema: "ai/inputs/google-ads-brief.schema.json + ai/schemas/google-ads-pmax-output.schema.json"
+    rubric: "ai/evals/ads-rubric.yaml + ai/evals/google-ads-pmax-human-review.md"
+    related_adr: ""
+    related_tasks:
+      - "gads-copy-002"
+      - "gads-copy-003"
+
+  deliverables:
+    - description: "山丘樂眠床 golden brief"
+      format: "json"
+      destination: "ai/inputs/briefs/lovefu-pmax-hillbed.json"
+
+    - description: "山丘樂眠床 PMax output"
+      format: "json"
+      destination: "ai/outputs/lovefu-pmax-hillbed.output.json"
+
+    - description: "山丘樂眠床 PMax markdown"
+      format: "markdown"
+      destination: "ai/outputs/lovefu-pmax-hillbed.output.md"
+
+    - description: "欄位分級報告"
+      format: "markdown"
+      destination: "ai/reports/2026-03-14-hillbed-brief-field-grading.md"
+
+    - description: "本次驗證紀錄"
+      format: "markdown"
+      destination: "ai/validation/2026-03-14-lovefu-hillbed-golden-brief.md"
+
+    - description: "本次 change record"
+      format: "markdown"
+      destination: "ai/changes/2026-03-14-lovefu-hillbed-golden-brief.md"
+
+  validation:
+    method: "manual + automated"
+    rubric: "ai/evals/ads-rubric.yaml + ai/evals/google-ads-pmax-human-review.md"
+    passing_criteria: >
+      golden brief 維持在既有 schema 內，且不擴張欄位；
+      PMax output 通過 `ad_copy_validator.py --exact-pmax-output`；
+      rubric overall score >= 3.5；
+      human review 達到可上稿或可微調後上稿；
+      angle coverage 與 keyword-message fit 兩項新增檢查皆通過。
+    validation_file: "ai/validation/2026-03-14-lovefu-hillbed-golden-brief.md"
+
+  notes: >
+    本任務採最小改動原則，不修改 schema。
+    schema 外的 `landing_page_url`、USP 分層、evidence map 與促案差異，全部留存在 brief `notes`。
+
+  metadata:
+    created_by: codex
+    compatible_agents:
+      - claude
+      - codex
+      - gemini
+      - openclaw

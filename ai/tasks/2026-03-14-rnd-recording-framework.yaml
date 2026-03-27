@@ -1,0 +1,58 @@
+# 第一筆正式任務記錄 — 建立研發記錄機制本身
+
+task:
+  task_id: "rnd-001"
+  title: "建立研發／改版記錄機制"
+  status: validated
+  owner: "claude + human"
+  created_at: "2026-03-14"
+  updated_at: "2026-03-14"
+
+  goal: >
+    讓每一次研發或改版工作都有可追溯的 repo 原生紀錄，
+    不再依賴聊天記錄作為官方記憶。
+
+  background: >
+    目前 multi-agent workspace 已有共用核心（brand、playbooks、schemas、skills），
+    但缺乏結構化的研發紀錄機制。當工作橫跨多個 agent 和多次會話時，
+    變更歷史、決策脈絡和驗證結果容易遺失。
+
+  references:
+    brand: "ai/brand/master-brand.yaml"
+    playbook: ""
+    schema: ""
+    rubric: ""
+    related_adr: ""
+    related_tasks: []
+
+  deliverables:
+    - description: "五個記錄資料夾（decisions, changes, validation, releases, retros）"
+      format: "directory"
+      destination: "ai/"
+    - description: "六份模板檔案（task, ADR, change, validation, release, retro）"
+      format: "markdown + yaml"
+      destination: "ai/tasks/, ai/decisions/, ai/changes/, ai/validation/, ai/releases/, ai/retros/"
+    - description: "更新 task-template.yaml 符合新規格"
+      format: "yaml"
+      destination: "ai/tasks/task-template.yaml"
+    - description: "更新 CLAUDE.md 加入 R&D recording rules"
+      format: "markdown"
+      destination: "CLAUDE.md"
+
+  validation:
+    method: "manual"
+    rubric: ""
+    passing_criteria: "所有資料夾存在、所有模板可用、task→change→validation 流程可走通"
+    validation_file: "ai/validation/2026-03-14-rnd-recording-framework.md"
+
+  notes: >
+    這是記錄機制的 bootstrap task。
+    用這件事本身來驗證整個流程是否能跑通。
+
+  metadata:
+    created_by: "claude"
+    compatible_agents:
+      - claude
+      - codex
+      - gemini
+      - openclaw

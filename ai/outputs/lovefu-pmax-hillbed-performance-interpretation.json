@@ -1,0 +1,510 @@
+{
+  "interpretation_id": "hillbed-pmax-2026q1-real",
+  "brand_name": "LOVEFU大島樂眠",
+  "product_name": "山丘樂眠床",
+  "campaign_type": "pmax",
+  "generated_by": "claude",
+  "generated_at": "2026-03-15T14:00:00+08:00",
+  "data_sufficiency": {
+    "overall_verdict": "sufficient",
+    "total_impressions": 183850,
+    "threshold_used": 5000,
+    "assets_below_threshold": 1,
+    "gaps_identified": [
+      "缺少單一素材層級的轉換數據（conversions per asset），無法做素材層級 CPA / ROAS 判斷",
+      "sh-14 曝光僅 450 次，低於 threshold 1,000 次，數據不足以判斷",
+      "缺少版位拆分數據（search / display / youtube / discover），無法區分版位對 CTR 的影響"
+    ]
+  },
+  "asset_decisions": [
+    {
+      "asset_id": "sh-01",
+      "text": "床墊推薦 先接住身體再放鬆",
+      "asset_type": "short_headline",
+      "decision": "reinforce",
+      "decision_rationale": "CTR 7.2% 高於 P75 的 6.0%，曝光 12,400 次數據充足，top performer。萃取模式：感受先行句式（先接住...再放鬆）+ keyword 開頭搭配體感動作。",
+      "performance_tier": "top",
+      "metrics_summary": { "impressions": 12400, "ctr": 0.072 },
+      "language_patterns_extracted": [
+        "感受先行句式（先...再...）",
+        "keyword 開頭 + 體感動作搭配（床墊推薦 + 先接住身體）"
+      ],
+      "is_validated_legacy": false
+    },
+    {
+      "asset_id": "sh-02",
+      "text": "獨立筒床墊 穩穩托住腰背",
+      "asset_type": "short_headline",
+      "decision": "retain",
+      "decision_rationale": "CTR 5.1% 高於 campaign median 4.5%，曝光 9,800 次數據充足，保留。keyword + 體感動詞（穩穩托住）表現穩定。",
+      "performance_tier": "mid",
+      "metrics_summary": { "impressions": 9800, "ctr": 0.051 },
+      "language_patterns_extracted": [],
+      "is_validated_legacy": false
+    },
+    {
+      "asset_id": "sh-03",
+      "text": "支撐床墊 睡出放鬆感",
+      "asset_type": "short_headline",
+      "decision": "retain",
+      "decision_rationale": "CTR 4.5% 等於 campaign median，曝光 8,500 次數據充足，保留。keyword + 結果描述的穩定組合。",
+      "performance_tier": "mid",
+      "metrics_summary": { "impressions": 8500, "ctr": 0.045 },
+      "language_patterns_extracted": [],
+      "is_validated_legacy": false
+    },
+    {
+      "asset_id": "sh-04",
+      "text": "山丘樂眠床 溫柔接住你",
+      "asset_type": "short_headline",
+      "decision": "retain",
+      "decision_rationale": "屬於 Validated Legacy Messaging（brand_guideline：山丘樂眠床），無條件保留。當前 CTR 6.8% 高於 P75，實際表現為 top performer。",
+      "performance_tier": "top",
+      "metrics_summary": { "impressions": 10200, "ctr": 0.068 },
+      "language_patterns_extracted": [],
+      "is_validated_legacy": true
+    },
+    {
+      "asset_id": "sh-05",
+      "text": "高碳鋼獨立筒 支撐更穩定",
+      "asset_type": "short_headline",
+      "decision": "retire",
+      "decision_rationale": "CTR 2.8% 低於 P25 的 3.9%，曝光 7,200 次數據充足，非 Legacy Messaging，退場。純材質規格訴求（高碳鋼獨立筒）缺乏感受面吸引力，表現持續低於同類素材。",
+      "performance_tier": "low",
+      "metrics_summary": { "impressions": 7200, "ctr": 0.028 },
+      "language_patterns_extracted": [],
+      "is_validated_legacy": false
+    },
+    {
+      "asset_id": "sh-06",
+      "text": "慢回彈泡棉 包覆更安心",
+      "asset_type": "short_headline",
+      "decision": "retire",
+      "decision_rationale": "CTR 2.1% 低於 P25 的 3.9%，曝光 6,800 次數據充足，非 Legacy Messaging，退場。純材質名詞開頭吸引力不足，同為 body-first-comfort 角度的感受先行句式表現遠優於此。",
+      "performance_tier": "low",
+      "metrics_summary": { "impressions": 6800, "ctr": 0.021 },
+      "language_patterns_extracted": [],
+      "is_validated_legacy": false
+    },
+    {
+      "asset_id": "sh-07",
+      "text": "100天安心睡 不怕選錯",
+      "asset_type": "short_headline",
+      "decision": "retain",
+      "decision_rationale": "屬於 Validated Legacy Messaging（brand_guideline：100天安心睡），無條件保留。當前 CTR 7.5% 為全 campaign 最高，同時驗證數字信任 + 降低門檻的語言模式極為有效。",
+      "performance_tier": "top",
+      "metrics_summary": { "impressions": 11500, "ctr": 0.075 },
+      "language_patterns_extracted": [],
+      "is_validated_legacy": true
+    },
+    {
+      "asset_id": "sh-08",
+      "text": "10年保固 長久安心睡",
+      "asset_type": "short_headline",
+      "decision": "observe",
+      "decision_rationale": "CTR 4.2% 介於 P25 (3.9%) 與 Median (4.5%) 之間，曝光 8,100 次數據充足但方向不明確，觀察。數字信任模式（10年保固）表現不如「100天」系列，需更多數據判斷。",
+      "performance_tier": "mid",
+      "metrics_summary": { "impressions": 8100, "ctr": 0.042 },
+      "language_patterns_extracted": [],
+      "is_validated_legacy": false
+    },
+    {
+      "asset_id": "sh-09",
+      "text": "買床不踩雷 先安心睡再說",
+      "asset_type": "short_headline",
+      "decision": "reinforce",
+      "decision_rationale": "CTR 6.5% 高於 P75 的 6.0%，曝光 9,400 次數據充足，top performer。萃取模式：口語化降低門檻（不踩雷）+ 先...再... 句式 + 安心睡關鍵詞。",
+      "performance_tier": "top",
+      "metrics_summary": { "impressions": 9400, "ctr": 0.065 },
+      "language_patterns_extracted": [
+        "口語化降低門檻句式（不踩雷、不怕選錯）",
+        "先...再... 感受先行句式",
+        "「安心睡」關鍵詞嵌入"
+      ],
+      "is_validated_legacy": false
+    },
+    {
+      "asset_id": "sh-10",
+      "text": "先睡100天 再決定留不留",
+      "asset_type": "short_headline",
+      "decision": "retain",
+      "decision_rationale": "CTR 5.3% 高於 campaign median 4.5%，曝光 7,800 次數據充足，保留。先...再... 句式搭配 100天數字信任，表現穩定。",
+      "performance_tier": "mid",
+      "metrics_summary": { "impressions": 7800, "ctr": 0.053 },
+      "language_patterns_extracted": [],
+      "is_validated_legacy": false
+    },
+    {
+      "asset_id": "sh-11",
+      "text": "獨立筒床墊 安心試睡",
+      "asset_type": "short_headline",
+      "decision": "retain",
+      "decision_rationale": "CTR 4.8% 高於 campaign median 4.5%，曝光 8,900 次數據充足，保留。keyword + 信任動作組合穩定。",
+      "performance_tier": "mid",
+      "metrics_summary": { "impressions": 8900, "ctr": 0.048 },
+      "language_patterns_extracted": [],
+      "is_validated_legacy": false
+    },
+    {
+      "asset_id": "sh-12",
+      "text": "14,900起 好支撐入門",
+      "asset_type": "short_headline",
+      "decision": "observe",
+      "decision_rationale": "CTR 4.0% 介於 P25 (3.9%) 與 Median (4.5%) 之間，曝光 6,500 次數據充足但方向不明確，觀察。價格定錨角度表現中等，需更長時間觀察趨勢。",
+      "performance_tier": "mid",
+      "metrics_summary": { "impressions": 6500, "ctr": 0.040 },
+      "language_patterns_extracted": [],
+      "is_validated_legacy": false
+    },
+    {
+      "asset_id": "sh-13",
+      "text": "入門床墊 也有好支撐",
+      "asset_type": "short_headline",
+      "decision": "retire",
+      "decision_rationale": "CTR 3.0% 低於 P25 的 3.9%，曝光 5,200 次數據充足，非 Legacy Messaging，退場。「入門」定位搭配「也有」語氣偏弱，缺乏明確的價值承諾。",
+      "performance_tier": "low",
+      "metrics_summary": { "impressions": 5200, "ctr": 0.030 },
+      "language_patterns_extracted": [],
+      "is_validated_legacy": false
+    },
+    {
+      "asset_id": "sh-14",
+      "text": "第2張床 從山丘開始",
+      "asset_type": "short_headline",
+      "decision": "observe",
+      "decision_rationale": "曝光 450 次，低於 threshold 1,000 次，數據不足以判斷，觀察。Google performance_label 為 pending，素材仍在學習期。",
+      "performance_tier": "insufficient_data",
+      "metrics_summary": { "impressions": 450, "ctr": 0.051 },
+      "language_patterns_extracted": [],
+      "is_validated_legacy": false
+    },
+    {
+      "asset_id": "sh-15",
+      "text": "山丘樂眠床 立即選購",
+      "asset_type": "short_headline",
+      "decision": "retain",
+      "decision_rationale": "屬於 Validated Legacy Messaging（brand_guideline：山丘樂眠床 + pm_decision：立即選購），無條件保留。當前 CTR 2.5% 低於 P25，但 legacy 保護條款優先。建議下輪測試其他 CTA 組合，但不可刪除本句。",
+      "performance_tier": "low",
+      "metrics_summary": { "impressions": 5800, "ctr": 0.025 },
+      "language_patterns_extracted": [],
+      "is_validated_legacy": true
+    },
+    {
+      "asset_id": "lh-01",
+      "text": "山丘樂眠床用高密度慢回彈泡棉搭配高碳鋼獨立筒，讓每晚都被穩穩接住",
+      "asset_type": "long_headline",
+      "decision": "retain",
+      "decision_rationale": "屬於 Validated Legacy Messaging（brand_guideline：山丘樂眠床），無條件保留。當前 CTR 6.2% 高於 P75，產品名 + 規格 + 感受結尾的長標題結構表現佳。",
+      "performance_tier": "top",
+      "metrics_summary": { "impressions": 6200, "ctr": 0.062 },
+      "language_patterns_extracted": [],
+      "is_validated_legacy": true
+    },
+    {
+      "asset_id": "lh-02",
+      "text": "找床墊推薦？先看支撐品質，山丘樂眠床通過歐盟安全檢測讓你睡得更安心",
+      "asset_type": "long_headline",
+      "decision": "retain",
+      "decision_rationale": "屬於 Validated Legacy Messaging（brand_guideline：山丘樂眠床），無條件保留。當前 CTR 4.5% = median，問句開頭 + 信任證據的結構穩定。",
+      "performance_tier": "mid",
+      "metrics_summary": { "impressions": 5500, "ctr": 0.045 },
+      "language_patterns_extracted": [],
+      "is_validated_legacy": true
+    },
+    {
+      "asset_id": "lh-03",
+      "text": "100天安心睡全額退款搭配10年保固，選山丘樂眠床不用急著下決定",
+      "asset_type": "long_headline",
+      "decision": "retain",
+      "decision_rationale": "屬於 Validated Legacy Messaging（brand_guideline：100天安心睡 + 山丘樂眠床），無條件保留。當前 CTR 7.0% 高於 P75，數字信任 + 降低門檻的長標題結構表現優異。",
+      "performance_tier": "top",
+      "metrics_summary": { "impressions": 7100, "ctr": 0.070 },
+      "language_patterns_extracted": [],
+      "is_validated_legacy": true
+    },
+    {
+      "asset_id": "lh-04",
+      "text": "第2張床也值得好好選，14,900起的山丘樂眠床讓入門不必將就支撐感",
+      "asset_type": "long_headline",
+      "decision": "retain",
+      "decision_rationale": "屬於 Validated Legacy Messaging（brand_guideline：山丘樂眠床），無條件保留。當前 CTR 3.8% 略低於 P25，但 legacy 保護條款優先。價格定錨 + 入門定位的長標題表現偏弱，下輪可測試替代句式。",
+      "performance_tier": "low",
+      "metrics_summary": { "impressions": 4800, "ctr": 0.038 },
+      "language_patterns_extracted": [],
+      "is_validated_legacy": true
+    },
+    {
+      "asset_id": "lh-05",
+      "text": "正在比較獨立筒床墊推薦？山丘樂眠床從支撐到安心一次到位",
+      "asset_type": "long_headline",
+      "decision": "retain",
+      "decision_rationale": "屬於 Validated Legacy Messaging（brand_guideline：山丘樂眠床），無條件保留。當前 CTR 4.1% 介於 P25-P50 之間，問句 + 產品名結構表現中等。",
+      "performance_tier": "mid",
+      "metrics_summary": { "impressions": 5100, "ctr": 0.041 },
+      "language_patterns_extracted": [],
+      "is_validated_legacy": true
+    },
+    {
+      "asset_id": "desc-01",
+      "text": "100天安心睡 選床少一點壓力",
+      "asset_type": "description",
+      "decision": "retain",
+      "decision_rationale": "屬於 Validated Legacy Messaging（brand_guideline：100天安心睡），無條件保留。當前 CTR 6.0% = P75，數字信任 + 感受型說明表現優異。",
+      "performance_tier": "top",
+      "metrics_summary": { "impressions": 9200, "ctr": 0.060 },
+      "language_patterns_extracted": [],
+      "is_validated_legacy": true
+    },
+    {
+      "asset_id": "desc-02",
+      "text": "山丘樂眠床以MDI高密度慢回彈泡棉搭配2.4mm高碳鋼獨立筒，支撐與包覆一次到位。",
+      "asset_type": "description",
+      "decision": "retain",
+      "decision_rationale": "屬於 Validated Legacy Messaging（brand_guideline：山丘樂眠床），無條件保留。當前 CTR 4.3% 介於 P25-P50 之間，規格詳述型說明表現中等。",
+      "performance_tier": "mid",
+      "metrics_summary": { "impressions": 7600, "ctr": 0.043 },
+      "language_patterns_extracted": [],
+      "is_validated_legacy": true
+    },
+    {
+      "asset_id": "desc-03",
+      "text": "通過歐盟CertiPUR與OEKO-TEX安全檢測，讓支撐床墊的品質不只靠感覺，而是有認證背書。",
+      "asset_type": "description",
+      "decision": "observe",
+      "decision_rationale": "CTR 3.9% 等於 P25 (3.9%)，曝光 6,400 次數據充足但處於邊界，方向不明確，觀察。認證訴求作為說明的獨立使用效果待驗證。",
+      "performance_tier": "mid",
+      "metrics_summary": { "impressions": 6400, "ctr": 0.039 },
+      "language_patterns_extracted": [],
+      "is_validated_legacy": false
+    },
+    {
+      "asset_id": "desc-04",
+      "text": "100天安心睡全額退款搭配10年保固，選床不用急，慢慢感受再決定適不適合自己。",
+      "asset_type": "description",
+      "decision": "retain",
+      "decision_rationale": "屬於 Validated Legacy Messaging（brand_guideline：100天安心睡），無條件保留。當前 CTR 5.0% 高於 median，完整信任保障 + 放鬆語氣的說明結構穩定。",
+      "performance_tier": "mid",
+      "metrics_summary": { "impressions": 8300, "ctr": 0.050 },
+      "language_patterns_extracted": [],
+      "is_validated_legacy": true
+    },
+    {
+      "asset_id": "desc-05",
+      "text": "14,900起的入門系列，不走低價路線，把好支撐與好放鬆一起帶回家。",
+      "asset_type": "description",
+      "decision": "retire",
+      "decision_rationale": "CTR 2.7% 低於 P25 的 3.9%，曝光 5,400 次數據充足，非 Legacy Messaging，退場。入門價格定位在說明中的吸引力不足，與 smart-start 角度在短標題的表現一致偏低。",
+      "performance_tier": "low",
+      "metrics_summary": { "impressions": 5400, "ctr": 0.027 },
+      "language_patterns_extracted": [],
+      "is_validated_legacy": false
+    }
+  ],
+  "high_value_language": {
+    "patterns": [
+      {
+        "pattern": "感受先行句式（先...，再...）",
+        "evidence": "sh-01 CTR 7.2%（P75 以上）、sh-09 CTR 6.5%（P75 以上），兩個 reinforce 素材均使用此句式，跨素材驗證一致",
+        "confidence": "high"
+      },
+      {
+        "pattern": "口語化降低門檻（不怕選錯、不踩雷、先...再說）",
+        "evidence": "sh-07 CTR 7.5%（legacy，全 campaign 最高）、sh-09 CTR 6.5%（reinforce），降低焦慮的口語化表達一致拉高點擊",
+        "confidence": "high"
+      },
+      {
+        "pattern": "數字信任模式（100天、10年、14,900起）",
+        "evidence": "sh-07 CTR 7.5%、sh-10 CTR 5.3%、lh-03 CTR 7.0%，含具體數字的素材整體表現優於純文字描述",
+        "confidence": "high"
+      },
+      {
+        "pattern": "keyword 開頭 + 體感動作搭配",
+        "evidence": "sh-01「床墊推薦 先接住身體再放鬆」CTR 7.2%、sh-02「獨立筒床墊 穩穩托住腰背」CTR 5.1%，keyword 開頭帶動體感詞比純規格詞表現高",
+        "confidence": "medium"
+      },
+      {
+        "pattern": "「安心睡」核心語彙嵌入",
+        "evidence": "含「安心睡」的素材（sh-07 7.5%、sh-09 6.5%、desc-01 6.0%、desc-04 5.0%）平均 CTR 6.3%，遠高於 campaign median 4.5%",
+        "confidence": "high"
+      }
+    ],
+    "validated_legacy_preserved": [
+      {
+        "text": "100天安心睡",
+        "reason": "品牌核心訊息，跨所有 campaign 使用",
+        "action": "retain"
+      },
+      {
+        "text": "山丘樂眠床",
+        "reason": "產品正式名稱，不得被替代",
+        "action": "retain"
+      },
+      {
+        "text": "立即選購",
+        "reason": "主要 CTA，經 PM 核可",
+        "action": "retain"
+      }
+    ]
+  },
+  "new_draft_review": [
+    {
+      "text": "支撐床墊推薦 安心睡好覺",
+      "inherits_from": [
+        "sh-01（keyword 開頭 + 體感結果）",
+        "「安心睡」核心語彙（legacy 模式）"
+      ],
+      "legacy_coverage_score": 0.7,
+      "recommendation": "approve",
+      "revision_notes": ""
+    },
+    {
+      "text": "不急著決定 先睡100天再說",
+      "inherits_from": [
+        "sh-09（先...再... 感受先行句式）",
+        "sh-07（100天數字信任 + 降低門檻）",
+        "口語化降低門檻模式（先...再說）"
+      ],
+      "legacy_coverage_score": 0.85,
+      "recommendation": "approve",
+      "revision_notes": ""
+    }
+  ],
+  "retire_now_assets": [
+    {
+      "asset_id": "sh-05",
+      "asset_text": "高碳鋼獨立筒 支撐更穩定",
+      "asset_type": "short_headline",
+      "reason": "CTR 2.8% 低於 P25 的 3.9%，曝光 7,200 次數據充足，非 Legacy Messaging，退場。純材質規格訴求缺乏感受面吸引力。",
+      "replaced_by_candidate_id": "cand-01"
+    },
+    {
+      "asset_id": "sh-06",
+      "asset_text": "慢回彈泡棉 包覆更安心",
+      "asset_type": "short_headline",
+      "reason": "CTR 2.1% 低於 P25 的 3.9%，曝光 6,800 次數據充足，非 Legacy Messaging，退場。純材質名詞開頭吸引力不足。",
+      "replaced_by_candidate_id": "cand-02"
+    },
+    {
+      "asset_id": "sh-13",
+      "asset_text": "入門床墊 也有好支撐",
+      "asset_type": "short_headline",
+      "reason": "CTR 3.0% 低於 P25 的 3.9%，曝光 5,200 次數據充足，非 Legacy Messaging，退場。「也有」語氣偏弱，缺乏明確價值承諾。",
+      "replaced_by_candidate_id": "cand-03"
+    },
+    {
+      "asset_id": "desc-05",
+      "asset_text": "14,900起的入門系列，不走低價路線，把好支撐與好放鬆一起帶回家。",
+      "asset_type": "description",
+      "reason": "CTR 2.7% 低於 P25 的 3.9%，曝光 5,400 次數據充足，非 Legacy Messaging，退場。入門價格定位在說明中吸引力不足。"
+    }
+  ],
+  "new_candidate_assets": [
+    {
+      "candidate_id": "cand-01",
+      "asset_text": "躺下就被接住，從腰到肩都穩",
+      "asset_type": "short_headline",
+      "source": "replace_retired_asset",
+      "intent": "用感受先行句式替換退場的純規格素材 sh-05，保持 body-first-comfort 角度覆蓋",
+      "related_gap": "sh-05 退場後，body-first-comfort 角度少一則短標題，需用驗證有效的感受句式補充",
+      "suggested_role": "主力"
+    },
+    {
+      "candidate_id": "cand-02",
+      "asset_text": "先被包覆，再慢慢放鬆入睡",
+      "asset_type": "short_headline",
+      "source": "replace_retired_asset",
+      "intent": "用感受先行句式替換退場的純材質素材 sh-06，將包覆感從材質名詞轉為體感描述",
+      "related_gap": "sh-06 退場後，需保持包覆感訴求但改用驗證有效的先...再...句式",
+      "suggested_role": "主力"
+    },
+    {
+      "candidate_id": "cand-03",
+      "asset_text": "14,900起 好支撐不將就",
+      "asset_type": "short_headline",
+      "source": "replace_retired_asset",
+      "intent": "替換退場的 sh-13，用數字定錨 + 不將就的積極語氣取代「也有」的弱勢語氣",
+      "related_gap": "sh-13 退場後，smart-start 角度短標題減少，需用數字信任模式補充",
+      "suggested_role": "測試"
+    },
+    {
+      "candidate_id": "cand-04",
+      "asset_text": "選床不急，先安心睡再決定",
+      "asset_type": "short_headline",
+      "source": "reinforce_expansion",
+      "intent": "擴寫 sh-09 的降低門檻 + 先...再... 句式，增加 worry-free-choice 角度的覆蓋",
+      "related_gap": "sh-09 為 reinforce 素材但同角度的口語化降低門檻句式僅此一則，需增加覆蓋驗證模式穩定性",
+      "suggested_role": "測試"
+    },
+    {
+      "candidate_id": "cand-05",
+      "asset_text": "床墊推薦 先安心睡再慢慢挑",
+      "asset_type": "short_headline",
+      "source": "reinforce_expansion",
+      "intent": "結合 sh-01 的 keyword 開頭 + sh-09 的降低門檻句式，測試兩個高價值模式的交叉組合",
+      "related_gap": "keyword 開頭 + 降低門檻的交叉組合尚無素材覆蓋，值得測試",
+      "suggested_role": "測試"
+    },
+    {
+      "candidate_id": "cand-06",
+      "asset_text": "100天安心睡全額退款，先體驗山丘樂眠床的支撐感，不滿意隨時退。",
+      "asset_type": "description",
+      "source": "replace_retired_asset",
+      "intent": "替換退場的 desc-05，用數字信任 + 降低門檻模式取代弱勢的入門價格定位說明",
+      "related_gap": "desc-05 退場後 description 只剩 4 則，需補充一則結合驗證有效模式的說明",
+      "suggested_role": "主力"
+    }
+  ],
+  "next_round_brief_additions": {
+    "must_include_language": [
+      "先接住身體，再放鬆",
+      "安心睡",
+      "不怕選錯",
+      "先...再... 句式結構"
+    ],
+    "proven_angles": [
+      {
+        "key": "body-first-comfort",
+        "label": "感受先行的身體支撐",
+        "evidence": "sh-01 CTR 7.2%、sh-04 CTR 6.8%（含 legacy），感受先行句式在 body-first-comfort 角度表現最佳"
+      },
+      {
+        "key": "worry-free-choice",
+        "label": "降低門檻的零風險購買",
+        "evidence": "sh-07 CTR 7.5%（全 campaign 最高）、sh-09 CTR 6.5%，數字信任 + 口語化降低焦慮持續有效"
+      }
+    ],
+    "language_to_avoid": [
+      "純材質規格名詞開頭（如「高碳鋼獨立筒」「慢回彈泡棉」作為標題主體）",
+      "弱勢語氣的價值承諾（如「也有好支撐」）",
+      "入門定位作為說明主體（CTR 持續偏低）"
+    ],
+    "suggested_seed_angles": [
+      "體驗場景角度（第2張床、從山丘開始——sh-14 數據不足但方向可探索）",
+      "認證信任角度獨立測試（歐盟安全檢測——desc-03 CTR 3.9% 在邊界，需驗證是否為說明版位天生 CTR 較低）"
+    ],
+    "constraints_from_performance": {
+      "must_retain_messages": [
+        "100天安心睡",
+        "山丘樂眠床",
+        "立即選購"
+      ],
+      "cta_preference": "立即選購（sh-15 CTR 2.5% 偏低，但為 PM 核可 CTA，保留使用。下輪可測試其他 CTA 如「安心試睡」「了解更多」作為對照）",
+      "tone_adjustments": [
+        "感受先行語氣（先被接住、再放鬆）表現遠優於純規格語氣（高碳鋼、慢回彈泡棉）",
+        "口語化降低門檻（不踩雷、先...再說）表現優於正式語氣（長久安心睡）",
+        "數字信任（100天、10年、14,900起）應持續作為文案錨點，但 100天 > 10年 > 14,900起 的效果梯度明確"
+      ]
+    }
+  },
+  "compliance_notes": {
+    "data_caveats": [
+      "缺少單一素材層級的轉換與 ROAS 數據，僅以 CTR 做分類，無法判斷哪些素材真正帶動購買",
+      "sh-14 曝光僅 450 次（threshold 1,000），歸類為 observe，其 CTR 5.1% 不具統計意義",
+      "缺少版位拆分數據，無法排除版位差異對 CTR 的影響（description 版位天生 CTR 可能較低）",
+      "含 Legacy Messaging（山丘樂眠床）的素材佔比高達 52%（13/25），legacy 保護使 retain 比例偏高，建議下輪精簡 legacy 定義範圍",
+      "分析期間 59 天，部分素材可能受季節性因素影響"
+    ],
+    "manual_review_required": true,
+    "interpretation_confidence": "medium"
+  }
+}

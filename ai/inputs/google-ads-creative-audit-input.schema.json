@@ -1,0 +1,266 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Google Ads Creative Audit Input",
+  "description": "Creative-auditor sidecar 的標準化輸入。可由 packager output、export snapshot 或 MCP snapshot 經 adapter 正規化後產生。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "audit_id",
+    "brand_name",
+    "product_name",
+    "campaign_type",
+    "generated_from",
+    "data_source",
+    "creative_inventory",
+    "coverage_context",
+    "delivery_context",
+    "compliance_context"
+  ],
+  "properties": {
+    "audit_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-_]*$"
+    },
+    "brand_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "product_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "campaign_type": {
+      "type": "string",
+      "enum": ["search_rsa", "pmax"]
+    },
+    "generated_from": {
+      "type": "string",
+      "enum": ["packager_sidecar", "account_audit", "manual_review"]
+    },
+    "data_source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "mode", "provider", "evidence_level"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["packager_output", "export_snapshot", "mcp_snapshot", "mixed"]
+        },
+        "mode": {
+          "type": "string",
+          "enum": ["read_only", "write_enabled"]
+        },
+        "provider": {
+          "type": "string",
+          "enum": ["local_file", "google_official_mcp", "adspirer", "otto", "manual", "custom"]
+        },
+        "evidence_level": {
+          "type": "string",
+          "enum": ["pack_only", "export_backed", "live_snapshot"]
+        },
+        "notes": {
+          "type": "string"
+        },
+        "artifact_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "lane_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "lane_id": { "type": "string" },
+        "message_scope": { "type": "string" },
+        "goal": { "type": "string" },
+        "platform": {
+          "type": "string",
+          "enum": ["google_ads"]
+        }
+      }
+    },
+    "creative_inventory": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["primary_assets", "test_assets"],
+      "properties": {
+        "primary_assets": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/asset" }
+        },
+        "test_assets": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/asset" }
+        }
+      }
+    },
+    "coverage_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["required_tokens", "protected_phrases", "angle_status"],
+      "properties": {
+        "required_tokens": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "protected_phrases": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "angle_status": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/angle_status" }
+        }
+      }
+    },
+    "history_signals": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "window_days": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "observed_fatigue_signals": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "asset_reuse_clusters": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["cluster_id", "asset_ids", "reason"],
+            "properties": {
+              "cluster_id": { "type": "string" },
+              "asset_ids": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "reason": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "delivery_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sign_off_status", "manual_review_required"],
+      "properties": {
+        "sign_off_status": {
+          "type": "string",
+          "enum": ["pending_review", "pm_approved", "ready_to_upload"]
+        },
+        "manual_review_required": {
+          "type": "boolean"
+        }
+      }
+    },
+    "compliance_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["policy_watch_terms", "must_avoid"],
+      "properties": {
+        "policy_watch_terms": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "must_avoid": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "asset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "asset_id",
+        "text",
+        "asset_type",
+        "bucket",
+        "source",
+        "angle_key",
+        "decision_confidence",
+        "char_count"
+      ],
+      "properties": {
+        "asset_id": { "type": "string" },
+        "text": { "type": "string", "minLength": 1 },
+        "asset_type": {
+          "type": "string",
+          "enum": [
+            "short_headline",
+            "long_headline",
+            "headline",
+            "description",
+            "image",
+            "video",
+            "logo"
+          ]
+        },
+        "bucket": {
+          "type": "string",
+          "enum": ["primary", "test"]
+        },
+        "source": { "type": "string" },
+        "angle_key": { "type": "string" },
+        "decision_confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low", "directional"]
+        },
+        "risk_level": {
+          "type": "string",
+          "enum": ["low", "medium", "high"]
+        },
+        "rewrite_mode": { "type": "string" },
+        "char_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "coverage_tags": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "protected_phrases": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "must_include_tokens": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "reusable_motifs": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        },
+        "notes": { "type": "string" }
+      }
+    },
+    "angle_status": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["angle_key", "status", "total_count"],
+      "properties": {
+        "angle_key": { "type": "string" },
+        "label": { "type": "string" },
+        "status": {
+          "type": "string",
+          "enum": ["core", "supporting", "test_only", "thin", "gap", "overbuilt"]
+        },
+        "total_count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+task:
+  task_id: "gads-copy-001"
+  title: "Search RSA 文案生成 MVP"
+  status: validated
+  owner: codex
+  created_at: "2026-03-14"
+  updated_at: "2026-03-14"
+
+  goal: >
+    建立一條可重複執行的 Search RSA 文案生成工作流，
+    讓 Claude、Codex、Gemini 之類的 agent 都能吃同一份 brief，
+    產出 15 個標題、4 個說明、3 個訴求角度與合規註記。
+
+  background: >
+    repo 目前已經有 google-ads-writer 與 ad-copy-builder 兩條文案相關 skill，
+    但缺少固定 input/output contract、testcase 與人工 review 機制，
+    因此還不能算是可驗證、可交付的 Google Ads 文案 MVP。
+    本任務將 scope 鎖定在 Search RSA，不先處理 PMax。
+
+  references:
+    brand: "ai/brand/master-brand.yaml"
+    playbook: "ai/playbooks/google-ads-search-rsa.md"
+    schema: "ai/schemas/google-ads-search-output.schema.json"
+    rubric: "ai/evals/ads-rubric.yaml + ai/evals/google-ads-human-review.md"
+    related_adr: ""
+    related_tasks:
+      - "gads-001"
+      - "rnd-002"
+
+  deliverables:
+    - description: "Google Ads brief input schema"
+      format: "json-schema"
+      destination: "ai/inputs/google-ads-brief.schema.json"
+
+    - description: "Search RSA output schema"
+      format: "json-schema"
+      destination: "ai/schemas/google-ads-search-output.schema.json"
+
+    - description: "Search RSA playbook"
+      format: "markdown"
+      destination: "ai/playbooks/google-ads-search-rsa.md"
+
+    - description: "google-ads-writer skill 升級為 Search RSA MVP 流程"
+      format: "skill-doc"
+      destination: "ai/skill-src/google-ads-writer/SKILL.md"
+
+    - description: "三份真實 Search RSA testcase"
+      format: "yaml"
+      destination: "ai/testcases/google-ads/"
+
+    - description: "人工 review checklist"
+      format: "markdown"
+      destination: "ai/evals/google-ads-human-review.md"
+
+  validation:
+    method: "manual + automated"
+    rubric: "ai/evals/ads-rubric.yaml + ai/evals/google-ads-human-review.md"
+    passing_criteria: >
+      brief schema 與 Search RSA schema 均可讀取；
+      google-ads-writer 已改為 Search RSA only；
+      三份 testcase 存在且可被 YAML parser 讀取；
+      validator 可讀取新 Search RSA JSON 結構；
+      skill 已同步到 .agents/skills/、.claude/skills/、runtime/openclaw/。
+    validation_file: "ai/validation/2026-03-14-google-ads-copy-mvp.md"
+
+  notes: >
+    V1 明確不處理 PMax 產出。
+    ad-copy-builder 保留給既有素材審查與後續 PMax 擴充使用。
+
+  metadata:
+    created_by: codex
+    compatible_agents:
+      - claude
+      - codex
+      - gemini
+      - openclaw

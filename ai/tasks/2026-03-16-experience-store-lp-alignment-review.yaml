@@ -1,0 +1,55 @@
+# Experience Store LP Alignment Review
+# 稽核三店合併 booking PMax 應該導向哪個 LP，避免 CTA 與頁面承諾斷裂。
+
+task:
+  task_id: "2026-03-16-experience-store-lp-alignment-review"
+  title: "Experience Store LP Alignment Review"
+  status: validated
+  owner: codex
+  created_at: "2026-03-16"
+  updated_at: "2026-03-16"
+
+  goal: >
+    稽核三店合併的 experience-store booking PMax 文案，
+    確認哪個官方頁面能真正承接「預約體驗」訴求，
+    並把漏斗斷點與快速修正項目寫成正式報告。
+  background: >
+    前一輪 booking refresh 已完成文案 draft，
+    但當時缺少實際 LP 內容，無法判斷應導向體驗店頁或 hillbed 商品頁。
+    這輪透過 LOVEFU 官方頁面內容核對，把 recommended LP 與 risky LP 明確定下來。
+
+  references:
+    brand: "ai/brand/master-brand.yaml"
+    playbook: "ai/skill-src/google-ads/lp-alignment-auditor/SKILL.md"
+    schema: ""
+    rubric: "ai/skill-src/google-ads/lp-alignment-auditor/references/alignment-criteria.md"
+    related_adr: "ai/decisions/ADR-002-productization-v1-scope.md"
+    related_tasks:
+      - "2026-03-16-experience-store-pmax-booking-refresh"
+
+  deliverables:
+    - description: "LP alignment audit report for experience-store booking PMax"
+      format: markdown
+      destination: "ai/reports/2026-03-16-experience-store-lp-alignment-review.md"
+
+  validation:
+    method: manual + source verification
+    rubric: "ai/skill-src/google-ads/lp-alignment-auditor/references/alignment-criteria.md"
+    passing_criteria: >
+      報告需對 keyword→ad、ad→LP、LP→conversion path 三層評分；
+      明確指出 recommended LP 與 risky LP；
+      每個斷點需有具體位置與修改建議；
+      並附上 LOVEFU 官方頁面來源。
+    validation_file: "ai/validation/2026-03-16-experience-store-lp-alignment-review.md"
+    governance_check: pass
+
+  notes: >
+    本任務是報告型輸出，寫入 ai/reports/，不新增 supported-matrix，也不產生 golden output。
+
+  metadata:
+    created_by: codex
+    compatible_agents:
+      - claude
+      - codex
+      - gemini
+      - openclaw

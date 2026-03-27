@@ -1,0 +1,56 @@
+{
+  "task_id": "2026-03-16-experience-store-pmax-booking-refresh",
+  "brief_id": "lovefu-pmax-experience-store-booking-draft",
+  "brief_file": "ai/inputs/briefs/lovefu-pmax-experience-store-booking-draft.json",
+  "source_csv": "/Users/andychou/Downloads/素材資源關聯報表_預約.csv",
+  "reporting_period": {
+    "start_date": "2025-12-16",
+    "end_date": "2026-01-31"
+  },
+  "campaign_scope": "combine Banqiao / Taoyuan / Taichung experience-store ads into one PMax draft",
+  "primary_conversion": "預約體驗",
+  "data_readiness": {
+    "asset_granularity": "asset_association_estimate",
+    "click_layer": "missing",
+    "conversion_layer": "partial",
+    "placement_layer": "missing",
+    "duration_layer": "partial",
+    "decision_basis": "booking_success + store_visit + directions association proxy"
+  },
+  "top_existing_assets": {
+    "short_headlines": [
+      {
+        "text": "量身打造你的專屬寢具組合",
+        "association_proxy": 83.0,
+        "signal_note": "best generic short-headline signal; store_visit + directions"
+      },
+      {
+        "text": "你的專屬睡眠顧問",
+        "association_proxy": 68.0,
+        "signal_note": "strongest consultant-led headline"
+      },
+      {
+        "text": "浸式睡眠體驗，感受極致放鬆",
+        "association_proxy": 64.0,
+        "signal_note": "strong immersive-tryout wording, but needs rewrite"
+      }
+    ],
+    "descriptions": [
+      {
+        "text": "還在尋找一張命定的床墊嗎？與其看過一篇篇的網路推薦文，不如實際到體驗店，感受量身訂做的睡眠",
+        "association_proxy": 286.05,
+        "signal_note": "strongest overall description; includes booking-success signal"
+      },
+      {
+        "text": "體驗過沉浸式睡眠了嗎？每個來過的客人，都睡到不想起來，你也想試試看嗎？",
+        "association_proxy": 125.0,
+        "signal_note": "high curiosity + experience signal; includes booking-success signal"
+      }
+    ]
+  },
+  "normalization_notes": [
+    "Location-specific headlines were not retained as-is because the user wants one combined three-store campaign.",
+    "Short-headline keep/replace decisions use directional confidence only.",
+    "Long-headline rows carried no usable proxy conversions, so final long headlines are rebuilt from winning descriptions plus the draft brief."
+  ]
+}

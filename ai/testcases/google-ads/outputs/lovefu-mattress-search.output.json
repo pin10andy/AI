@@ -1,0 +1,136 @@
+{
+  "task_id": "gads-copy-001",
+  "brief_id": "tc-lovefu-mattress-search",
+  "campaign_type": "search_rsa",
+  "brand_name": "LOVEFU大島樂眠",
+  "product_name": "獨立筒護腰床墊",
+  "generated_by": "codex",
+  "generated_at": "2026-03-14T11:00:00+08:00",
+  "angles": [
+    {
+      "key": "product_support",
+      "label": "產品支撐",
+      "rationale": "聚焦獨立筒、護腰與穩定托住感，回應購買前的功能比較需求。"
+    },
+    {
+      "key": "pain_relief",
+      "label": "放鬆痛點",
+      "rationale": "回應久坐腰背緊與睡前難放鬆的需求，但避免做治療承諾。"
+    },
+    {
+      "key": "trial_confidence",
+      "label": "試躺信任",
+      "rationale": "用門市試躺、睡眠顧問與安心睡計畫降低決策壓力。"
+    }
+  ],
+  "headlines": [
+    {
+      "text": "大島樂眠 獨立筒床墊",
+      "angle_key": "product_support",
+      "keyword_used": true
+    },
+    {
+      "text": "護腰床墊 先試再選",
+      "angle_key": "product_support",
+      "keyword_used": true
+    },
+    {
+      "text": "獨立筒支撐 穩穩托住",
+      "angle_key": "product_support",
+      "keyword_used": true
+    },
+    {
+      "text": "床墊推薦 從試躺開始",
+      "angle_key": "product_support",
+      "keyword_used": true
+    },
+    {
+      "text": "睡眠顧問陪你挑床墊",
+      "angle_key": "product_support",
+      "keyword_used": false
+    },
+    {
+      "text": "久坐腰緊 找對支撐",
+      "angle_key": "pain_relief",
+      "keyword_used": false
+    },
+    {
+      "text": "腰痛床墊推薦 看支撐",
+      "angle_key": "pain_relief",
+      "keyword_used": true
+    },
+    {
+      "text": "讓身體先被接住",
+      "angle_key": "pain_relief",
+      "keyword_used": false
+    },
+    {
+      "text": "睡得更放鬆 從床開始",
+      "angle_key": "pain_relief",
+      "keyword_used": false
+    },
+    {
+      "text": "晚安歡迎回家 好好睡",
+      "angle_key": "pain_relief",
+      "keyword_used": false
+    },
+    {
+      "text": "台北床墊試躺推薦",
+      "angle_key": "trial_confidence",
+      "keyword_used": true
+    },
+    {
+      "text": "預約試躺 找到合適床墊",
+      "angle_key": "trial_confidence",
+      "keyword_used": false
+    },
+    {
+      "text": "安心睡計畫 更放心",
+      "angle_key": "trial_confidence",
+      "keyword_used": false
+    },
+    {
+      "text": "大島樂眠 預約試躺",
+      "angle_key": "trial_confidence",
+      "keyword_used": false
+    },
+    {
+      "text": "找到適合你的床墊",
+      "angle_key": "trial_confidence",
+      "keyword_used": false
+    }
+  ],
+  "descriptions": [
+    {
+      "text": "大島樂眠提供門市試躺與睡眠顧問協助，陪你比較支撐與包覆差異，慢慢找到更適合的床墊。",
+      "angle_key": "trial_confidence"
+    },
+    {
+      "text": "從獨立筒到護腰支撐，現場試躺後再決定，讓身體先被接住，選床墊也能更安心。",
+      "angle_key": "product_support"
+    },
+    {
+      "text": "如果你久坐腰背容易緊，歡迎預約試躺，感受更穩定的托住感與放鬆睡感。",
+      "angle_key": "pain_relief"
+    },
+    {
+      "text": "安心睡計畫搭配門市體驗，讓你不只看規格，而是用自己的身體慢慢挑到適合的床墊。",
+      "angle_key": "trial_confidence"
+    }
+  ],
+  "compliance_notes": {
+    "manual_review_required": true,
+    "checks_passed": [
+      "exact_counts",
+      "char_limits",
+      "zh_tw_only",
+      "three_distinct_angles"
+    ],
+    "policy_risks": [
+      "腰痛相關詞彙需避免被解讀為醫療承諾"
+    ],
+    "brand_risks": [
+      "品牌名稱出現 2 次，人工上稿時可再確認是否過密"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+# Gemini configuration
+# Points Gemini to the shared instruction layer
+
+instructions:
+  file: GEMINI.md
+
+context:
+  files:
+    - ai/memory/shared-context.yaml
+    - ai/brand/master-brand.yaml

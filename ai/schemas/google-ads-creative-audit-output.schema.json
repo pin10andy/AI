@@ -1,0 +1,228 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Google Ads Creative Audit Output",
+  "description": "Creative-auditor sidecar 的標準輸出。用於 preflight review、creative intelligence 和下輪約束輸出。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "audit_id",
+    "brand_name",
+    "product_name",
+    "campaign_type",
+    "generated_by",
+    "generated_at",
+    "source_data_assessment",
+    "health_score",
+    "dimension_scores",
+    "findings",
+    "upload_decision",
+    "recommended_actions",
+    "integration_handoff",
+    "limitations"
+  ],
+  "properties": {
+    "audit_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-_]*$"
+    },
+    "brand_name": { "type": "string", "minLength": 1 },
+    "product_name": { "type": "string", "minLength": 1 },
+    "campaign_type": {
+      "type": "string",
+      "enum": ["search_rsa", "pmax"]
+    },
+    "generated_by": {
+      "type": "string",
+      "enum": ["claude", "codex", "gemini", "openclaw"]
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "source_data_assessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidence_level", "fatigue_confidence", "platform_fit_confidence"],
+      "properties": {
+        "evidence_level": {
+          "type": "string",
+          "enum": ["pack_only", "export_backed", "live_snapshot"]
+        },
+        "fatigue_confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low"]
+        },
+        "platform_fit_confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low"]
+        },
+        "notes": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "health_score": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["overall", "grade"],
+      "properties": {
+        "overall": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "grade": {
+          "type": "string",
+          "enum": ["A", "B", "C", "D", "F"]
+        }
+      }
+    },
+    "dimension_scores": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "asset_sufficiency",
+        "creative_diversity",
+        "product_specificity",
+        "policy_risk",
+        "platform_fit"
+      ],
+      "properties": {
+        "asset_sufficiency": { "$ref": "#/definitions/dimension_score" },
+        "creative_diversity": { "$ref": "#/definitions/dimension_score" },
+        "product_specificity": { "$ref": "#/definitions/dimension_score" },
+        "policy_risk": { "$ref": "#/definitions/dimension_score" },
+        "platform_fit": { "$ref": "#/definitions/dimension_score" }
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/finding" }
+    },
+    "upload_decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "rationale"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["clear_to_review", "needs_manual_review", "blocked_for_upload"]
+        },
+        "rationale": { "type": "string" }
+      }
+    },
+    "recommended_actions": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/action_item" }
+    },
+    "integration_handoff": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "packager_blockers",
+        "upstream_constraints",
+        "challenger_notes"
+      ],
+      "properties": {
+        "packager_blockers": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "upstream_constraints": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "challenger_notes": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "definitions": {
+    "dimension_score": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["score", "verdict", "rationale"],
+      "properties": {
+        "score": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "verdict": {
+          "type": "string",
+          "enum": ["pass", "warn", "fail"]
+        },
+        "rationale": { "type": "string" }
+      }
+    },
+    "finding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "finding_id",
+        "severity",
+        "category",
+        "title",
+        "summary",
+        "evidence",
+        "blocking",
+        "affected_assets"
+      ],
+      "properties": {
+        "finding_id": { "type": "string" },
+        "severity": {
+          "type": "string",
+          "enum": ["blocker", "high", "medium", "low"]
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "asset_sufficiency",
+            "fatigue",
+            "diversity",
+            "product_drift",
+            "policy_risk",
+            "platform_fit",
+            "offer_clarity",
+            "coverage_gap"
+          ]
+        },
+        "title": { "type": "string" },
+        "summary": { "type": "string" },
+        "evidence": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "blocking": { "type": "boolean" },
+        "affected_assets": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "action_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["priority", "owner", "action", "reason"],
+      "properties": {
+        "priority": {
+          "type": "string",
+          "enum": ["P0", "P1", "P2"]
+        },
+        "owner": {
+          "type": "string",
+          "enum": ["pm", "media_buyer", "copy_runner", "human_reviewer"]
+        },
+        "action": { "type": "string" },
+        "reason": { "type": "string" }
+      }
+    }
+  }
+}

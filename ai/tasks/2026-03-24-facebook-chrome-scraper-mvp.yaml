@@ -1,0 +1,91 @@
+# Facebook Chrome Scraper MVP
+
+task:
+  task_id: "fb-chrome-skill-001"
+  title: "Facebook Chrome Scraper MVP"
+  status: validated
+  owner: codex
+  created_at: "2026-03-24"
+  updated_at: "2026-03-24"
+
+  goal: >
+    將 `kevinzg/facebook-scraper` 的主要 Facebook 貼文/留言擷取能力，
+    重構成適合 Codex 的 `facebook-chrome-scraper` skill，
+    以 Chrome MCP 進行瀏覽、已登入 session 讀取與互動式小批量收集。
+
+  background: >
+    原始 repo 主要是 Python HTTP + cookies 解析器，
+    支援 pages、profiles、groups、指定 post URLs、comments 與 reactors 等擷取面。
+    但在 Codex 中，最佳整合點不是直接移植 requests-based scraper，
+    而是把登入與頁面狀態交給 Chrome MCP，把 skill 本身定義為
+    preflight、capture、normalization、limitations reporting workflow。
+
+  references:
+    brand: "ai/brand/master-brand.yaml"
+    playbook: "ai/playbooks/facebook-chrome-scrape.md"
+    schema: "ai/schemas/facebook-post-collection.schema.json"
+    rubric: "ai/evals/facebook-post-collection-rubric.yaml"
+    related_adr: "ai/decisions/ADR-007-facebook-scraper-chrome-mcp-skill.md"
+    related_tasks: []
+
+  deliverables:
+    - description: "Facebook Chrome scraper skill"
+      format: markdown
+      destination: "ai/skill-src/facebook-chrome-scraper/SKILL.md"
+    - description: "Codex skill UI metadata and MCP dependency declaration"
+      format: yaml
+      destination: "ai/skill-src/facebook-chrome-scraper/agents/openai.yaml"
+    - description: "Feature mapping reference"
+      format: markdown
+      destination: "ai/skill-src/facebook-chrome-scraper/references/feature-mapping.md"
+    - description: "MCP operating rules reference"
+      format: markdown
+      destination: "ai/skill-src/facebook-chrome-scraper/references/mcp-operating-rules.md"
+    - description: "Collection report template"
+      format: markdown
+      destination: "ai/skill-src/facebook-chrome-scraper/templates/collection-report.md"
+    - description: "Facebook Chrome scrape playbook"
+      format: markdown
+      destination: "ai/playbooks/facebook-chrome-scrape.md"
+    - description: "Facebook post collection schema"
+      format: json
+      destination: "ai/schemas/facebook-post-collection.schema.json"
+    - description: "Facebook collection rubric"
+      format: yaml
+      destination: "ai/evals/facebook-post-collection-rubric.yaml"
+    - description: "Architecture decision record"
+      format: markdown
+      destination: "ai/decisions/ADR-007-facebook-scraper-chrome-mcp-skill.md"
+    - description: "Change record"
+      format: markdown
+      destination: "ai/changes/2026-03-24-facebook-chrome-scraper-mvp.md"
+    - description: "Validation record"
+      format: markdown
+      destination: "ai/validation/2026-03-24-facebook-chrome-scraper-mvp.md"
+
+  validation:
+    method: manual + schema + sync
+    rubric: "ai/evals/facebook-post-collection-rubric.yaml"
+    passing_criteria: >
+      skill、metadata、references、playbook、schema、rubric 全部存在；
+      JSON/YAML 可解析；skills sync 完成；
+      skill 明確採用 Chrome MCP-first workflow，
+      並在沒有 MCP 或沒有授權 session 時 fail closed。
+    validation_file: "ai/validation/2026-03-24-facebook-chrome-scraper-mvp.md"
+    governance_check: "not_applicable"
+
+  notes: >
+    本 MVP 只處理 interactive / small-batch scraping workflow，
+    不做 headless stealth、帳密管理、CAPTCHA bypass 或大規模爬取排程。
+    由於 workspace 尚未配置 Chrome MCP server，
+    本次 validation 不含 live Facebook capture run。
+
+  metadata:
+    priority: low
+    priority_note: "使用者標記為不重要專案（2026-03-27），暫不推進"
+    created_by: codex
+    compatible_agents:
+      - claude
+      - codex
+      - gemini
+      - openclaw

@@ -1,0 +1,85 @@
+# Google Ads Creative Auditor MVP
+
+task:
+  task_id: "gads-creative-audit-001"
+  title: "Google Ads Creative Auditor MVP"
+  status: validated
+  owner: codex
+  created_at: "2026-03-21"
+  updated_at: "2026-03-21"
+
+  goal: >
+    在現有 Google Ads copy pipeline 之外，
+    新增一個 creative-auditor sidecar MVP，
+    用於審查既有素材池或 final pack 的 creative health，
+    產出可作為 preflight gate 或 challenger review 的結構化報告。
+
+  background: >
+    前序分析已確認外部 Claude Ads creative pipeline 本質是 audit / intelligence pipeline，
+    最適合整合為 sidecar reviewer，而非取代 interpreter / builder / packager 主鏈。
+    因此本任務建立 MVP 骨架：skill、criteria、schema、rubric、playbook 與最小治理記錄。
+
+  references:
+    brand: "ai/brand/master-brand.yaml"
+    playbook: "ai/playbooks/google-ads-creative-audit.md"
+    schema: "ai/schemas/google-ads-creative-audit-output.schema.json"
+    rubric: "ai/evals/google-ads-creative-audit-rubric.yaml"
+    decision: "ai/decisions/ADR-006-google-ads-creative-auditor-sidecar.md"
+    related_tasks:
+      - "gads-arch-001"
+      - "gads-arch-002"
+      - "gads-pipeline-012"
+      - "gads-pipeline-013"
+
+  deliverables:
+    - description: "Creative audit input schema"
+      format: json
+      destination: "ai/inputs/google-ads-creative-audit-input.schema.json"
+    - description: "Creative audit output schema"
+      format: json
+      destination: "ai/schemas/google-ads-creative-audit-output.schema.json"
+    - description: "Creative auditor skill"
+      format: markdown
+      destination: "ai/skill-src/google-ads/creative-auditor/SKILL.md"
+    - description: "Creative audit criteria"
+      format: markdown
+      destination: "ai/skill-src/google-ads/creative-auditor/references/audit-criteria.md"
+    - description: "Creative audit report template"
+      format: markdown
+      destination: "ai/skill-src/google-ads/creative-auditor/templates/audit-report.md"
+    - description: "Creative audit rubric"
+      format: yaml
+      destination: "ai/evals/google-ads-creative-audit-rubric.yaml"
+    - description: "Creative audit playbook"
+      format: markdown
+      destination: "ai/playbooks/google-ads-creative-audit.md"
+    - description: "Skill suite routing update"
+      format: markdown
+      destination: "ai/skill-src/google-ads/SKILL.md"
+    - description: "Validation record"
+      format: markdown
+      destination: "ai/validation/2026-03-21-google-ads-creative-auditor-mvp.md"
+    - description: "Change record"
+      format: markdown
+      destination: "ai/changes/2026-03-21-google-ads-creative-auditor-mvp.md"
+
+  validation:
+    method: manual + schema + sync
+    rubric: "ai/evals/google-ads-creative-audit-rubric.yaml"
+    passing_criteria: >
+      新 skill、input/output schema、criteria、rubric、playbook 全數存在，
+      JSON/YAML 語法合法，skills sync 完成，
+      並可清楚表達 creative-auditor 是 sidecar reviewer 而不是 production generator。
+    validation_file: "ai/validation/2026-03-21-google-ads-creative-auditor-mvp.md"
+    governance_check: "pass"
+
+  notes: >
+    本任務不接入 MCP、不建立 write-mode capability、不修改現有 interpreter / builder / packager contract。
+
+  metadata:
+    created_by: codex
+    compatible_agents:
+      - claude
+      - codex
+      - gemini
+      - openclaw

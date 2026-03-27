@@ -1,0 +1,196 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Brand Extraction Output",
+  "description": "brand-extractor skill 的提取結果格式，用於驗證並寫入 master-brand.yaml",
+  "type": "object",
+  "required": ["meta", "extracted", "gaps"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["generated_by", "generated_at", "sources"],
+      "properties": {
+        "generated_by": {
+          "type": "string",
+          "description": "執行提取的 agent 名稱"
+        },
+        "generated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["type"],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": ["website", "document", "user_input"]
+              },
+              "url": { "type": "string" },
+              "filename": { "type": "string" },
+              "description": { "type": "string" }
+            }
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "extracted": {
+      "type": "object",
+      "description": "成功提取的品牌資料，結構對應 master-brand.yaml",
+      "properties": {
+        "name": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "string" },
+            "source": { "type": "string" },
+            "confidence": { "type": "string", "enum": ["high", "medium", "low"] }
+          }
+        },
+        "tagline": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "string" },
+            "source": { "type": "string" },
+            "confidence": { "type": "string", "enum": ["high", "medium", "low"] }
+          }
+        },
+        "industry": {
+          "type": "object",
+          "properties": {
+            "value": { "type": "string" },
+            "source": { "type": "string" },
+            "confidence": { "type": "string", "enum": ["high", "medium", "low"] }
+          }
+        },
+        "voice": {
+          "type": "object",
+          "properties": {
+            "tone": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "value": { "type": "string" },
+                  "source": { "type": "string" }
+                }
+              }
+            },
+            "personality": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "value": { "type": "string" },
+                  "source": { "type": "string" }
+                }
+              }
+            },
+            "do": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "value": { "type": "string" },
+                  "source": { "type": "string" }
+                }
+              }
+            },
+            "do_not": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "value": { "type": "string" },
+                  "source": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "visual": {
+          "type": "object",
+          "properties": {
+            "primary_color": {
+              "type": "object",
+              "properties": {
+                "value": { "type": "string" },
+                "source": { "type": "string" }
+              }
+            },
+            "secondary_color": {
+              "type": "object",
+              "properties": {
+                "value": { "type": "string" },
+                "source": { "type": "string" }
+              }
+            },
+            "font_family": {
+              "type": "object",
+              "properties": {
+                "value": { "type": "string" },
+                "source": { "type": "string" }
+              }
+            }
+          }
+        },
+        "target_audience": {
+          "type": "object",
+          "properties": {
+            "segments": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "value": { "type": "string" },
+                  "source": { "type": "string" }
+                }
+              }
+            },
+            "pain_points": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "value": { "type": "string" },
+                  "source": { "type": "string" }
+                }
+              }
+            },
+            "desired_outcomes": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "value": { "type": "string" },
+                  "source": { "type": "string" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "gaps": {
+      "type": "array",
+      "description": "仍未填入的欄位清單",
+      "items": {
+        "type": "object",
+        "required": ["field", "yaml_path", "required"],
+        "properties": {
+          "field": { "type": "string" },
+          "yaml_path": { "type": "string" },
+          "required": { "type": "boolean" },
+          "reason": { "type": "string" }
+        }
+      }
+    },
+    "completion_rate": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "品牌資料填入完成度百分比"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+# supported-matrix.yaml
+# 正式支援的廣告素材生成 lane 一覽表
+# PM 可從此檔確認哪些 lane 已產品化
+# 擴張方式：新增一筆 lane entry，不修改既有 lane
+
+version: "1.0"
+updated_at: "2026-03-14"
+
+lanes:
+  - lane_id: "hillbed-purchase-pmax"
+    brand: "LOVEFU大島樂眠"
+    product: "山丘樂眠床"
+    campaign_type: pmax
+    goal: purchase
+    status: production                # production / beta / deprecated
+
+    # 關聯檔案
+    canonical_brief: "lovefu-pmax-hillbed"
+    brief_file: "ai/inputs/briefs/lovefu-pmax-hillbed.json"
+    skill: "ai/skill-src/google-ads-writer/SKILL.md"
+    playbook: "ai/playbooks/google-ads-pmax.md"
+    runbook: "ai/playbooks/lovefu-hillbed-pmax-runbook.md"
+    output_schema: "ai/schemas/google-ads-pmax-output.schema.json"
+    rubric: "ai/evals/ads-rubric.yaml"
+    human_review: "ai/evals/google-ads-pmax-human-review.md"
+    regression_baseline: "ai/validation/regression-baseline-hillbed-pmax.yaml"
+    change_control_adr: "ai/decisions/ADR-003-hillbed-pmax-production-change-control.md"
+    wording_watchlist: "ai/reports/2026-03-15-hillbed-pmax-wording-risk-watchlist.md"
+
+    # 驗證紀錄
+    validated_at: "2026-03-14"
+    hardened_at: "2026-03-15"
+    validation_record: "ai/validation/2026-03-14-productization-v1.md"
+    golden_score: 4.65
+    human_review_verdict: "可直接上稿"
+
+    # 使用邊界
+    boundaries:
+      - "僅限山丘樂眠床，不適用其他 LOVEFU 產品"
+      - "僅限 purchase goal，不適用 store_visit 或 lead"
+      - "僅限文字素材，不含圖片/影片/feed"
+      - "必須經 human review 才可上稿"
+      - "brief 中的價格/保固/退款必須與官網一致"
+
+    # 決策依據
+    adr: "ai/decisions/ADR-002-productization-v1-scope.md"
+    notes: "Golden output scored 4.65/5，human review 判定可直接上稿；目前已有 3 筆 approved references，未來 production change 依 ADR-003 gate 執行。"

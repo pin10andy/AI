@@ -1,0 +1,102 @@
+{
+  "task_id": "gads-copy-002",
+  "brief_id": "tc-lovefu-neck-pillow-pmax",
+  "campaign_type": "pmax",
+  "brand_name": "LOVEFU大島樂眠",
+  "product_name": "量脖子頸椎枕",
+  "generated_by": "codex",
+  "generated_at": "2026-03-14T11:35:00+08:00",
+  "angles": [
+    {
+      "key": "fit_measurement",
+      "label": "量測適配",
+      "rationale": "把量脖子當成明確差異化，讓 PMax 重組時仍看得出服務特色。"
+    },
+    {
+      "key": "comfort_relief",
+      "label": "肩頸放鬆",
+      "rationale": "回應肩頸容易緊、睡前反覆調整枕頭的情境。"
+    },
+    {
+      "key": "trial_guidance",
+      "label": "試枕信任",
+      "rationale": "用門市試枕與顧問引導降低選錯風險。"
+    }
+  ],
+  "short_headlines": [
+    { "text": "大島樂眠 量脖子選枕", "angle_key": "fit_measurement", "keyword_used": false },
+    { "text": "頸椎枕推薦 先量脖子", "angle_key": "fit_measurement", "keyword_used": true },
+    { "text": "量脖子枕頭 更貼近需求", "angle_key": "fit_measurement", "keyword_used": true },
+    { "text": "找對枕高 比材質更重要", "angle_key": "fit_measurement", "keyword_used": false },
+    { "text": "枕頭推薦 不只看材質", "angle_key": "fit_measurement", "keyword_used": true },
+    { "text": "肩頸容易緊 找對枕頭", "angle_key": "comfort_relief", "keyword_used": false },
+    { "text": "睡前少翻身 更快放鬆", "angle_key": "comfort_relief", "keyword_used": false },
+    { "text": "枕頭太高太低都會累", "angle_key": "comfort_relief", "keyword_used": false },
+    { "text": "頸椎枕頭推薦 看適配", "angle_key": "comfort_relief", "keyword_used": true },
+    { "text": "讓肩頸慢慢放鬆", "angle_key": "comfort_relief", "keyword_used": false },
+    { "text": "門市試枕 再帶回家", "angle_key": "trial_guidance", "keyword_used": false },
+    { "text": "睡眠顧問陪你挑枕頭", "angle_key": "trial_guidance", "keyword_used": false },
+    { "text": "大島樂眠 試枕更安心", "angle_key": "trial_guidance", "keyword_used": false },
+    { "text": "台北試枕 預約了解", "angle_key": "trial_guidance", "keyword_used": false },
+    { "text": "量脖子服務 幫你縮小選擇", "angle_key": "trial_guidance", "keyword_used": false }
+  ],
+  "long_headlines": [
+    {
+      "text": "量脖子後再挑枕頭，讓適合你的枕高更有依據也更安心",
+      "angle_key": "fit_measurement"
+    },
+    {
+      "text": "如果你常常翻來翻去還找不到舒服位置，可以先從試枕開始",
+      "angle_key": "comfort_relief"
+    },
+    {
+      "text": "門市試枕搭配睡眠顧問，讓選枕頭不再只是自己亂猜",
+      "angle_key": "trial_guidance"
+    },
+    {
+      "text": "大島樂眠把量測、試枕與陪伴式建議放進同一段選枕流程",
+      "angle_key": "trial_guidance"
+    },
+    {
+      "text": "從量脖子到試躺體驗，陪你慢慢找到更貼合睡姿的枕頭",
+      "angle_key": "fit_measurement"
+    }
+  ],
+  "descriptions": [
+    {
+      "text": "量脖子後再試枕",
+      "angle_key": "fit_measurement"
+    },
+    {
+      "text": "大島樂眠以量脖子服務協助你找到更適合的枕高，不只看材質，而是更貼近自己的睡姿與需求。",
+      "angle_key": "fit_measurement"
+    },
+    {
+      "text": "如果你常常翻來翻去還找不到舒服位置，歡迎先試枕，讓肩頸在更合適的支撐裡慢慢放鬆。",
+      "angle_key": "comfort_relief"
+    },
+    {
+      "text": "門市可試枕、可諮詢，睡眠顧問陪你比較不同枕感，降低買回家才發現不適合的風險。",
+      "angle_key": "trial_guidance"
+    },
+    {
+      "text": "從量測到試枕都一步一步陪你做，讓選枕頭不再只靠猜，而是更安心地找到適合自己的睡感。",
+      "angle_key": "trial_guidance"
+    }
+  ],
+  "compliance_notes": {
+    "manual_review_required": true,
+    "checks_passed": [
+      "exact_counts",
+      "char_limits",
+      "one_short_description",
+      "three_distinct_angles"
+    ],
+    "policy_risks": [
+      "頸椎相關字眼需避免靠近治療、矯正等醫療語意"
+    ],
+    "brand_risks": [
+      "量脖子與試枕承諾需由 landing page 首屏清楚承接"
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+brief_id: "tc-lovefu-neck-pillow-search"
+brand_name: "LOVEFU大島樂眠"
+product_name: "量脖子頸椎枕"
+campaign_type: "search_rsa"
+goal: "purchase"
+landing_page_summary:
+  hero_message: "量脖子後挑對枕頭，讓肩頸慢慢放鬆"
+  primary_cta: "立即了解"
+  supporting_points:
+    - "量脖子服務協助找到更適合的枕高"
+    - "依睡姿與脖圍推薦，不只看材質"
+    - "門市可試枕，降低選錯風險"
+target_audience:
+  segments:
+    - "有肩頸與頸椎適配需求、想找到合適枕頭的人"
+    - "常常換枕頭，卻還是睡不好的人"
+  pain_points:
+    - "不知道什麼枕高才適合自己"
+    - "枕頭買回家才發現撐不到或太高"
+  desired_outcomes:
+    - "找到更貼合自己脖圍與睡姿的枕頭"
+    - "睡前更快放鬆，不再一直調整枕頭"
+keyword_cluster:
+  primary_keywords:
+    - "頸椎枕推薦"
+    - "枕頭推薦"
+    - "量脖子枕頭"
+  secondary_keywords:
+    - "頸椎枕頭推薦"
+    - "台北試枕"
+    - "乳膠枕"
+  negative_themes:
+    - "免費"
+    - "二手"
+    - "DIY"
+    - "醫療器材"
+usp:
+  - "量脖子服務是明確差異化體驗"
+  - "依睡姿與脖圍推薦，不只賣單一材質"
+  - "可到門市試枕，降低選錯成本"
+offers: []
+constraints:
+  must_include:
+    - "量脖子"
+    - "大島樂眠"
+  must_avoid:
+    - "保證改善頸椎病"
+    - "醫療級治療"
+    - "買一送一"
+  character_policy:
+    headline_count: 15
+    headline_max: 30
+    description_count: 4
+    description_max: 90
+tone:
+  - "warm"
+  - "approachable"
+  - "professional"
+forbidden_claims:
+  - "保證改善頸椎病"
+  - "100% 消除肩頸痠痛"
+  - "醫療級治療效果"
+notes: "用於測試枕頭品類與量脖子服務的 Search RSA 產出。"

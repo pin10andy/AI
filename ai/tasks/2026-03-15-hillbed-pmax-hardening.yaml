@@ -1,0 +1,68 @@
+# Hillbed Purchase PMax Production Hardening
+# 穩定既有 production lane，補齊 change control、multi-reference baseline 與 wording 風險 watchlist
+
+task:
+  task_id: "hard-001"
+  title: "Hillbed Purchase PMax Production Hardening"
+  status: validated
+  owner: codex
+  created_at: "2026-03-15"
+  updated_at: "2026-03-15"
+
+  goal: >
+    穩定既有的 LOVEFU hillbed purchase PMax production lane，
+    補齊 production 變更控制、至少 3 筆 approved regression references，
+    並建立可交接的 wording risk watchlist。
+
+  background: >
+    Productization v1 已讓 hillbed purchase PMax 成為正式 supported lane，
+    但 baseline 仍只有 1 筆 canonical output，且 policy-sensitive wording
+    尚缺明確 watchlist。這輪 hardening 的重點是讓未來 production 變更
+    有清楚 gate，不修改既有 canonical brief，也不擴到其他產品。
+
+  references:
+    brand: "ai/brand/master-brand.yaml"
+    playbook: "ai/playbooks/lovefu-hillbed-pmax-runbook.md"
+    schema: "ai/schemas/google-ads-pmax-output.schema.json"
+    rubric: "ai/evals/ads-rubric.yaml"
+    related_adr: "ai/decisions/ADR-003-hillbed-pmax-production-change-control.md"
+    related_tasks:
+      - "prod-001"
+      - "gads-copy-004"
+
+  deliverables:
+    - description: "Production change control ADR"
+      format: markdown
+      destination: "ai/decisions/ADR-003-hillbed-pmax-production-change-control.md"
+    - description: "Expanded regression baseline with 3 approved references"
+      format: yaml
+      destination: "ai/validation/regression-baseline-hillbed-pmax.yaml"
+    - description: "Approved reference output #3"
+      format: json
+      destination: "ai/outputs/lovefu-pmax-hillbed.approved-reference-03.output.json"
+    - description: "Approved reference output #3 (Markdown)"
+      format: markdown
+      destination: "ai/outputs/lovefu-pmax-hillbed.approved-reference-03.output.md"
+    - description: "Wording risk watchlist for policy-sensitive phrases"
+      format: markdown
+      destination: "ai/reports/2026-03-15-hillbed-pmax-wording-risk-watchlist.md"
+
+  validation:
+    method: automated + manual
+    rubric: "ai/evals/ads-rubric.yaml"
+    passing_criteria: >
+      新增第三筆 approved reference output，並完成 brief/output schema validation、
+      ad_copy_validator 驗證、watchlist 建立與 ADR gate 定義。
+    validation_file: "ai/validation/2026-03-15-hillbed-pmax-hardening.md"
+
+  notes: >
+    本任務不得修改 ai/inputs/briefs/lovefu-pmax-hillbed.json，
+    且不建立其他產品 lane。
+
+  metadata:
+    created_by: codex
+    compatible_agents:
+      - claude
+      - codex
+      - gemini
+      - openclaw

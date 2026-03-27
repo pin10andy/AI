@@ -1,0 +1,65 @@
+brief_id: "tc-lovefu-mattress-pmax"
+brand_name: "LOVEFU大島樂眠"
+product_name: "獨立筒護腰床墊"
+campaign_type: "pmax"
+goal: "purchase"
+landing_page_summary:
+  hero_message: "久坐腰背緊，也想被穩穩接住"
+  primary_cta: "預約試躺"
+  supporting_points:
+    - "門市可試躺，感受支撐與包覆差異"
+    - "睡眠顧問協助對應睡姿與身型需求"
+    - "安心睡計畫降低選錯床墊的壓力"
+target_audience:
+  segments:
+    - "久坐腰緊、想找穩定支撐的成人"
+    - "已經看過多款床墊，想實際比較試躺的人"
+  pain_points:
+    - "睡醒腰背還是緊，無法真正放鬆"
+    - "不知道硬式、獨立筒、護腰差在哪裡"
+  desired_outcomes:
+    - "身體先被接住，再慢慢放鬆入睡"
+    - "用更安心的方法挑到適合自己的床墊"
+keyword_cluster:
+  primary_keywords:
+    - "獨立筒床墊"
+    - "護腰床墊"
+    - "床墊推薦"
+  secondary_keywords:
+    - "台北床墊試躺"
+    - "硬式床墊"
+    - "安心睡計畫"
+  negative_themes:
+    - "免費"
+    - "二手"
+    - "DIY"
+    - "修理"
+usp:
+  - "獨立筒支撐與穩定托住感"
+  - "門市可試躺，睡眠顧問陪你一起挑"
+  - "安心睡計畫降低選購壓力"
+offers: []
+constraints:
+  must_include:
+    - "大島樂眠"
+    - "預約試躺"
+  must_avoid:
+    - "最低價"
+    - "保證治好腰痛"
+    - "全台最好"
+  character_policy:
+    short_headline_count: 15
+    short_headline_max: 30
+    long_headline_count: 5
+    long_headline_max: 90
+    description_count: 5
+    description_max: 90
+tone:
+  - "warm"
+  - "professional"
+  - "comfort-focused"
+forbidden_claims:
+  - "保證治好腰痛"
+  - "睡一晚立刻痊癒"
+  - "全台最低價"
+notes: "用於測試床墊品類的 PMax 文案生成。"
