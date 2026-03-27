@@ -14,56 +14,9 @@ import re
 import sys
 from pathlib import Path
 
-
-ALLOWED_HANDOFF_STATUSES = {
-    "pending",
-    "in_progress",
-    "review_ready",
-    "approved",
-    "changes_requested",
-    "closed",
-}
+from handoff_status import ALLOWED_HANDOFF_STATUSES, parse_status_yaml
 
 TASK_ID_RE = re.compile(r'^\s*task_id:\s*"?(?P<value>[^"\n]+)"?\s*$', re.MULTILINE)
-
-
-def strip_value(raw: str) -> str:
-    value = raw.strip()
-    if value.startswith('"') and value.endswith('"'):
-        return value[1:-1]
-    return value
-
-
-def parse_simple_yaml_mapping(path: Path) -> dict[str, object]:
-    root: dict[str, object] = {}
-    current_map: dict[str, str] | None = None
-    current_key: str | None = None
-
-    for raw_line in path.read_text(encoding="utf-8").splitlines():
-        if not raw_line.strip() or raw_line.lstrip().startswith("#"):
-            continue
-
-        indent = len(raw_line) - len(raw_line.lstrip(" "))
-        line = raw_line.strip()
-
-        if indent == 0:
-            if line.endswith(":"):
-                current_key = line[:-1]
-                current_map = {}
-                root[current_key] = current_map
-            else:
-                key, value = line.split(":", 1)
-                root[key.strip()] = strip_value(value)
-                current_key = None
-                current_map = None
-        elif indent == 2 and current_map is not None and current_key is not None:
-            key, value = line.split(":", 1)
-            current_map[key.strip()] = strip_value(value)
-        else:
-            raise ValueError(f"Unsupported YAML structure in {path}: {raw_line}")
-
-    return root
-
 
 def ok(message: str) -> None:
     print(f"[ok]   {message}")
@@ -81,6 +34,10 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Validate a handoff package before execution.")
     parser.add_argument("--task", required=True, help="Handoff task id, e.g. handoff-pipeline-001")
     parser.add_argument("--repo-root", default=".", help="Repository root")
+    parser.add_argument(
+        "--require-status",
+        help="Fail unless status.yaml.handoff_status matches this value exactly",
+    )
     args = parser.parse_args()
 
     repo_root = Path(args.repo_root).resolve()
@@ -102,7 +59,7 @@ def main() -> int:
         return 1
 
     try:
-        status = parse_simple_yaml_mapping(status_path)
+        status = parse_status_yaml(status_path)
     except Exception as exc:  # noqa: BLE001
         fail(f"could not parse status.yaml: {exc}")
         return 1
@@ -110,6 +67,8 @@ def main() -> int:
     for field in (
         "task_id",
         "handoff_status",
+        "attempt",
+        "revision",
         "planning_owner",
         "execution_owner",
         "review_owner",
@@ -126,6 +85,8 @@ def main() -> int:
     task_id = str(status.get("task_id", ""))
     handoff_status = str(status.get("handoff_status", ""))
     artifacts = status.get("artifacts", {})
+    attempt = status.get("attempt", "")
+    revision = status.get("revision", "")
 
     if task_id == args.task:
         ok(f"status.task_id matches requested task: {args.task}")
@@ -138,6 +99,28 @@ def main() -> int:
     else:
         fail(f"handoff_status invalid: {handoff_status or '<empty>'}")
         failures += 1
+
+    if isinstance(attempt, int) and attempt >= 1:
+        ok(f"attempt valid: {attempt}")
+    else:
+        fail(f"attempt invalid: {attempt!r}")
+        failures += 1
+
+    if isinstance(revision, int) and revision >= 1:
+        ok(f"revision valid: {revision}")
+    else:
+        fail(f"revision invalid: {revision!r}")
+        failures += 1
+
+    if args.require_status:
+        if handoff_status == args.require_status:
+            ok(f"handoff_status satisfies required value: {args.require_status}")
+        else:
+            fail(
+                "handoff_status requirement failed: "
+                f"expected {args.require_status}, got {handoff_status or '<empty>'}"
+            )
+            failures += 1
 
     if not isinstance(artifacts, dict):
         fail("artifacts block missing or malformed")

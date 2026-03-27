@@ -1,11 +1,13 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "HandoffStatus",
-  "description": "Machine-readable state for a Claude<->Codex handoff package.",
+  "description": "Machine-readable execution-package state for a Claude<->Codex handoff package.",
   "type": "object",
   "required": [
     "task_id",
     "handoff_status",
+    "attempt",
+    "revision",
     "planning_owner",
     "execution_owner",
     "review_owner",
@@ -21,7 +23,17 @@
     "handoff_status": {
       "type": "string",
       "enum": ["pending", "in_progress", "review_ready", "approved", "changes_requested", "closed"],
-      "description": "Current state of the handoff."
+      "description": "Current execution-package state of the handoff. This is not the broader task lifecycle."
+    },
+    "attempt": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Execution attempt counter for this package. Increment when a changes_requested loop reopens the same package."
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Auditable package revision counter. Increment together with attempt when reopening the same package."
     },
     "worktree_branch": {
       "type": "string",
@@ -29,7 +41,7 @@
     },
     "worktree_path": {
       "type": "string",
-      "description": "Absolute or relative path to the git worktree. Set by orchestrator."
+      "description": "Repo-relative path to the git worktree. Set by orchestrator."
     },
     "planning_owner": {
       "type": "string",
@@ -68,6 +80,69 @@
           "description": "Path to ai/handoffs/<task-id>/review-brief.md. Set after Codex completes."
         }
       }
+    },
+    "review": {
+      "type": "object",
+      "description": "Reviewer writeback metadata for approved or changes_requested decisions.",
+      "properties": {
+        "decision": {
+          "type": "string",
+          "enum": ["approved", "changes_requested"]
+        },
+        "reviewed_by": {
+          "type": "string"
+        },
+        "reviewed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "approved_by": {
+          "type": "string"
+        },
+        "approved_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "requested_by": {
+          "type": "string"
+        },
+        "requested_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "scope_decision": {
+          "type": "string",
+          "enum": ["same_package", "new_package_required"]
+        },
+        "required_changes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "reopen": {
+      "type": "object",
+      "description": "Explicit reopen audit metadata for the changes_requested loop.",
+      "required": ["reopened_by", "reopened_at", "reopen_reason"],
+      "properties": {
+        "reopened_by": {
+          "type": "string"
+        },
+        "reopened_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "reopen_reason": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
     },
     "created_at": {
       "type": "string",

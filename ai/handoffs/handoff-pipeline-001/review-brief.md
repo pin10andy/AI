@@ -68,3 +68,33 @@ Review only `HANDOFF-002`, `HANDOFF-003`, `HANDOFF-004`, `HANDOFF-005`, and the 
 | non-reviewer approve / request-changes | PASS | both gates rejected `codex` and preserved package state |
 | illegal transitions | PASS | invalid `complete`, `close`, and `reopen` attempts all failed |
 | `new_package_required` refusal | PASS | package reuse refused and package state preserved |
+
+## Final Review Decision
+
+**Decision: APPROVED**
+
+**Reviewer:** claude
+**Date:** 2026-03-27
+
+### Review History
+
+| Sub-task | Review Round | Result | Notes |
+|----------|-------------|--------|-------|
+| HANDOFF-002 | 1 | APPROVED | preflight validator, stdlib-only |
+| HANDOFF-003 | 1 + delta | APPROVED | orchestrator; delta fixed `write_status_yaml` KeyError on optional artifact keys |
+| HANDOFF-004 | 1 | APPROVED | shared status helper + handoff_complete.py |
+| HANDOFF-005 | 1 | APPROVED | E2E harness; undocumented scope change flagged (post-commit hook deferred to HANDOFF-006) |
+| HANDOFF-006 | 1 + delta | APPROVED | post-commit hook, ADR-009 clarifications; delta fixed untracked hook (95fb3a9) |
+
+### Blocking Issues Resolved
+
+1. **HANDOFF-003**: `write_status_yaml` crashed on optional artifact keys → fixed with `.get(key, "")` pattern
+2. **HANDOFF-006**: `scripts/hooks/post-commit` was untracked and lacked execute bit → tracked as `100755` in commit 95fb3a9
+
+### Outstanding Debt (Out of Scope)
+
+- AGENTS.md / CLAUDE.md / HANDOFF_PROTOCOL adapter rewrites
+- WORKTREE_POLICY branch naming reconciliation (`handoff/<task-id>` vs `feat/<short-scope>`)
+- Brief template governance files
+- Phase 2 auto-trigger (Claude auto-pickup after review_ready)
+- Live Codex launch integration test

@@ -3,7 +3,7 @@
 task:
   task_id: "handoff-pipeline-001"
   title: "Auto Handoff Mechanism"
-  status: in_progress
+  status: validated
   owner: claude
   created_at: "2026-03-27"
   updated_at: "2026-03-27"
@@ -25,33 +25,33 @@ task:
     playbook: ""
     schema: "ai/schemas/handoff-status.schema.json"
     rubric: ""
-    related_adr: ""
+    related_adr: "ai/decisions/ADR-009-handoff-status-execution-gates.md"
     related_tasks: []
 
   sub_tasks:
     - task_id: HANDOFF-001
       title: "建立 ai/handoffs/ 目錄結構與 status schema"
-      status: ready
+      status: approved
       dependencies: []
     - task_id: HANDOFF-002
       title: "撰寫 handoff_preflight.py"
-      status: ready_for_review
+      status: approved
       dependencies: [HANDOFF-001]
     - task_id: HANDOFF-003
       title: "撰寫 orchestrator.py"
-      status: blocked_on_HANDOFF-002
+      status: approved
       dependencies: [HANDOFF-002]
     - task_id: HANDOFF-004
       title: "撰寫 handoff_complete.py"
-      status: blocked_on_HANDOFF-001
+      status: approved
       dependencies: [HANDOFF-001]
     - task_id: HANDOFF-005
-      title: "新建 post-commit hook 偵測 pending handoff"
-      status: blocked_on_HANDOFF-002
-      dependencies: [HANDOFF-002]
+      title: "新增 handoff_e2e.py 驗證 canonical handoff flows"
+      status: approved
+      dependencies: [HANDOFF-003, HANDOFF-004]
     - task_id: HANDOFF-006
-      title: "更新 HANDOFF_PROTOCOL.md、AGENTS.md、CLAUDE.md"
-      status: blocked_on_HANDOFF-003_004_005
+      title: "補 post-commit hook 與 remaining hardening debt"
+      status: approved
       dependencies: [HANDOFF-003, HANDOFF-004, HANDOFF-005]
 
   deliverables:
@@ -67,9 +67,12 @@ task:
     - description: "Completion signal script"
       format: python
       destination: "scripts/handoff_complete.py"
-    - description: "Post-commit hook"
+    - description: "E2E validation harness"
+      format: python
+      destination: "scripts/handoff_e2e.py"
+    - description: "Post-commit notification hook"
       format: bash
-      destination: "scripts/hooks/post-commit"
+      destination: "scripts/hooks/post-commit + scripts/install-hooks.sh"
     - description: "Updated protocol + adapter docs"
       format: markdown
       destination: "docs/ai/HANDOFF_PROTOCOL.md + AGENTS.md + CLAUDE.md"
@@ -78,24 +81,29 @@ task:
     method: manual + structural + smoke test
     rubric: "docs/ai/VALIDATION_LEVELS.md"
     passing_criteria: >
-      preflight.py, orchestrator.py, handoff_complete.py 均可 py_compile；
+      preflight.py, orchestrator.py, handoff_complete.py, handoff_e2e.py 均可 py_compile；
       handoff_preflight.py 對一個完整的 handoff package 返回 PASS；
       handoff_preflight.py 對一個不完整的 handoff package 返回 FAIL；
-      post-commit hook 存在且 bash -n 通過；
-      AGENTS.md 包含 handoff entry point 說明；
-      CLAUDE.md 包含 planning output convention 說明。
+      handoff_e2e.py 對 canonical happy path / retry path / reviewer-only gate failures /
+      illegal transitions / new_package_required refusal 返回 PASS matrix；
+      post-commit hook 可被 install-hooks.sh 安裝，且在 pending handoff package 存在時輸出 orchestrator hint；
+      AGENTS.md 與 CLAUDE.md 的 adapter/docs debt 留待後續治理。
     validation_file: "ai/validation/2026-03-27-auto-handoff-mechanism.md"
     governance_check: "not_applicable"
 
   known_risks:
     - "Codex CLI 啟動語法需在 HANDOFF-003 前確認（目前假設 codex '<prompt>'）"
     - "Claude review 自動觸發為 Phase 2，Phase 1 只做 print notification"
-    - "Worktree 路徑 ../ai-worktrees/ 假設 repo 在 home 目錄層級"
+    - "預設 worktree root 仍採 repo sibling `../ai-worktrees/` 慣例；若部署環境不同，需透過 AI_WORKTREE_ROOT 或 --worktree-root 明確指定"
+    - "repo 中仍缺少 execution brief / review brief template 檔案；HANDOFF-004 只處理 status writeback，不補模板治理"
 
   assumptions:
     - "post-commit hook 偵測到 pending handoff 後只 print 通知，不自動執行 orchestrator"
     - "review-brief.md 由 handoff_complete.py 建立空檔，Codex 在呼叫前填寫內容"
-    - "HANDOFF-005 是新建 post-commit hook，現有 pre-commit hook 不受影響"
+    - "HANDOFF-005 以 E2E validation harness 驗證整體 flow，不碰 hook 安裝或 adapter docs"
+    - "`status.yaml.handoff_status` 是 handoff package execution state；`validated` / `shipped` 仍由 task lifecycle 管理"
+    - "changes_requested 只適用於仍在原 package scope 內的 rework；超出 scope 必須新建 package"
+    - "HANDOFF-006 只補 post-commit notification、ADR clarification、與 retry-path hardening；不重開 adapter/doc rewrite"
 
   metadata:
     created_by: claude

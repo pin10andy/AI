@@ -1,7 +1,9 @@
 task_id: "handoff-pipeline-001"
-handoff_status: review_ready
+handoff_status: closed
+attempt: 1
+revision: 1
 worktree_branch: "feat/handoff-002-preflight"
-worktree_path: "/Users/andychou/ai-worktrees/handoff-002"
+worktree_path: "ai-worktrees/handoff-002"
 planning_owner: claude
 execution_owner: codex
 review_owner: claude
@@ -11,5 +13,10 @@ artifacts:
   change: "ai/changes/2026-03-27-auto-handoff-mechanism.md"
   validation: "ai/validation/2026-03-27-auto-handoff-mechanism.md"
   review_brief: "ai/handoffs/handoff-pipeline-001/review-brief.md"
+review:
+  decision: approved
+  approved_by: claude
+  approved_at: "2026-03-27T16:30:00+0800"
+  note: "HANDOFF-002 through HANDOFF-006 all passed review. HANDOFF-006 delta review resolved blocking issue (untracked post-commit hook) in 95fb3a9."
 created_at: "2026-03-27T00:00:00"
-updated_at: "2026-03-27T13:55:00+0800"
+updated_at: "2026-03-27T16:30:00+0800"
