@@ -33,6 +33,8 @@ Level 2
 - `README.md`
 - `AGENTS.md`
 - `CLAUDE.md`
+- `GEMINI.md`
+- `ai/decisions/ADR-008-operating-pack-layer-boundary.md`
 - `ai/tasks/2026-03-27-multi-agent-operating-pack-implementation.yaml`
 
 ## Commands Run
@@ -41,6 +43,7 @@ Level 2
 - `find /Users/andychou/ai-worktrees/multi-agent-operating-pack/docs/ai -maxdepth 2 -type f | sort`
 - `rg -n "docs/ai/(PRD|SSD|HANDOFF_PROTOCOL|WORKTREE_POLICY|VALIDATION_LEVELS|MEMORY_GOVERNANCE)" /Users/andychou/ai-worktrees/multi-agent-operating-pack/AGENTS.md /Users/andychou/ai-worktrees/multi-agent-operating-pack/CLAUDE.md`
 - `sed -n '1,260p' /Users/andychou/ai-worktrees/multi-agent-operating-pack/README.md`
+- `rg -n "docs/ai/(PRD|SSD|HANDOFF_PROTOCOL|WORKTREE_POLICY|VALIDATION_LEVELS|MEMORY_GOVERNANCE)" /Users/andychou/ai/GEMINI.md`
 - `python3 /Users/andychou/ai-worktrees/multi-agent-operating-pack/scripts/validate_task_artifacts.py --repo-root /Users/andychou/ai-worktrees/multi-agent-operating-pack --task ai/tasks/2026-03-27-multi-agent-operating-pack-implementation.yaml --change ai/changes/2026-03-27-multi-agent-operating-pack-implementation.md --validation ai/validation/2026-03-27-multi-agent-operating-pack-implementation.md`
 
 ## Result
@@ -53,8 +56,9 @@ PASS
 |---------|------|------|
 | docs/ai files exist | ✓ | requested operating-pack docs and template entrypoints exist under `docs/ai/` |
 | templates exist | ✓ | `TASK_TEMPLATE`, `ADR_TEMPLATE`, `CHANGE_RECORD_TEMPLATE`, `REVIEW_TEMPLATE`, `VALIDATION_REPORT_TEMPLATE` all exist |
-| adapters are thin | ✓ | `AGENTS.md` and `CLAUDE.md` now point to shared docs instead of restating full operating rules |
+| adapters are thin | ✓ | `AGENTS.md`, `CLAUDE.md`, and `GEMINI.md` now point to shared docs instead of restating full operating rules |
 | repo boundary is documented | ✓ | `README.md` now explains `docs/ai/` versus `ai/` responsibilities |
+| boundary decision is recorded | ✓ | `ADR-008` records why `docs/ai/` and `ai/` are split by responsibility |
 | script parse check | ✓ | `python3 -m py_compile scripts/validate_task_artifacts.py` passed |
 | task chain linkage | ✓ | `python3 scripts/validate_task_artifacts.py ...` returned `Result: PASS` |
 

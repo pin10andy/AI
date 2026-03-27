@@ -24,6 +24,7 @@ minimal script to validate task/change/validation linkage.
 - `docs/ai/templates/REVIEW_TEMPLATE.md`
 - `docs/ai/templates/VALIDATION_REPORT_TEMPLATE.md`
 - `scripts/validate_task_artifacts.py`
+- `ai/decisions/ADR-008-operating-pack-layer-boundary.md`
 - `ai/tasks/2026-03-27-multi-agent-operating-pack-implementation.yaml`
 - `ai/changes/2026-03-27-multi-agent-operating-pack-implementation.md`
 - `ai/validation/2026-03-27-multi-agent-operating-pack-implementation.md`
@@ -33,6 +34,7 @@ minimal script to validate task/change/validation linkage.
 - `README.md`
 - `AGENTS.md`
 - `CLAUDE.md`
+- `GEMINI.md`
 - `ai/changes/change-template.md`
 - `ai/validation/validation-template.md`
 
@@ -47,6 +49,7 @@ minimal script to validate task/change/validation linkage.
 - `find /Users/andychou/ai-worktrees/multi-agent-operating-pack/docs/ai -maxdepth 2 -type f | sort`
 - `rg -n "docs/ai/(PRD|SSD|HANDOFF_PROTOCOL|WORKTREE_POLICY|VALIDATION_LEVELS|MEMORY_GOVERNANCE)" AGENTS.md CLAUDE.md`
 - `sed -n '1,260p' /Users/andychou/ai-worktrees/multi-agent-operating-pack/README.md`
+- `sed -n '1,240p' /Users/andychou/ai/GEMINI.md`
 - `python3 /Users/andychou/ai-worktrees/multi-agent-operating-pack/scripts/validate_task_artifacts.py --repo-root /Users/andychou/ai-worktrees/multi-agent-operating-pack --task ai/tasks/2026-03-27-multi-agent-operating-pack-implementation.yaml --change ai/changes/2026-03-27-multi-agent-operating-pack-implementation.md --validation ai/validation/2026-03-27-multi-agent-operating-pack-implementation.md`
 
 ## Assumptions
@@ -54,6 +57,7 @@ minimal script to validate task/change/validation linkage.
 - `docs/ai/` should hold operating-pack documents, while `ai/` remains the canonical home for domain truth and runtime records.
 - Existing `ai/` templates are still canonical, so `docs/ai/templates/` should act as discovery entrypoints rather than a second template system.
 - A minimal structural validation script is sufficient for this task; no broader workflow framework is needed.
+- The `docs/ai/` versus `ai/` boundary is important enough to record as an ADR because it affects adapter loading and future governance placement.
 
 ## Sync / Deployment Impact
 
@@ -69,7 +73,8 @@ minimal script to validate task/change/validation linkage.
 
 - `docs/ai/` now contains the requested operating-pack files and template entrypoints
 - `README.md` now explains the operating-pack layer in `docs/ai/` versus the domain/runtime layer in `ai/`
-- `AGENTS.md` and `CLAUDE.md` now load `docs/ai/` in a defined order instead of restating operational rules
+- `AGENTS.md`, `CLAUDE.md`, and `GEMINI.md` now load `docs/ai/` in a defined order instead of restating operational rules
+- `ai/decisions/ADR-008-operating-pack-layer-boundary.md` records the canonical boundary decision
 - `python3 -m py_compile scripts/validate_task_artifacts.py` passed
 - `python3 scripts/validate_task_artifacts.py ...` returned `Result: PASS`
 

@@ -21,7 +21,7 @@ task:
     playbook: ""
     schema: ""
     rubric: ""
-    related_adr: ""
+    related_adr: "ai/decisions/ADR-008-operating-pack-layer-boundary.md"
     related_tasks:
       - "rnd-001"
       - "rnd-002"
