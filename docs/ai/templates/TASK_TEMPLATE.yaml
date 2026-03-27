@@ -1,0 +1,6 @@
+canonical_template: ai/tasks/task-template.yaml
+copy_to: ai/tasks/YYYY-MM-DD-short-name.yaml
+usage_notes:
+  - Use the canonical task template in ai/tasks/.
+  - Pair every non-trivial task with a change record and a validation record.
+  - Do not edit this entrypoint file when changing the canonical schema; edit ai/tasks/task-template.yaml instead.

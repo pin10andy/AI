@@ -1,0 +1,69 @@
+task:
+  task_id: "os-pack-001"
+  title: "Multi-Agent Operating Pack implementation"
+  status: validated
+  owner: codex
+  created_at: "2026-03-27"
+  updated_at: "2026-03-27"
+
+  goal: >
+    根據既有 multi-agent workspace 的 canonical docs、治理文件與 task backlog，
+    將 operating pack 落地成 repo 內可直接引用的文件、模板入口與最小檢查工具，
+    並讓 agent adapters 保持薄層引用。
+
+  background: >
+    repo 已具備 ai/ 下的 shared context、playbooks、schemas、task/change/validation
+    機制與 Google Ads artifact governance，但缺少一組集中在 docs/ai/ 的 operating-pack
+    文件，也缺少一個最小 task-linkage validation 腳本與可供 review 的標準入口。
+
+  references:
+    brand: "ai/brand/master-brand.yaml"
+    playbook: ""
+    schema: ""
+    rubric: ""
+    related_adr: ""
+    related_tasks:
+      - "rnd-001"
+      - "rnd-002"
+
+  deliverables:
+    - description: "Operating-pack canonical docs"
+      format: markdown
+      destination: "docs/ai/"
+    - description: "Template entrypoints"
+      format: markdown + yaml
+      destination: "docs/ai/templates/"
+    - description: "Thin adapter updates"
+      format: markdown
+      destination: "AGENTS.md + CLAUDE.md"
+    - description: "Minimal task artifact linkage validator"
+      format: python-script
+      destination: "scripts/validate_task_artifacts.py"
+    - description: "Task / change / validation artifacts for this implementation"
+      format: yaml + markdown
+      destination: "ai/tasks/2026-03-27-multi-agent-operating-pack-implementation.yaml + ai/changes/2026-03-27-multi-agent-operating-pack-implementation.md + ai/validation/2026-03-27-multi-agent-operating-pack-implementation.md"
+
+  validation:
+    method: manual + structural
+    rubric: "docs/ai/VALIDATION_LEVELS.md"
+    passing_criteria: >
+      docs/ai/ 下存在 requested operating docs；
+      docs/ai/templates/ 下存在 requested template entrypoints；
+      AGENTS.md 與 CLAUDE.md 為薄層 adapter；
+      validate_task_artifacts.py 可成功驗證本次 task/change/validation 鏈；
+      change 與 validation artifact 均留下 assumptions、risks、commands、follow-ups 與 evidence。
+    validation_file: "ai/validation/2026-03-27-multi-agent-operating-pack-implementation.md"
+    governance_check: "not_applicable"
+
+  notes: >
+    採保守 split：docs/ai/ 承載 operating-pack docs，ai/ 持續承載 domain truth、
+    runtime records 與 existing canonical governance。此 split 若與既有 README 的描述有邊界差異，
+    以 change record 記錄而不重寫 domain policy。
+
+  metadata:
+    created_by: codex
+    compatible_agents:
+      - claude
+      - codex
+      - gemini
+      - openclaw

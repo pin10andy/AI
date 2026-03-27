@@ -7,6 +7,10 @@
 
 [任務 ID 或路徑]
 
+## Validation Level
+
+[Level 0 / Level 1 / Level 2 / Level 3]
+
 ## What Was Tested
 
 [具體測試了什麼？列出驗證項目]
@@ -20,6 +24,10 @@
 [驗證時參考了哪些檔案？]
 
 - [檔案路徑]
+
+## Commands Run
+
+- [執行過的命令]
 
 ## Result
 

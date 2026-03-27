@@ -23,10 +23,26 @@
 
 - [刪除檔案路徑]（如無則寫「無」）
 
+## Commands Run
+
+- [執行過的命令]
+
+## Assumptions
+
+- [本次採用的最小可行假設]
+
 ## Sync / Deployment Impact
 
 [這次改動是否需要跑 sync script？是否影響其他工具的設定？]
 
-## Open Issues
+## Known Risks
 
-[尚未解決的問題或後續待處理事項]
+- [目前風險]
+
+## Validation Evidence
+
+- [驗證指令、報告、或證據路徑]
+
+## Follow-ups
+
+- [尚未解決的問題或後續待處理事項]
