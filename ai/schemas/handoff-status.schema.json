@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "HandoffStatus",
+  "description": "Machine-readable state for a Claude<->Codex handoff package.",
+  "type": "object",
+  "required": [
+    "task_id",
+    "handoff_status",
+    "planning_owner",
+    "execution_owner",
+    "review_owner",
+    "artifacts",
+    "created_at",
+    "updated_at"
+  ],
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "description": "Matches task_id in the corresponding ai/tasks/ record."
+    },
+    "handoff_status": {
+      "type": "string",
+      "enum": ["pending", "in_progress", "review_ready", "approved", "changes_requested", "closed"],
+      "description": "Current state of the handoff."
+    },
+    "worktree_branch": {
+      "type": "string",
+      "description": "Git branch created for this handoff. Set by orchestrator."
+    },
+    "worktree_path": {
+      "type": "string",
+      "description": "Absolute or relative path to the git worktree. Set by orchestrator."
+    },
+    "planning_owner": {
+      "type": "string",
+      "description": "Agent that produced the execution brief."
+    },
+    "execution_owner": {
+      "type": "string",
+      "description": "Agent responsible for implementation."
+    },
+    "review_owner": {
+      "type": "string",
+      "description": "Agent responsible for review and approval."
+    },
+    "artifacts": {
+      "type": "object",
+      "required": ["task", "execution_brief"],
+      "properties": {
+        "task": {
+          "type": "string",
+          "description": "Path to ai/tasks/<task-id>.yaml"
+        },
+        "execution_brief": {
+          "type": "string",
+          "description": "Path to ai/handoffs/<task-id>/execution-brief.md"
+        },
+        "change": {
+          "type": "string",
+          "description": "Path to ai/changes/<task-id>.md. Set after Codex completes."
+        },
+        "validation": {
+          "type": "string",
+          "description": "Path to ai/validation/<task-id>.md. Set after Codex completes."
+        },
+        "review_brief": {
+          "type": "string",
+          "description": "Path to ai/handoffs/<task-id>/review-brief.md. Set after Codex completes."
+        }
+      }
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}

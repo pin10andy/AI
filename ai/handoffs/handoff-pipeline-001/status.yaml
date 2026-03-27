@@ -1,0 +1,15 @@
+task_id: "handoff-pipeline-001"
+handoff_status: review_ready
+worktree_branch: "feat/handoff-002-preflight"
+worktree_path: "/Users/andychou/ai-worktrees/handoff-002"
+planning_owner: claude
+execution_owner: codex
+review_owner: claude
+artifacts:
+  task: "ai/tasks/2026-03-27-auto-handoff-mechanism.yaml"
+  execution_brief: "ai/handoffs/handoff-pipeline-001/execution-brief.md"
+  change: "ai/changes/2026-03-27-auto-handoff-mechanism.md"
+  validation: "ai/validation/2026-03-27-auto-handoff-mechanism.md"
+  review_brief: "ai/handoffs/handoff-pipeline-001/review-brief.md"
+created_at: "2026-03-27T00:00:00"
+updated_at: "2026-03-27T13:55:00+0800"

@@ -1,0 +1,103 @@
+# Auto Handoff Mechanism
+
+task:
+  task_id: "handoff-pipeline-001"
+  title: "Auto Handoff Mechanism"
+  status: in_progress
+  owner: claude
+  created_at: "2026-03-27"
+  updated_at: "2026-03-27"
+
+  goal: >
+    實作 Claude → Codex → Claude 的自動化 handoff 機制，
+    讓 Claude 完成規劃後可直接啟動 Codex 執行，
+    Codex 完成後自動通知 Claude 進行 review，
+    全程透過 repo artifacts 交接，不依賴 chat history。
+
+  background: >
+    目前 Claude 與 Codex 之間的交接需要人工操作：
+    Claude 在 chat 中輸出規劃，使用者手動切換至 Codex session，
+    再口頭轉述上下文。此機制目標是讓規劃產出直接成為 Codex 的
+    執行入口，並透過 orchestrator script 自動建立 worktree 並啟動 Codex。
+
+  references:
+    brand: "ai/brand/master-brand.yaml"
+    playbook: ""
+    schema: "ai/schemas/handoff-status.schema.json"
+    rubric: ""
+    related_adr: ""
+    related_tasks: []
+
+  sub_tasks:
+    - task_id: HANDOFF-001
+      title: "建立 ai/handoffs/ 目錄結構與 status schema"
+      status: ready
+      dependencies: []
+    - task_id: HANDOFF-002
+      title: "撰寫 handoff_preflight.py"
+      status: ready_for_review
+      dependencies: [HANDOFF-001]
+    - task_id: HANDOFF-003
+      title: "撰寫 orchestrator.py"
+      status: blocked_on_HANDOFF-002
+      dependencies: [HANDOFF-002]
+    - task_id: HANDOFF-004
+      title: "撰寫 handoff_complete.py"
+      status: blocked_on_HANDOFF-001
+      dependencies: [HANDOFF-001]
+    - task_id: HANDOFF-005
+      title: "新建 post-commit hook 偵測 pending handoff"
+      status: blocked_on_HANDOFF-002
+      dependencies: [HANDOFF-002]
+    - task_id: HANDOFF-006
+      title: "更新 HANDOFF_PROTOCOL.md、AGENTS.md、CLAUDE.md"
+      status: blocked_on_HANDOFF-003_004_005
+      dependencies: [HANDOFF-003, HANDOFF-004, HANDOFF-005]
+
+  deliverables:
+    - description: "Handoff directory skeleton + templates + schema"
+      format: directory + markdown + json
+      destination: "ai/handoffs/ + ai/schemas/handoff-status.schema.json"
+    - description: "Preflight validator"
+      format: python
+      destination: "scripts/handoff_preflight.py"
+    - description: "Orchestrator"
+      format: python
+      destination: "scripts/orchestrator.py"
+    - description: "Completion signal script"
+      format: python
+      destination: "scripts/handoff_complete.py"
+    - description: "Post-commit hook"
+      format: bash
+      destination: "scripts/hooks/post-commit"
+    - description: "Updated protocol + adapter docs"
+      format: markdown
+      destination: "docs/ai/HANDOFF_PROTOCOL.md + AGENTS.md + CLAUDE.md"
+
+  validation:
+    method: manual + structural + smoke test
+    rubric: "docs/ai/VALIDATION_LEVELS.md"
+    passing_criteria: >
+      preflight.py, orchestrator.py, handoff_complete.py 均可 py_compile；
+      handoff_preflight.py 對一個完整的 handoff package 返回 PASS；
+      handoff_preflight.py 對一個不完整的 handoff package 返回 FAIL；
+      post-commit hook 存在且 bash -n 通過；
+      AGENTS.md 包含 handoff entry point 說明；
+      CLAUDE.md 包含 planning output convention 說明。
+    validation_file: "ai/validation/2026-03-27-auto-handoff-mechanism.md"
+    governance_check: "not_applicable"
+
+  known_risks:
+    - "Codex CLI 啟動語法需在 HANDOFF-003 前確認（目前假設 codex '<prompt>'）"
+    - "Claude review 自動觸發為 Phase 2，Phase 1 只做 print notification"
+    - "Worktree 路徑 ../ai-worktrees/ 假設 repo 在 home 目錄層級"
+
+  assumptions:
+    - "post-commit hook 偵測到 pending handoff 後只 print 通知，不自動執行 orchestrator"
+    - "review-brief.md 由 handoff_complete.py 建立空檔，Codex 在呼叫前填寫內容"
+    - "HANDOFF-005 是新建 post-commit hook，現有 pre-commit hook 不受影響"
+
+  metadata:
+    created_by: claude
+    compatible_agents:
+      - codex
