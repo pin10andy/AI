@@ -17,6 +17,21 @@ metadata:
 
 分析 Google Ads 搜尋字詞報表，找出該排除的字、該獨立成群組的字、正在燒錢的字。輸出人工審核後可直接執行的建議清單。
 
+## Woolito 搜尋意圖診斷 v0.1（優先路由）
+
+針對 Woolito／「動畫」污染與 OS Issue #47，使用
+`scripts/woolito_intent_diagnostic.py` 與
+[CSV 契約與規則](references/woolito-diagnostic-contract.md)。
+此路徑取代下方 legacy 預篩流程：**不得用高花費零轉換直接判定浪費、
+不得用「免費／教學／設計」單字排除、不建立單字「動畫」否定字**。
+KEEP_B2B／NEGATIVE_EXACT_CANDIDATE／REVIEW 均需保留證據，候選只提完整查詢
+否定完全比對並等待人工審核。缺帳戶資料依 synthetic fallback，
+真實結論 BLOCKED_ON_ACCOUNT_DATA。無 Ads live write。
+
+既有 `search_terms_analyzer.py` 是 legacy 量化預篩，非本診斷的分類證據。
+本輪只重用它的 header aliases；其 parser 會把缺值變 0 且遺失 IDs/date，不能用於本流程。
+下方 LOVEFU 流程及品牌設定不能當 Woolito 服務政策。
+
 ## Required References
 
 執行前必須讀取：

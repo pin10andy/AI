@@ -1,0 +1,20 @@
+{
+  "source_kind": "synthetic",
+  "start": "2026-07-14",
+  "end": "2026-10-11",
+  "currency": "TWD",
+  "account_timezone": "Asia/Taipei",
+  "exported_at": "2026-10-12T00:00:00+08:00",
+  "conversion_lag_days": 14,
+  "campaign_ids": [
+    "synthetic-c1"
+  ],
+  "complete": {
+    "search_terms": true,
+    "positives": true,
+    "negatives": true,
+    "historical_conversions": true,
+    "campaign_totals": true
+  },
+  "protected_phrases": []
+}

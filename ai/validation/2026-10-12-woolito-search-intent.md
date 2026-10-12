@@ -1,0 +1,20 @@
+# Validation — 2026-10-12-woolito-search-intent
+
+Canonical：[OS #47](https://github.com/pin10andy/personal-operating-dashboard/issues/47)。
+Level 3（bounded synthetic domain validation）；真實帳戶結論 BLOCKED_ON_ACCOUNT_DATA。
+
+- `python3 -m unittest discover -s ai/skill-src/google-ads/search-terms-cleaner/tests -v` — 9 tests PASS。
+  指定 KEEP/REVIEW、僅全查詢 exact 候選、歷史＋跨列可見轉換、positive 衝突、缺檢查資料、negative scopes、coverage、重複 grain/date/metric 拒收。
+- `python3 ai/skill-src/google-ads/search-terms-cleaner/scripts/woolito_intent_diagnostic.py ai/skill-src/google-ads/search-terms-cleaner/assets/woolito-synthetic --output-dir scratch/google-ads/woolito-synthetic` — PASS。
+  source=synthetic、account_conclusion=BLOCKED_ON_ACCOUNT_DATA、coverage_status=CONFIRMED、live_write_go=NO_GO；21 列 11 KEEP / 6 REVIEW / 4 exact candidates。
+- `bash scripts/sync-skills.sh` — PASS，本隔離 checkout ignored 複本可再生；沒有正式部署。
+- `python3 scripts/check_artifact_governance.py` — PASS：92 passed / 0 failed / 14 existing legacy warnings。
+  clone 初始無 ignored scratch directory，首次為 2 FAIL；建立 scratch/google-ads 後通過，不改政策。
+- `python3 scripts/validate_task_artifacts.py --repo-root . --task ai/tasks/2026-10-12-woolito-search-intent.yaml --change ai/changes/2026-10-12-woolito-search-intent.md --validation ai/validation/2026-10-12-woolito-search-intent.md` — PASS。
+- `git diff --check` — PASS。
+
+無 UI/E2E、無多輪審稿、無 Ads API 呼叫或 live mutation。
+有限核對 AI 及 Creative Workbench 本機未提交成果；無同範圍 active Builder；GitHub AI issues/PR 再查為空。
+Google 官方 negative keyword 文件已核對；search terms 文件 fetch 失敗，hidden-tail 限制按 Issue 記錄。
+Known limits：有限規則字庫、未知中文詞降 REVIEW、未模擬正向近似／語意扩張、negative tokenization，
+manual review mandatory。synthetic coverage 不能代表真實帳戶資料完整性；manifest 的宣告需 owner 核實。

@@ -1,0 +1,15 @@
+task:
+  task_id: "2026-10-12-woolito-search-intent"
+  title: "Woolito search intent diagnostic v0.1 / OS #47"
+  status: blocked
+  owner: codex
+  created_at: "2026-10-12"
+  updated_at: "2026-10-12"
+  goal: "Complete anonymous offline fallback; real spend blocked on account exports"
+  canonical_work_state: "https://github.com/pin10andy/personal-operating-dashboard/issues/47"
+  next_owner: "DOT / Andy (coordinate existing authorized private exports)"
+  validation:
+    method: focused-unit-and-cli
+    validation_file: "ai/validation/2026-10-12-woolito-search-intent.md"
+    governance_check: pass
+  notes: "Fallback complete; BLOCKED_ON_ACCOUNT_DATA. No Ads live write, merge or deploy."
