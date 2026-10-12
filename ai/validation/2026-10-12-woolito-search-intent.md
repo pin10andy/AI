@@ -18,3 +18,15 @@ Level 3（bounded synthetic domain validation）；真實帳戶結論 BLOCKED_ON
 Google 官方 negative keyword 文件已核對；search terms 文件 fetch 失敗，hidden-tail 限制按 Issue 記錄。
 Known limits：有限規則字庫、未知中文詞降 REVIEW、未模擬正向近似／語意扩張、negative tokenization，
 manual review mandatory。synthetic coverage 不能代表真實帳戶資料完整性；manifest 的宣告需 owner 核實。
+
+
+## 真實資料 bounded rerun
+
+同一CLI在私有 normalized input 跑通：source=account、account_conclusion=MANUAL_DIAGNOSIS_REQUIRED、
+coverage_status=CONFIRMED（僅已宣告 enabled範圍）、live_write_go=NO_GO。
+原始11,888 rows → 11,887正規化日列；4×90 campaign totals；44 enabled positives；2941 negative checks；168 historical conversion rows。
+日期齊全、原始 grain無重複／缺指標、group ID joins完整；未補造0；daily/period總計差額保留。
+Engine232 KEEP /11655 REVIEW/0 confirmed candidates；另有私有人工核對4 paid exact proposals，全部REVIEW。
+首次大資料CLI因重複 norm 耗時，已中止該進程；2行等價conversion-first與非零history追加修正後實帳CLI完成。
+對實际變更重跑原9 focused tests PASS；沒有新UI/E2E或重複審稿。
+公開資料僅匿名摘要與hash，完整report/候選與raw只有本機private目錄。No Ads mutations/OAuth/merge/deploy。

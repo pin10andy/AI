@@ -18,3 +18,11 @@ task / change / validation / report 各留最小收據；沒有新平台、資�
 
 風險與後續：缺真實帳戶匯出／完整性／lag 證據；報告 BLOCKED_ON_ACCOUNT_DATA，
 產品決策 null。DOT / Andy 下一步協調既有合法私有五份匯出，再執行同一 CLI。
+
+
+後續已授權實帳 read-only：從 existing Chrome DOM 核實來源、私有匯出與正規化，未碰正式 Ads 設定。
+真實 11,887 日列處理發現重複 norm 導致效能問題；只調整歷史衝突核對先檢查 conversion>0、
+且只追加 converting visible rows，邏輯等价、無分類政策變更；原9 focused tests通過。
+私有 raw/normalized/results 全部在 repo 外，不進公開 PR。公開報告僅匿名摘要、比例、hash。
+原始 search query match 與正向 match type 不同，私有 adapter 正確還原 keyword設定並合併1對 disjoint query-match outcomes。
+Bounded result NEGATIVE_LIST_FIRST for manual review；完整歷史帳戶/qualified lead/lag仍有邊界。無merge/deploy/livewrite。

@@ -127,7 +127,7 @@ def classify(row, tables, manifest):
                 break
     conflicts = []
     history = tables.get('historical_conversions')
-    if row['conversions'] > 0 or any(norm(h['query']) == q and h['conversions'] > 0
+    if row['conversions'] > 0 or any(h['conversions'] > 0 and norm(h['query']) == q
                                      for h in (history or [])):
         conflicts.append('HISTORICAL_CONVERSION')
     for p in tables.get('positives') or []:
@@ -179,7 +179,7 @@ def diagnose(tables, manifest):
     # Cross-row history: a converting visible query elsewhere also protects it.
     checks = dict(tables)
     if tables.get('historical_conversions') is not None:
-        checks['historical_conversions'] = tables['historical_conversions'] + rows
+        checks['historical_conversions'] = tables['historical_conversions'] + [r for r in rows if r['conversions'] > 0]
     classified = [classify(r, checks, manifest) for r in rows]
     totals = tables.get('campaign_totals')
     visible = defaultdict(lambda: dict(cost=0., clicks=0., conversions=0.))
